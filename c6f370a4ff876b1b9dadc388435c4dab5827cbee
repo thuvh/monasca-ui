@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "baada198_0ae37905",
+        "filename": "tox.ini",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 6230
+      },
+      "writtenOn": "2014-07-25T17:23:54Z",
+      "side": 1,
+      "message": "As much as I would like to, I don\u0027t think we should deviate from openstack coding standards. http://docs.openstack.org/developer/hacking/ keeps the 80 char limit.",
+      "revId": "c6f370a4ff876b1b9dadc388435c4dab5827cbee",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
