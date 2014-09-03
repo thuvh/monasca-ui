@@ -36,6 +36,7 @@ from monitoring.alarms import constants
 from monitoring.alarms import forms as alarm_forms
 from monitoring.alarms import tables as alarm_tables
 from monitoring import api
+from monitoring.util import cache
 
 LOG = logging.getLogger(__name__)
 SERVICES = getattr(settings, 'MONITORING_SERVICES', [])
@@ -145,7 +146,14 @@ class AlarmCreateView(forms.ModalFormView):
         context["cancel_url"] = self.get_success_url()
         context["action_url"] = reverse(constants.URL_PREFIX + 'alarm_create',
                                         args=(self.service,))
-        metrics = api.monitor.metrics_list(self.request)
+        try:
+            metrics = cache.metrics_list(self.request)
+        except Exception:
+            redirect = self.get_success_url()
+            exceptions.handle(self.request,
+                              _('Unable to retrieve metrics.'),
+                              redirect=redirect)
+
         # Filter out metrics for other services
         if self.service != 'all':
             metrics = [m for m in metrics
