@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9aa7fdbe_185d49ed",
+        "filename": "monitoring/config/local_settings.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6650
+      },
+      "writtenOn": "2014-10-29T01:13:00Z",
+      "side": 0,
+      "message": "you will need this line in here:\nfrom django.utils.translation import ugettext_lazy as _",
+      "revId": "a24f358dfba330f9a4fd25129d97ef0a10241cd4",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
