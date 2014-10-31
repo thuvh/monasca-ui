@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a8c0949_86261015",
+        "filename": "monasca_policy.json.sample",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6650
+      },
+      "writtenOn": "2014-10-31T19:01:02Z",
+      "side": 1,
+      "message": "I think this should be the {  character instead",
+      "revId": "048098251c7930ab6e20c894dcec102ad721e7b2",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a8c0949_a6230c04",
+        "filename": "monitoring/dashboard.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 6650
+      },
+      "writtenOn": "2014-10-31T19:01:02Z",
+      "side": 1,
+      "message": "this role might want to be something different than overview.  Overview seems like it would apply to overview panel.... not the top level dashboard.",
+      "revId": "048098251c7930ab6e20c894dcec102ad721e7b2",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
