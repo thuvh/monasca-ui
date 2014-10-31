@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a8c0949_a35bfe52",
+        "filename": "monitoring/dashboard.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 6230
+      },
+      "writtenOn": "2014-10-31T18:12:58Z",
+      "side": 1,
+      "message": "What do these rules have to do with monitoring?",
+      "revId": "0908a4f8add879753d37badf7961fd4a6c8cc459",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
