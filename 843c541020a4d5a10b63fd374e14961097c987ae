@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a961159_22251dae",
+        "filename": "monitoring/overview/templates/overview/monitor.html",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 6650
+      },
+      "writtenOn": "2015-01-02T15:52:10Z",
+      "side": 1,
+      "message": "using this\nhttps://docs.djangoproject.com/en/1.6/ref/templates/builtins/#url\nwould be more better",
+      "revId": "843c541020a4d5a10b63fd374e14961097c987ae",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
