@@ -75,7 +75,12 @@ def show_def_severity(data):
 
 def show_metric_dimensions(data):
     if len(data['metrics']) > 1:
-        return _('Multiple metrics')
+        commonDimensions = data['metrics'][0]['dimensions']
+        for metric in data['metrics'][1:]:
+            for n,v in metric['dimensions'].items():
+                if n in commonDimensions and commonDimensions.get(n) != v:
+                    del commonDimensions[n]
+        return ','.join(["%s=%s" % (n, v) for n,v in commonDimensions.items()])
     else:
         return ','.join(["%s=%s" % (n, v) for n,v in data['metrics'][0]['dimensions'].items()])
 
