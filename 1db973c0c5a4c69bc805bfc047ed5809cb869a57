@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da86d52c_fd73337d",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 6230
+      },
+      "writtenOn": "2015-02-12T16:51:24Z",
+      "side": 1,
+      "message": "Add a line: \"Pro Tip: Make sure you have horizon running correctly before proceeding.\"",
+      "revId": "1db973c0c5a4c69bc805bfc047ed5809cb869a57",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da86d52c_fdc5f38d",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 6230
+      },
+      "writtenOn": "2015-02-12T16:51:24Z",
+      "side": 1,
+      "message": "trailing space to delete on this line",
+      "revId": "1db973c0c5a4c69bc805bfc047ed5809cb869a57",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
