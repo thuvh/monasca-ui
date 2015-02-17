@@ -34,6 +34,24 @@
       "revId": "5332325392fc2a424b2825e1572229499ff75569",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da86d52c_4879372e",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 11809
+      },
+      "writtenOn": "2015-02-17T20:51:35Z",
+      "side": 1,
+      "message": "If Roland wants it that way then let\u0027s leave it for him to look at. Its not like it is a difficult change to make later",
+      "parentUuid": "da86d52c_68e35b34",
+      "revId": "5332325392fc2a424b2825e1572229499ff75569",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
