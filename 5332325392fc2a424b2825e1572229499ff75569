@@ -16,6 +16,24 @@
       "revId": "5332325392fc2a424b2825e1572229499ff75569",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da86d52c_68e35b34",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 15027
+      },
+      "writtenOn": "2015-02-17T20:44:55Z",
+      "side": 1,
+      "message": "I ran into a similar question with the alarm table view as those are common dimensions as well, but when talking to Roland when working on it he wanted to leave out \"common\" in the column name so I followed the same naming convention here. I can change it if you think it would be better. Maybe we should change it both places then?",
+      "parentUuid": "da86d52c_a8ff1300",
+      "revId": "5332325392fc2a424b2825e1572229499ff75569",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
