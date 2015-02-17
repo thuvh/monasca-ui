@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da86d52c_a8ff1300",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 11809
+      },
+      "writtenOn": "2015-02-17T20:38:56Z",
+      "side": 1,
+      "message": "Should common be in the name since it is only the common dimensions? I don\u0027t know if that too long but maybe you could leave alarm off",
+      "revId": "5332325392fc2a424b2825e1572229499ff75569",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
