@@ -34,7 +34,13 @@ OVERVIEW = [
      'groupBy': 'hostname'}
 ]
 
+DEFAULT_LINKS = [
+    {'title': 'Dashboard', 'fileName': 'openstack.json'},
+    {'title': 'Monasca Health', 'fileName': 'monasca.json'}
+]
+
 SERVICES = getattr(settings, 'MONITORING_SERVICES', OVERVIEW)
+DASHBOARDS = getattr(settings, 'GRAFANA_LINKS', DEFAULT_LINKS)
 
 
 def get_icon(status):
@@ -125,6 +131,7 @@ class IndexView(TemplateView):
         context = super(IndexView, self).get_context_data(**kwargs)
         context["token"] = self.request.user.token.id
         context["api"] = api.monitor.monasca_endpoint(self.request)
+        context["dashboards"] = DASHBOARDS
         return context
 
 
