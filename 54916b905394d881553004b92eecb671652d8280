@@ -16,6 +16,23 @@
       "revId": "54916b905394d881553004b92eecb671652d8280",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a6ced46_386c3608",
+        "filename": "monitoring/overview/templates/overview/index.html",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 7052
+      },
+      "writtenOn": "2015-03-25T22:34:28Z",
+      "side": 1,
+      "message": "Now that you can have several dashboards, should the target be dependent on the dashboard itself, like dashboard.title or like?",
+      "revId": "54916b905394d881553004b92eecb671652d8280",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
