@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa963961_692b8431",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 6650
+      },
+      "writtenOn": "2015-03-27T19:00:20Z",
+      "side": 1,
+      "message": "this part really addresses the bug - everything else is pep8 cleanup",
+      "revId": "10ae8d5b51d6ca19e2103a23d7071ff78cf5f5f6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
