@@ -163,14 +163,18 @@ class MonascaProxyView(TemplateView):
         if "metrics" == parts[0]:
             req_kwargs = dict(self.request.GET)
             self._convert_dimensions(req_kwargs)
-            if "statistics" == parts[1]:
-                results = {'elements': api.monitor.
-                           metrics_stat_list(request,
-                                             **req_kwargs)}
-            if "measurements" == parts[1]:
+            if len(parts) == 1:
                 results = {'elements': api.monitor.
                            metrics_list(request,
                                         **req_kwargs)}
+            elif "statistics" == parts[1]:
+                results = {'elements': api.monitor.
+                           metrics_stat_list(request,
+                                             **req_kwargs)}
+            elif "measurements" == parts[1]:
+                results = {'elements': api.monitor.
+                           metrics_measurement_list(request,
+                                                    **req_kwargs)}
         if not results:
             LOG.warn("There was a request made for the path %s that"
                      " is not supported." % restpath)
