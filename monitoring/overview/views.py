@@ -169,7 +169,7 @@ class MonascaProxyView(TemplateView):
                                              **req_kwargs)}
             if "measurements" == parts[1]:
                 results = {'elements': api.monitor.
-                           metrics_list(request,
+                           metrics_measurement_list(request,
                                         **req_kwargs)}
         if not results:
             LOG.warn("There was a request made for the path %s that"
