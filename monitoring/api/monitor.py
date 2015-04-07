@@ -143,7 +143,7 @@ def notification_update(request, notification_id, **kwargs):
 
 
 def metrics_list(request, **kwargs):
-    result = monascaclient(request).metrics.list(**kwargs)
+    result = monascaclient(request).metrics.list_measurements(**kwargs)
     return result['elements'] if type(result) is dict else result
 
 
