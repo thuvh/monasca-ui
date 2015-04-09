@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9aa53dc9_a097f446",
+        "filename": "requirements.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 6650
+      },
+      "writtenOn": "2015-04-09T20:37:53Z",
+      "side": 1,
+      "message": "django 1.8 was recently updated, and with monasca\u0027s other pinning to horizon 2014.2 - it will not work with django 1.8.   One of these options must change, keeping the pinning of django back.",
+      "revId": "7b4c0a78e852ced99f2d621f2f102783ea15d911",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
