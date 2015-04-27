@@ -25,6 +25,7 @@ from django.template import defaultfilters as filters
 from django.utils.translation import ugettext as _  # noqa
 from django.views.generic import View  # noqa
 from django.views.generic import TemplateView  # noqa
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from horizon import exceptions
 from horizon import forms
@@ -113,21 +114,35 @@ class AlarmServiceView(tables.DataTableView):
         results = []
         try:
             results = api.monitor.alarm_list(self.request)
+            results.sort(key=lambda x: x['state'])
+            paginator = Paginator(results, 10)
+            page = self.request.GET.get('page')
         except Exception:
             messages.error(self.request, _("Could not retrieve alarms"))
-        if self.service != 'all':
-            name, value = self.service.split('=')
-            filtered = []
-            for row in results:
-                if (name in row['metrics'][0]['dimensions'] and
-                    row['metrics'][0]['dimensions'][name] == value):
-                    filtered.append(row)
-            results = filtered
-        results.sort(key=lambda x: x['state'])
-        return results
+        try:
+            contacts = paginator.page(page)
+        except PageNotAnInteger:
+            contacts = paginator.page(1)
+        except EmptyPage:
+            contacts = paginator.page(paginator.num_pages)
+        return contacts.object_list
 
     def get_context_data(self, **kwargs):
         context = super(AlarmServiceView, self).get_context_data(**kwargs)
+        results = []
+        try:
+            results = api.monitor.alarm_list(self.request)
+            paginator = Paginator(results, 10)
+            page = self.request.GET.get('page')
+        except Exception:
+            messages.error(self.request, _("Could not retrieve alarms"))
+        try:
+            contacts = paginator.page(page)
+        except PageNotAnInteger:
+            contacts = paginator.page(1)
+        except EmptyPage:
+            contacts = paginator.page(paginator.num_pages)
+        context["contacts"]=contacts
         context["service"] = self.service
         return context
 
