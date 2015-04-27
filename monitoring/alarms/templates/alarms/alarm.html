@@ -13,7 +13,6 @@
   {% include "horizon/common/_page_header.html" with title="All Alarms" %}
   {% endif %}
 {% endblock page_header %}
-
 {% block main %}
     {{ table.render }}
 <style>
@@ -22,4 +21,11 @@
   margin-right: 2px;
 }
 </style>
+<div class="pagination">
+    <span class="step-links">
+        {% if pageOffset %}
+            Page <a href="?pageOffset={{ pageOffset }}">Next</a>
+        {% endif %}
+    </span>
+</div>
 {% endblock %}

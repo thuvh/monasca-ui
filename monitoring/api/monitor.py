@@ -60,8 +60,8 @@ def monascaclient(request, password=None):
     return client
 
 
-def alarm_list(request, marker=None, paginate=False):
-    result = monascaclient(request).alarms.list()
+def alarm_list(request,offset,limit,marker=None, paginate=False):
+    result = monascaclient(request).alarms.list(offset=offset,limit=limit)
     return result['elements'] if type(result) is dict else result
 
 
