@@ -113,6 +113,8 @@ class AlarmServiceView(tables.DataTableView):
     def get_data(self):
         limit = 25
         page_offset=self.request.GET.get('page_offset')
+        contacts = []
+        paginator = None
         if page_offset == None:
             page_offset = 0
         try:
@@ -131,6 +133,8 @@ class AlarmServiceView(tables.DataTableView):
     def get_context_data(self, **kwargs):
         context = super(AlarmServiceView, self).get_context_data(**kwargs)
         limit = 25
+        contacts = []
+        paginator = None
         page_offset = self.request.GET.get('page_offset')
         if page_offset == None:
             page_offset = 0
@@ -139,6 +143,7 @@ class AlarmServiceView(tables.DataTableView):
             paginator = Paginator(results, limit)
         except Exception:
             messages.error(self.request, _("Could not retrieve alarms"))
+            return context
         try:
             contacts = paginator.page(1)
         except PageNotAnInteger:
