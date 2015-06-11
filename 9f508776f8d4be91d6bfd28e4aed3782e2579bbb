@@ -37,6 +37,57 @@
     },
     {
       "key": {
+        "uuid": "3afb71cf_6c1404e8",
+        "filename": "monitoring/alarms/views.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 11809
+      },
+      "writtenOn": "2015-06-11T06:16:05Z",
+      "side": 1,
+      "message": "paginator.page(1) will fail because paginator is None assuming api.monitor.alarm_list() throws the PageNotAnInteger",
+      "revId": "9f508776f8d4be91d6bfd28e4aed3782e2579bbb",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3afb71cf_0cb3500b",
+        "filename": "monitoring/alarms/views.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 11809
+      },
+      "writtenOn": "2015-06-11T06:16:05Z",
+      "side": 1,
+      "message": "paginator.num_pages will fail because paginator is None assuming api.monitor.alarm_list() throws the PageNotAnInteger. What else throws EmptyPage?",
+      "revId": "9f508776f8d4be91d6bfd28e4aed3782e2579bbb",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3afb71cf_2cc04c4f",
+        "filename": "monitoring/alarms/views.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 11809
+      },
+      "writtenOn": "2015-06-11T06:16:05Z",
+      "side": 1,
+      "message": "I\u0027d rather see this in the Exception clause. That way it is obvious contacts is being set to an empty array when an Exception occurs.\n\ncontacts \u003d []",
+      "revId": "9f508776f8d4be91d6bfd28e4aed3782e2579bbb",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3afb71cf_c6c2c284",
         "filename": "monitoring/alarms/views.py",
         "patchSetId": 2
@@ -66,6 +117,23 @@
       "side": 1,
       "message": "Same reason as above.",
       "parentUuid": "3afb71cf_c6c2c284",
+      "revId": "9f508776f8d4be91d6bfd28e4aed3782e2579bbb",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3afb71cf_4c0828da",
+        "filename": "monitoring/alarms/views.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 11809
+      },
+      "writtenOn": "2015-06-11T06:16:05Z",
+      "side": 1,
+      "message": "I agree with Michael. If api.monitor.alarm_list throws an exception, then there is a return in the except so paginator and contacts are never used.\n\ncontacts is set in the 2nd try and both except clauses so setting it here obscures the real control flow",
       "revId": "9f508776f8d4be91d6bfd28e4aed3782e2579bbb",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
