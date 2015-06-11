@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "3afb71cf_6cb3e44d",
+        "filename": "monitoring/alarms/views.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 16170
+      },
+      "writtenOn": "2015-06-11T06:00:44Z",
+      "side": 1,
+      "message": "Not when \nresults \u003d api.monitor.alarm_list(self.request, page_offset, limit)\nwould crash (i.e. any possible reason that goes to Exception catch), then paginator and contacts variables are undefined. \n\nWe cannot return unbound variable, because we will get this exception we posted.",
+      "parentUuid": "3afb71cf_260e36e5",
+      "revId": "9f508776f8d4be91d6bfd28e4aed3782e2579bbb",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3afb71cf_c6c2c284",
         "filename": "monitoring/alarms/views.py",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2015-06-10T21:45:17Z",
       "side": 1,
       "message": "why are both of these being set? they will be overridden in the try when this runs.",
+      "revId": "9f508776f8d4be91d6bfd28e4aed3782e2579bbb",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3afb71cf_2c884c70",
+        "filename": "monitoring/alarms/views.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 16170
+      },
+      "writtenOn": "2015-06-11T06:00:44Z",
+      "side": 1,
+      "message": "Same reason as above.",
+      "parentUuid": "3afb71cf_c6c2c284",
       "revId": "9f508776f8d4be91d6bfd28e4aed3782e2579bbb",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
