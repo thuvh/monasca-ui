@@ -1,0 +1,8 @@
+Verified+2: Jenkins
+Code-Review+2: Michael Hoppal <michael.jam.hoppal@hp.com>
+Workflow+1: Michael Hoppal <michael.jam.hoppal@hp.com>
+Submitted-by: Jenkins
+Submitted-at: Fri, 26 Jun 2015 15:56:28 +0000
+Reviewed-on: https://review.openstack.org/196118
+Project: stackforge/monasca-ui
+Branch: refs/heads/master
