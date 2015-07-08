@@ -27,6 +27,7 @@ from horizon import tables
 from monitoring.notifications import constants
 from monitoring.notifications import forms as notification_forms
 from monitoring.notifications import tables as notification_tables
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from monitoring import api
 
@@ -41,15 +42,47 @@ class IndexView(tables.DataTableView):
         return super(IndexView, self).dispatch(*args, **kwargs)
 
     def get_data(self):
+        limit = 10
+        page_offset=self.request.GET.get('page_offset')
         results = []
+        if page_offset == None:
+            page_offset = 0
         try:
-            results = api.monitor.notification_list(self.request)
+            results = api.monitor.notification_list(self.request, page_offset, limit)
+            paginator = Paginator(results, limit)
+            results = paginator.page(1)
+        except EmptyPage:
+            contacts = paginator.page(paginator.num_pages)
         except Exception:
             messages.error(self.request, _("Could not retrieve notifications"))
         return results
 
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
+        limit = 10
+        contacts = []
+        results = []
+        page_offset = self.request.GET.get('page_offset')
+
+        if page_offset == None:
+            page_offset = 0
+        try:
+            results = api.monitor.notification_list(self.request, page_offset, limit)
+            paginator = Paginator(results, limit)
+            contacts = paginator.page(1)
+        except EmptyPage:
+            contacts = paginator.page(paginator.num_pages)
+        except Exception:
+            messages.error(self.request, _("Could not retrieve alarms"))
+            return context
+
+        context["contacts"] = contacts
+
+        if len(contacts.object_list) < limit:
+            context["page_offset"] = None
+        else:
+            context["page_offset"] = contacts.object_list[-1]["id"]
+
         return context
 
 

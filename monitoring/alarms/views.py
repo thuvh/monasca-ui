@@ -79,7 +79,9 @@ def get_status(alarms):
 def generate_status(request):
     try:
         alarms = api.monitor.alarm_list(request)
-    except Exception:
+    except Exception as e:
+        messages.error(request,
+                       _('Unable to list alarms: %s') % str(e))
         alarms = []
     alarms_by_service = {}
     for a in alarms:
@@ -111,7 +113,7 @@ class AlarmServiceView(tables.DataTableView):
         return super(AlarmServiceView, self).dispatch(*args, **kwargs)
 
     def get_data(self):
-        limit = 25
+        limit = 10
         page_offset=self.request.GET.get('page_offset')
         contacts = []
 
@@ -131,7 +133,7 @@ class AlarmServiceView(tables.DataTableView):
 
     def get_context_data(self, **kwargs):
         context = super(AlarmServiceView, self).get_context_data(**kwargs)
-        limit = 25
+        limit = 10
         contacts = []
         page_offset = self.request.GET.get('page_offset')
 
