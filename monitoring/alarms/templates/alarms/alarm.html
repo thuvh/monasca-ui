@@ -16,16 +16,10 @@
 
 {% block main %}
     {{ table.render }}
-<style>
-.status-icon {
-  vertical-align: top;
-  margin-right: 2px;
-}
-</style>
 <div class="pagination">
     <span class="step-links">
         {% if page_offset %}
-            Page <a href="?page_offset={{ page_offset}}">Next</a>
+            <a href="?page_offset={{ page_offset}}">Next Page</a>
         {% endif %}
     </span>
 </div>
