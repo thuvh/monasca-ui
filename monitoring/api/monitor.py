@@ -60,7 +60,7 @@ def monascaclient(request, password=None):
     return client
 
 
-def alarm_list(request, offset, limit, marker=None, paginate=False):
+def alarm_list(request, offset=0, limit=10000, marker=None, paginate=False):
     result = monascaclient(request).alarms.list(offset=offset, limit=limit)
     return result['elements'] if type(result) is dict else result
 
@@ -88,8 +88,8 @@ def alarm_patch(request, **kwargs):
     return monascaclient(request).alarms.patch(**kwargs)
 
 
-def alarmdef_list(request, marker=None, paginate=False):
-    result = monascaclient(request).alarm_definitions.list()
+def alarmdef_list(request, offset=0, limit=10000, marker=None, paginate=False):
+    result = monascaclient(request).alarm_definitions.list(offset=offset, limit=limit)
     return result['elements'] if type(result) is dict else result
 
 
