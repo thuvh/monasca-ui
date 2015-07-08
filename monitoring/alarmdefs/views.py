@@ -30,18 +30,55 @@ from monitoring.alarmdefs import constants
 from monitoring.alarmdefs import forms as alarm_forms
 from monitoring.alarmdefs import tables as alarm_tables
 from monitoring import api
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 class IndexView(tables.DataTableView):
     table_class = alarm_tables.AlarmsTable
     template_name = constants.TEMPLATE_PREFIX + 'alarm.html'
 
     def get_data(self):
+        limit = 10
+        page_offset=self.request.GET.get('page_offset')
         results = []
+        if page_offset==None:
+            page_offset=0
         try:
-            results = api.monitor.alarmdef_list(self.request)
+            results = api.monitor.alarmdef_list(self.request,page_offset,limit)
+            paginator = Paginator(results, limit)
+            results = paginator.page(1)
+        except EmptyPage:
+            contacts = paginator.page(paginator.num_pages)
         except Exception:
             messages.error(self.request, _("Could not retrieve alarm definitions"))
+
         return results
+
+    def get_context_data(self, **kwargs):
+        context = super(IndexView, self).get_context_data(**kwargs)
+        limit = 10
+        contacts = []
+        page_offset = self.request.GET.get('page_offset')
+
+        if page_offset == None:
+            page_offset = 0
+        try:
+            results = api.monitor.alarmdef_list(self.request, page_offset, limit)
+            paginator = Paginator(results, limit)
+            contacts = paginator.page(1)
+        except EmptyPage:
+            contacts = paginator.page(paginator.num_pages)
+        except Exception:
+            messages.error(self.request, _("Could not retrieve alarm definitions"))
+            return context
+
+        context["contacts"] = contacts
+
+        if len(contacts.object_list) < limit:
+            context["page_offset"] = None
+        else:
+            context["page_offset"] = contacts.object_list[-1]["id"]
+
+        return context
 
 
 class AlarmCreateView(forms.ModalFormView):
