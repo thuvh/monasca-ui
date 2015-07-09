@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba3cc151_d93733e1",
+        "filename": "monitoring/alarmdefs/views.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 15027
+      },
+      "writtenOn": "2015-07-09T14:53:09Z",
+      "side": 1,
+      "message": "need white space on equals",
+      "revId": "84bfd143559d68fd1b12ed65b21cb76e7a3732de",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
