@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba3cc151_a2ca219e",
+        "filename": "monitoring/alarmdefs/views.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 14273
+      },
+      "writtenOn": "2015-07-09T23:31:00Z",
+      "side": 1,
+      "message": "If we\u0027re limiting via the API what is the Paginator object doing for us?",
+      "revId": "011bceb194619937d8642b98904daeb4c8fd4db0",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba3cc151_224e1138",
+        "filename": "monitoring/alarmdefs/views.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 14273
+      },
+      "writtenOn": "2015-07-09T23:31:00Z",
+      "side": 1,
+      "message": "From this if down to the end of the try this function and get_data are very similar.  Can you do anything to remove the duplication here and in the rest of the views?",
+      "revId": "011bceb194619937d8642b98904daeb4c8fd4db0",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba3cc151_c2d16558",
+        "filename": "monitoring/alarmdefs/views.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 14273
+      },
+      "writtenOn": "2015-07-09T23:31:00Z",
+      "side": 1,
+      "message": "If we\u0027re limiting via the API what is the Paginator object doing for us?",
+      "revId": "011bceb194619937d8642b98904daeb4c8fd4db0",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba3cc151_8007d61c",
+        "filename": "monitoring/api/monitor.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 14273
+      },
+      "writtenOn": "2015-07-09T23:31:00Z",
+      "side": 1,
+      "message": "Does this need an offset and limit?",
+      "revId": "011bceb194619937d8642b98904daeb4c8fd4db0",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba3cc151_c014fe4e",
+        "filename": "monitoring/api/monitor.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 14273
+      },
+      "writtenOn": "2015-07-09T23:31:00Z",
+      "side": 1,
+      "message": "Does this need an offset and limit?",
+      "revId": "011bceb194619937d8642b98904daeb4c8fd4db0",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
