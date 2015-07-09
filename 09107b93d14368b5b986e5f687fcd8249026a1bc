@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba3cc151_33166949",
+        "filename": "monitoring/alarmdefs/views.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 14273
+      },
+      "writtenOn": "2015-07-09T20:50:08Z",
+      "side": 1,
+      "message": "Same questions here as the notification view",
+      "revId": "09107b93d14368b5b986e5f687fcd8249026a1bc",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba3cc151_936bb5b8",
+        "filename": "monitoring/alarms/views.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 14273
+      },
+      "writtenOn": "2015-07-09T20:50:08Z",
+      "side": 1,
+      "message": "This view is doing basically the same thing as the notification and alarmdefs views but it is sorting the results.  Do the other views need to sort somehow as well?",
+      "revId": "09107b93d14368b5b986e5f687fcd8249026a1bc",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba3cc151_d3837d54",
+        "filename": "monitoring/api/monitor.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 14273
+      },
+      "writtenOn": "2015-07-09T20:50:08Z",
+      "side": 1,
+      "message": "Does this need to paginate as well?",
+      "revId": "09107b93d14368b5b986e5f687fcd8249026a1bc",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba3cc151_b37cb971",
+        "filename": "monitoring/api/monitor.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 14273
+      },
+      "writtenOn": "2015-07-09T20:50:08Z",
+      "side": 1,
+      "message": "Does this need to paginate as well?",
+      "revId": "09107b93d14368b5b986e5f687fcd8249026a1bc",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba3cc151_a041c164",
+        "filename": "monitoring/notifications/views.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 14273
+      },
+      "writtenOn": "2015-07-09T20:50:08Z",
+      "side": 1,
+      "message": "We have limit defined in a number of places.  We should extract that to a constant so we can update one location when we want to change it.",
+      "revId": "09107b93d14368b5b986e5f687fcd8249026a1bc",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba3cc151_e0190989",
+        "filename": "monitoring/notifications/views.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 14273
+      },
+      "writtenOn": "2015-07-09T20:50:08Z",
+      "side": 1,
+      "message": "What is the difference here between get_data and get_context_data?  Should they both be using the same function to go to the API and retrieve data?",
+      "revId": "09107b93d14368b5b986e5f687fcd8249026a1bc",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba3cc151_c012c560",
+        "filename": "monitoring/notifications/views.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 14273
+      },
+      "writtenOn": "2015-07-09T20:50:08Z",
+      "side": 1,
+      "message": "Is \"alarms\" correct here?",
+      "revId": "09107b93d14368b5b986e5f687fcd8249026a1bc",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
