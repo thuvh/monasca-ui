@@ -33,6 +33,23 @@
       "revId": "347005e5a5bde03796708003afe931d989d532b5",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba3cc151_67e42b0c",
+        "filename": "monitoring/alarms/views.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 14517
+      },
+      "writtenOn": "2015-07-09T22:26:42Z",
+      "side": 1,
+      "message": "Why did you remove the sorting?",
+      "revId": "347005e5a5bde03796708003afe931d989d532b5",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
