@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a41bdd9_231c3bc0",
+        "filename": "monitoring/api/monitor.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 14517
+      },
+      "writtenOn": "2015-07-14T22:47:41Z",
+      "side": 1,
+      "message": "can we rename this to alarm_list_by_dimensions?",
+      "revId": "93e955c23379485e38eda9be64b62eebf8a0d2bb",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a41bdd9_c3622f3e",
+        "filename": "monitoring/api/monitor.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 14517
+      },
+      "writtenOn": "2015-07-14T22:47:41Z",
+      "side": 1,
+      "message": "this should be on one line \"name, value \u003d item.split(\u0027\u003d\u0027)",
+      "revId": "93e955c23379485e38eda9be64b62eebf8a0d2bb",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
