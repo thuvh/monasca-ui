@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "9a41bdd9_e3ce532d",
+        "filename": "monitoring/api/monitor.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 14273
+      },
+      "writtenOn": "2015-07-14T23:17:37Z",
+      "side": 1,
+      "message": "The name of the function should more closely match what it\u0027s doing now.  Maybe alarm_list_by_dimension?",
+      "revId": "93e955c23379485e38eda9be64b62eebf8a0d2bb",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a41bdd9_c3622f3e",
         "filename": "monitoring/api/monitor.py",
         "patchSetId": 2
@@ -30,6 +47,57 @@
       "writtenOn": "2015-07-14T22:47:41Z",
       "side": 1,
       "message": "this should be on one line \"name, value \u003d item.split(\u0027\u003d\u0027)",
+      "revId": "93e955c23379485e38eda9be64b62eebf8a0d2bb",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a41bdd9_fe74a636",
+        "filename": "monitoring/api/monitor.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 14273
+      },
+      "writtenOn": "2015-07-14T23:17:37Z",
+      "side": 1,
+      "message": "We should do this on one line with \"name, value \u003d item.split(\"\u003d\")\".  This avoids having to split the string twice.",
+      "revId": "93e955c23379485e38eda9be64b62eebf8a0d2bb",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a41bdd9_03e497a9",
+        "filename": "monitoring/api/monitor.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 14273
+      },
+      "writtenOn": "2015-07-14T23:17:37Z",
+      "side": 1,
+      "message": "This should probably be called something other than service_dim.",
+      "revId": "93e955c23379485e38eda9be64b62eebf8a0d2bb",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a41bdd9_fe7586f9",
+        "filename": "monitoring/api/monitor.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 14273
+      },
+      "writtenOn": "2015-07-14T23:17:37Z",
+      "side": 1,
+      "message": "This function doesn\u0027t appear to be referenced anymore.",
       "revId": "93e955c23379485e38eda9be64b62eebf8a0d2bb",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
