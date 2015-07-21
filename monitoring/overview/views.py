@@ -44,6 +44,7 @@ DEFAULT_LINKS = [
 
 SERVICES = getattr(settings, 'MONITORING_SERVICES', OVERVIEW)
 DASHBOARDS = getattr(settings, 'GRAFANA_LINKS', DEFAULT_LINKS)
+PROJECT_GRAFANA_LINKS = getattr(settings, 'PROJECT_GRAFANA_LINKS')
 
 
 def get_icon(status):
@@ -69,6 +70,14 @@ priorities = [
 ]
 index_by_severity = {d['severity']: i for i, d in enumerate(priorities)}
 
+def get_dashboard_links(request):
+    try:
+        for project_link in PROJECT_GRAFANA_LINKS:
+            if project_link.keys()[0] == request.user.project_name:
+                return project_link.values()[0]
+    except Exception:
+        pass
+    return DASHBOARDS
 
 def show_by_dimension(data, dim_name):
     if 'dimensions' in data['metrics'][0]:
@@ -137,7 +146,7 @@ class IndexView(TemplateView):
         proxy_url_path = str(reverse_lazy(constants.URL_PREFIX + 'proxy'))
         api_root = self.request.build_absolute_uri(proxy_url_path)
         context["api"] = api_root
-        context["dashboards"] = DASHBOARDS
+        context["dashboards"] = get_dashboard_links(self.request)
         return context
 
 
