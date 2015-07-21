@@ -69,6 +69,40 @@ priorities = [
 ]
 index_by_severity = {d['severity']: i for i, d in enumerate(priorities)}
 
+def get_dashboard_links(request):
+    flat_keys = {'fileName','title'}
+    try:
+        default_links = DEFAULT_LINKS
+        for project_link in DASHBOARDS:
+            key = project_link.keys()[0]
+            value = project_link.values()[0]
+            if key in flat_keys:
+                #
+                # we're not indexed by project, just return
+                # the whole list.
+                #
+                return DASHBOARDS
+            if key == request.user.project_name:
+                #
+                # we match this project, return the project
+                # specific links.
+                #
+                return value
+            if key == '*':
+                #
+                # this is a global setting, squirrel it away
+                # in case we exhaust the list without a project
+                # match
+                #
+                default_links = value
+        return default_links
+    except Exception:
+        pass
+    #
+    # Safety here -- should have got a match somewhere above,
+    # but fall back to defaults.
+    #
+    return DASHBOARDS
 
 def show_by_dimension(data, dim_name):
     if 'dimensions' in data['metrics'][0]:
@@ -137,7 +171,7 @@ class IndexView(TemplateView):
         proxy_url_path = str(reverse_lazy(constants.URL_PREFIX + 'proxy'))
         api_root = self.request.build_absolute_uri(proxy_url_path)
         context["api"] = api_root
-        context["dashboards"] = DASHBOARDS
+        context["dashboards"] = get_dashboard_links(self.request)
         return context
 
 
