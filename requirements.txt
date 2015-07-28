@@ -1,2 +1,3 @@
 python-monascaclient
 django<1.8
+oslo.config<2.0.0
