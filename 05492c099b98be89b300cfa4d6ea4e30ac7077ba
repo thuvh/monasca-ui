@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a50d1a3_384a8bad",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 16557
+      },
+      "writtenOn": "2015-07-30T20:25:17Z",
+      "side": 1,
+      "message": "is this intended to be a list or a dictionary?",
+      "revId": "05492c099b98be89b300cfa4d6ea4e30ac7077ba",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a50d1a3_38e12b9b",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 16557
+      },
+      "writtenOn": "2015-07-30T20:25:17Z",
+      "side": 1,
+      "message": "we should probably use if elif else statements",
+      "revId": "05492c099b98be89b300cfa4d6ea4e30ac7077ba",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
