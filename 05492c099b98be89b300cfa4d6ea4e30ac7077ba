@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "3a50d1a3_d8333912",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 2419
+      },
+      "writtenOn": "2015-07-31T17:04:25Z",
+      "side": 1,
+      "message": "Yes, agree this should either be a dictionary or a list, but this is a weird thing that I haven\u0027t seen before.",
+      "parentUuid": "3a50d1a3_384a8bad",
+      "revId": "05492c099b98be89b300cfa4d6ea4e30ac7077ba",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3a50d1a3_38e12b9b",
         "filename": "monitoring/overview/views.py",
         "patchSetId": 5
@@ -30,6 +48,41 @@
       "writtenOn": "2015-07-30T20:25:17Z",
       "side": 1,
       "message": "we should probably use if elif else statements",
+      "revId": "05492c099b98be89b300cfa4d6ea4e30ac7077ba",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a50d1a3_3b3a57ce",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 2419
+      },
+      "writtenOn": "2015-07-31T17:04:25Z",
+      "side": 1,
+      "message": "probably, but this code is not quite understandable to me.\n\nAt this point you set default_links \u003d value, but then when you start the loop again, it could be overwritten, or something else returned.\n\nHow about writing this as\n\nlinks \u003d DEFAULT_LINKS\n\nfor ...\n   if ...\n       links \u003d \n   elif ...\n      links \u003d \n   elif\n       links \u003d\n\nreturn links",
+      "parentUuid": "3a50d1a3_38e12b9b",
+      "revId": "05492c099b98be89b300cfa4d6ea4e30ac7077ba",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a50d1a3_1b2f5b89",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 2419
+      },
+      "writtenOn": "2015-07-31T17:04:25Z",
+      "side": 1,
+      "message": "Do you wan\u0027t to log here?",
       "revId": "05492c099b98be89b300cfa4d6ea4e30ac7077ba",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
