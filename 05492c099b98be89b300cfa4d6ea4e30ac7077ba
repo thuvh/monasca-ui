@@ -37,6 +37,42 @@
     },
     {
       "key": {
+        "uuid": "1a4dcd0f_76311fa2",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 8126
+      },
+      "writtenOn": "2015-08-03T22:13:28Z",
+      "side": 1,
+      "message": "see if my comment in the next PS helps clarify, eric wanted to use one variable instead of two -- so it can appear in either form and the code will handle it.",
+      "parentUuid": "3a50d1a3_d8333912",
+      "revId": "05492c099b98be89b300cfa4d6ea4e30ac7077ba",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a4dcd0f_96038bb8",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 8126
+      },
+      "writtenOn": "2015-08-03T22:13:28Z",
+      "side": 1,
+      "message": "it\u0027s a list of dictionaries, optionally can be a nested list -- see the examples in local_settings.py.  trying to support legacy behavior and not break anyone.",
+      "parentUuid": "3a50d1a3_384a8bad",
+      "revId": "05492c099b98be89b300cfa4d6ea4e30ac7077ba",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3a50d1a3_38e12b9b",
         "filename": "monitoring/overview/views.py",
         "patchSetId": 5
@@ -72,6 +108,42 @@
     },
     {
       "key": {
+        "uuid": "1a4dcd0f_76d83f54",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 8126
+      },
+      "writtenOn": "2015-08-03T22:13:28Z",
+      "side": 1,
+      "message": "i need to return early if we get a match, or we\u0027ll override the match as we iterate through the loop.  see the next PS with if/elif and see if that is ok...",
+      "parentUuid": "3a50d1a3_3b3a57ce",
+      "revId": "05492c099b98be89b300cfa4d6ea4e30ac7077ba",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a4dcd0f_16269b68",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 8126
+      },
+      "writtenOn": "2015-08-03T22:13:28Z",
+      "side": 1,
+      "message": "done in the next PS",
+      "parentUuid": "3a50d1a3_38e12b9b",
+      "revId": "05492c099b98be89b300cfa4d6ea4e30ac7077ba",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3a50d1a3_1b2f5b89",
         "filename": "monitoring/overview/views.py",
         "patchSetId": 5
@@ -83,6 +155,24 @@
       "writtenOn": "2015-07-31T17:04:25Z",
       "side": 1,
       "message": "Do you wan\u0027t to log here?",
+      "revId": "05492c099b98be89b300cfa4d6ea4e30ac7077ba",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a4dcd0f_16dd3b42",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 8126
+      },
+      "writtenOn": "2015-08-03T22:13:28Z",
+      "side": 1,
+      "message": "great idea, in the next PS",
+      "parentUuid": "3a50d1a3_1b2f5b89",
       "revId": "05492c099b98be89b300cfa4d6ea4e30ac7077ba",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
