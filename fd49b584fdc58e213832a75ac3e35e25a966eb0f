@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a4dcd0f_496dbdca",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 15027
+      },
+      "writtenOn": "2015-08-06T15:44:59Z",
+      "side": 1,
+      "message": "you can just return DEFAULT_LINKS here since you do not do anything with the variable links in the loop",
+      "revId": "fd49b584fdc58e213832a75ac3e35e25a966eb0f",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a4dcd0f_697e796b",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 15027
+      },
+      "writtenOn": "2015-08-06T15:44:59Z",
+      "side": 1,
+      "message": "maybe this should be \"Failed to parse dashboard links by project, returning defaults.\"",
+      "revId": "fd49b584fdc58e213832a75ac3e35e25a966eb0f",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
