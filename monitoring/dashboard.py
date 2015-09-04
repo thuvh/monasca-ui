@@ -15,11 +15,13 @@
 #    under the License.
 
 from django.utils.translation import ugettext_lazy as _
-from django.conf import settings  # noqa
+from monitoring.config import local_settings as settings
 
 import horizon
 
-service_type = getattr(settings, 'MONITORING_SERVICE_TYPE', 'monitoring')
+
+service_type = settings.MONITORING_SERVICE_TYPE
+
 
 class Monitoring(horizon.Dashboard):
     name = _("Monitoring")
