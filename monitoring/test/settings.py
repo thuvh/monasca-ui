@@ -139,7 +139,7 @@ SECURITY_GROUP_RULES = {
 
 NOSE_ARGS = ['--nocapture',
              '--nologcapture',
-             '--cover-package=openstack_dashboard',
+             '--cover-package=monitoring',
              '--cover-inclusive',
              '--all-modules']
 

@@ -16,10 +16,11 @@
 
 from django.utils.translation import ugettext_lazy as _
 from django.conf import settings  # noqa
+from monitoring.utils import config as config_helper
 
 import horizon
 
-service_type = getattr(settings, 'MONITORING_SERVICE_TYPE', 'monitoring')
+service_type = config_helper.get_config('MONITORING_SERVICE_TYPE', 'monitoring')
 
 class Monitoring(horizon.Dashboard):
     name = _("Monitoring")

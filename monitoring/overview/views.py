@@ -17,6 +17,7 @@
 import json
 import logging
 import urllib
+import urllib2
 
 from django.conf import settings  # noqa
 from django.contrib import messages
@@ -24,10 +25,16 @@ from django.core.urlresolvers import reverse_lazy
 from django.http import HttpResponse  # noqa
 from django.views.generic import TemplateView  # noqa
 from django.utils.translation import ugettext_lazy as _  # noqa
+from django import http
+from django.views.decorators.csrf import csrf_exempt
+from django.views import generic
+from openstack_dashboard import policy
 
 from monitoring.overview import constants
 from monitoring.alarms import tables as alarm_tables
 from monitoring import api
+from monitoring.utils import config as config_helper
+
 
 LOG = logging.getLogger(__name__)
 OVERVIEW = [
@@ -42,8 +49,9 @@ DEFAULT_LINKS = [
     {'title': 'Monasca Health', 'fileName': 'monasca.json'}
 ]
 
-SERVICES = getattr(settings, 'MONITORING_SERVICES', OVERVIEW)
-DASHBOARDS = getattr(settings, 'GRAFANA_LINKS', DEFAULT_LINKS)
+SERVICES = config_helper.get_config('MONITORING_SERVICES', OVERVIEW)
+DASHBOARDS = config_helper.get_config('GRAFANA_LINKS', DEFAULT_LINKS)
+ENABLE_KIBANA_BUTTON = config_helper.get_config('ENABLE_KIBANA_BUTTON', False)
 
 
 def get_icon(status):
@@ -186,6 +194,10 @@ class IndexView(TemplateView):
         api_root = self.request.build_absolute_uri(proxy_url_path)
         context["api"] = api_root
         context["dashboards"] = get_dashboard_links(self.request)
+        context['can_access_logs'] = policy.check(
+            (('identity', 'admin_required'), ), self.request
+        )
+        context['enable_kibana_button'] = ENABLE_KIBANA_BUTTON
         return context
 
 
@@ -254,3 +266,75 @@ class StatusView(TemplateView):
 
         return HttpResponse(json.dumps(ret),
                             content_type='application/json')
+
+
+class _HttpMethodRequest(urllib2.Request):
+
+    def __init__(self, method, url, **kwargs):
+        urllib2.Request.__init__(self, url, **kwargs)
+        self.method = method
+
+    def get_method(self):
+        return self.method
+
+
+def proxy_stream_generator(response):
+    while True:
+        chunk = response.read(1000 * 1024)
+        if not chunk:
+            break
+        yield chunk
+
+
+class KibanaProxyView(generic.View):
+
+    base_url = None
+    http_method_names = ['GET', 'POST', 'PUT', 'DELETE', 'HEAD']
+
+    def read(self, method, url, data, headers):
+
+        proxy_request_url = self.get_absolute_url(url)
+        proxy_request = _HttpMethodRequest(
+            method, proxy_request_url, data=data, headers=headers
+        )
+        try:
+            response = urllib2.urlopen(proxy_request)
+
+        except urllib2.HTTPError as e:
+            return http.HttpResponse(
+                e.read(), status=e.code
+            )
+        except urllib2.URLError as e:
+            return http.HttpResponse(e.reason, 404)
+
+        else:
+            status = response.getcode()
+            return http.HttpResponse(
+                proxy_stream_generator(response),
+                status=status,
+                content_type=response.headers['content-type']
+            )
+
+    @csrf_exempt
+    def dispatch(self, request, url):
+
+        if not url:
+            url = '/'
+
+        if request.method not in self.http_method_names:
+            return http.HttpResponseNotAllowed(request.method)
+        headers = {
+            'X-Auth-Token': request.user.token.id
+        }
+        return self.read(request.method, url, request.body, headers)
+
+    def get_relative_url(self, url):
+        url = urllib.quote(url.encode('utf-8'))
+        params_str = self.request.GET.urlencode()
+
+        if params_str:
+            return '{0}?{1}'.format(url, params_str)
+        return url
+
+    def get_absolute_url(self, url):
+        return self.base_url + self.get_relative_url(url).lstrip('/')
