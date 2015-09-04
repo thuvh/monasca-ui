@@ -29,3 +29,6 @@ GRAFANA_LINKS = [
 #        {'title': 'OpenStack Dashboard', 'fileName': 'project.json'},
 #        {'title': 'Add New Dashboard', 'fileName': 'empty.json'}]}
 #]
+
+ENABLE_KIBANA_BUTTON = False
+KIBANA_HOST = 'http://192.168.10.4:5601/'

@@ -17,6 +17,9 @@ from django.conf.urls import patterns  # noqa
 from django.conf.urls import url  # noqa
 
 from monitoring.overview import views
+from monitoring.utils import config as config_helper
+
+KIBANA_HOST = config_helper.get_config('KIBANA_HOST', None)
 
 urlpatterns = patterns(
     '',
@@ -24,4 +27,6 @@ urlpatterns = patterns(
     url(r'^status', views.StatusView.as_view(), name='status'),
     url(r'^proxy\/(?P<restpath>.*)$', views.MonascaProxyView.as_view()),
     url(r'^proxy', views.MonascaProxyView.as_view(), name='proxy'),
+    url(r'^logs_proxy(?P<url>.*)$',
+        views.KibanaProxyView.as_view(base_url=KIBANA_HOST), name='kibana_proxy'),
 )
