@@ -2,6 +2,74 @@
   "comments": [
     {
       "key": {
+        "uuid": "da20952f_57b77184",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 312,
+      "author": {
+        "id": 15799
+      },
+      "writtenOn": "2015-09-07T09:29:15Z",
+      "side": 1,
+      "message": "I think this should probably be using StreamingHttpResponse? \n\nhttps://docs.djangoproject.com/en/1.8/ref/request-response/#django.http.StreamingHttpResponse",
+      "revId": "2abb46c62a576d546294515b06d6bf73611d966a",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da20952f_9c30ce57",
+        "filename": "monitoring/utils/config.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 15799
+      },
+      "writtenOn": "2015-09-07T09:29:15Z",
+      "side": 1,
+      "message": "File should have a licence notice",
+      "revId": "2abb46c62a576d546294515b06d6bf73611d966a",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da20952f_b2493b62",
+        "filename": "monitoring/utils/config.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 15799
+      },
+      "writtenOn": "2015-09-07T09:29:15Z",
+      "side": 1,
+      "message": "The OpenStack style guide says files shouldn\u0027t include vim configuration (H106)",
+      "revId": "2abb46c62a576d546294515b06d6bf73611d966a",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da20952f_770715ca",
+        "filename": "monitoring/utils/config.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 15799
+      },
+      "writtenOn": "2015-09-07T09:29:15Z",
+      "side": 1,
+      "message": "So if a setting is defined globally, it takes precedence over the local setting, unless the global value is explicitly set to None, in which case the value from the local setting is used instead.\n\nFurther to that, effectively \"VARIABLE \u003d None\" will result in different behaviour if it\u0027s in the global settings to if it\u0027s in local_settings.\n\nI think this may be a bit surprising to users, especially as it will only apply to variables that are retrieved with this method, and not to all settings.\n\nThe use of this method in various places through the source will result in a change to the existing behaviour, which could break existing installations.",
+      "revId": "2abb46c62a576d546294515b06d6bf73611d966a",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da20952f_bc5352e1",
         "filename": "test-requirements.txt",
         "patchSetId": 1
