@@ -16,6 +16,24 @@
       "revId": "2abb46c62a576d546294515b06d6bf73611d966a",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da20952f_3cae6281",
+        "filename": "test-requirements.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 16172
+      },
+      "writtenOn": "2015-09-07T08:46:37Z",
+      "side": 1,
+      "message": "yes! existing imports (i.e. in ceilometer client) use\n`from oslo.serialization import jsonutils`\nNotation with dot is abandoned in oslo.serialization 1.7.\n\nIn 1.6 you can still use both:\n`from oslo.serialization import jsonutils`\nand\n`from oslo_serialization import jsonutils`",
+      "parentUuid": "da20952f_bc5352e1",
+      "revId": "2abb46c62a576d546294515b06d6bf73611d966a",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
