@@ -70,6 +70,24 @@
     },
     {
       "key": {
+        "uuid": "da20952f_dade2a10",
+        "filename": "monitoring/utils/config.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 16172
+      },
+      "writtenOn": "2015-09-08T06:38:51Z",
+      "side": 1,
+      "message": "You must know that local_settings are not imported anywhere. And such file is a good place to control application (ansible templates). Another option is to:\n\nimport local_settings as settings\n\n# and use settings.CONSTANT\n\nand in local_settings:\n\nfrom django.conf import settings\n\nCONSTANT \u003d getattr(settings, \u0027CONSTANT\u0027, \u0027default\u0027)",
+      "parentUuid": "da20952f_770715ca",
+      "revId": "2abb46c62a576d546294515b06d6bf73611d966a",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da20952f_bc5352e1",
         "filename": "test-requirements.txt",
         "patchSetId": 1
