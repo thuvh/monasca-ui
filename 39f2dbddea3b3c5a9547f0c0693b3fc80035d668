@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da20952f_79fda73a",
+        "filename": "monitoring/utils/config.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 15799
+      },
+      "writtenOn": "2015-09-08T09:21:46Z",
+      "side": 1,
+      "message": "It looks like this method is no longer used anywhere in the patch, so it should probably be removed",
+      "revId": "39f2dbddea3b3c5a9547f0c0693b3fc80035d668",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
