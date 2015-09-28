@@ -22,13 +22,27 @@
 {% endblock page_header %}
 
 {% block main %}
+
+    <div class="btn-group">
+        <button id="timestampFormatDropdownAlarmHistory"
+                class="btn btn-default dropdown-toggle"
+                type="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="true">
+            {% trans "Timestamp format" %} <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu"
+            aria-labelledby="timestampFormatDropdownAlarmHistory">
+            {% for key,label in timestamp_formats %}
+            <li><a href="?ts_mode={{ key }}" title="{{ label }}">{{ label }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
     {{ table.render }}
-<style>
-.status-icon {
-  vertical-align: top;
-  margin-right: 2px;
-}
-</style>
+
 <div class="pagination">
     <span class="step-links">
         {% if page_offset %}
@@ -36,5 +50,44 @@
         {% endif %}
     </span>
 </div>
+<style>
+.status-icon {
+  vertical-align: top;
+  margin-right: 2px;
+}
+</style>
+<script type="text/javascript">
+$(function(){
+
+    var current_offset = timezoneOffset();
+
+    $('#timestampFormatDropdownAlarmHistory')
+        .next()
+        .find('li a')
+        .each(appendTsOffset);
+
+    function appendTsOffset(index, el){
+        var href_val;
+
+        el = $(el)
+        href_val = el.attr('href')
+
+        href_val = href_val
+            + '&ts_offset='
+            + encodeURIComponent(current_offset);
+
+        el.attr('href', href_val)
+    }
+
+    function timezoneOffset() {
+        var offset = new Date().getTimezoneOffset();
+        var minutes = Math.abs(offset);
+        var hours = Math.floor(minutes / 60);
+        var prefix = offset < 0 ? "+" : "-";
+        return prefix + hours;
+    }
+
+})
+</script>
 {% endblock %}
 
