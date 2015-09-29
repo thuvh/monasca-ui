@@ -19,6 +19,7 @@ import logging
 import urllib
 import urllib2
 
+from django.conf import settings as dj_settings
 from django.contrib import messages
 from django.core.urlresolvers import reverse_lazy
 from django.http import HttpResponse  # noqa
@@ -182,6 +183,7 @@ class IndexView(TemplateView):
             (('identity', 'admin_required'), ), self.request
         )
         context['enable_kibana_button'] = settings.ENABLE_KIBANA_BUTTON
+        context['static_url'] = dj_settings.STATIC_URL or '/'
         return context
 
 
