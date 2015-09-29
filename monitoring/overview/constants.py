@@ -14,12 +14,24 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
+from django.conf import settings
 
 URL_PREFIX = 'horizon:monitoring:overview:'
 TEMPLATE_PREFIX = 'monitoring/overview/'
 
-CRITICAL_ICON = '/static/monitoring/img/critical-icon.png'
-WARNING_ICON = '/static/monitoring/img/warning-icon.png'
-OK_ICON = '/static/monitoring/img/ok-icon.png'
-UNKNOWN_ICON = '/static/monitoring/img/unknown-icon.png'
-NOTFOUND_ICON = '/static/monitoring/img/notfound-icon.png'
+def get_static_url():
+    if settings.STATIC_URL:
+        url = settings.STATIC_URL
+    elif settings.WEBROOT:
+        url = settings.WEBROOT + 'static/'
+    else:
+        url = '/static/'
+
+    return url
+
+prefix = get_static_url()
+CRITICAL_ICON = prefix + 'monitoring/img/critical-icon.png'
+WARNING_ICON = prefix + 'monitoring/img/warning-icon.png'
+OK_ICON = prefix + 'monitoring/img/ok-icon.png'
+UNKNOWN_ICON = prefix + 'monitoring/img/unknown-icon.png'
+NOTFOUND_ICON = prefix + 'monitoring/img/notfound-icon.png'

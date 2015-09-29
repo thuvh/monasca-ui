@@ -14,12 +14,14 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
+from monitoring.overview.constants import get_static_url
 
 URL_PREFIX = 'horizon:monitoring:alarms:'
 TEMPLATE_PREFIX = 'monitoring/alarms/'
 
-CRITICAL_ICON = '/static/monitoring/img/critical-icon.png'
-WARNING_ICON = '/static/monitoring/img/warning-icon.png'
-OK_ICON = '/static/monitoring/img/ok-icon.png'
-UNKNOWN_ICON = '/static/monitoring/img/unknown-icon.png'
-NOTFOUND_ICON = '/static/monitoring/img/notfound-icon.png'
+prefix = get_static_url()
+CRITICAL_ICON = prefix + 'monitoring/img/critical-icon.png'
+WARNING_ICON = prefix + 'monitoring/img/warning-icon.png'
+OK_ICON = prefix + 'monitoring/img/ok-icon.png'
+UNKNOWN_ICON = prefix + 'monitoring/img/unknown-icon.png'
+NOTFOUND_ICON = prefix + 'monitoring/img/notfound-icon.png'
