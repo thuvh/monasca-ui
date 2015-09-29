@@ -182,6 +182,7 @@ class IndexView(TemplateView):
             (('identity', 'admin_required'), ), self.request
         )
         context['enable_kibana_button'] = settings.ENABLE_KIBANA_BUTTON
+        context['static_url'] = settings.STATIC_URL
         return context
 
 

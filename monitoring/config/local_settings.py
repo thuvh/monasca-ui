@@ -1,6 +1,8 @@
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 
+# Horizon static components
+STATIC_URL = '/static'
 
 # Services being monitored
 MONITORING_SERVICES = getattr(

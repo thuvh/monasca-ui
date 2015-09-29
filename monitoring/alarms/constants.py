@@ -14,12 +14,13 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
+from monitoring.config.local_settings import STATIC_URL
 
 URL_PREFIX = 'horizon:monitoring:alarms:'
 TEMPLATE_PREFIX = 'monitoring/alarms/'
 
-CRITICAL_ICON = '/static/monitoring/img/critical-icon.png'
-WARNING_ICON = '/static/monitoring/img/warning-icon.png'
-OK_ICON = '/static/monitoring/img/ok-icon.png'
-UNKNOWN_ICON = '/static/monitoring/img/unknown-icon.png'
-NOTFOUND_ICON = '/static/monitoring/img/notfound-icon.png'
+CRITICAL_ICON = STATIC_URL + '/monitoring/img/critical-icon.png'
+WARNING_ICON = STATIC_URL + '/monitoring/img/warning-icon.png'
+OK_ICON = STATIC_URL + '/monitoring/img/ok-icon.png'
+UNKNOWN_ICON = STATIC_URL + '/monitoring/img/unknown-icon.png'
+NOTFOUND_ICON = STATIC_URL + '/monitoring/img/notfound-icon.png'
