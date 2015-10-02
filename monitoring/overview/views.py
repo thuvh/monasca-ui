@@ -198,20 +198,26 @@ class MonascaProxyView(TemplateView):
         into a python dict that looks like
         {"service": "monitoring"} (used by monasca api calls)
         """
-        new_dimenstion_dict = {}
+        new_dimension_dict = {}
         if 'dimensions' in req_kwargs:
             dimensions_str = req_kwargs['dimensions'][0]
-            print(dimensions_str)
-            print(type(dimensions_str))
             dimensions_str_array = dimensions_str.split(',')
             for dimension in dimensions_str_array:
                 dimension_name_value = dimension.split(':')
                 if len(dimension_name_value) == 2:
-                    new_dimenstion_dict[dimension_name_value[0]] = urllib.unquote(dimension_name_value[1]).decode('utf8')
+                    new_dimension_dict[dimension_name_value[0]] = urllib.unquote(dimension_name_value[1]).decode('utf8')
                 else:
                     raise Exception('Dimensions are malformed')
 
-            req_kwargs['dimensions'] = new_dimenstion_dict
+        #
+        # If the request hasn't already specfied region, we'll
+        # scope the reqeust to the region they are scoped to in
+        # horizon.
+        #
+        if 'region' not in new_dimension_dict:
+            new_dimension_dict['region'] = self.request.user.services_region
+
+        req_kwargs['dimensions'] = new_dimension_dict
         return req_kwargs
 
     def get(self, request, *args, **kwargs):
