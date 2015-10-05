@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a2fa921_b3ffc433",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 6650
+      },
+      "writtenOn": "2015-10-05T22:53:02Z",
+      "side": 1,
+      "message": "these print statements seem unneeded.  at the least these should be moved to python logging framework so we can choose whether or not this goes to the console.",
+      "revId": "ef26b3598f91b35354cb4ef347050d3d041d8aa5",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a2fa921_5358b056",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 6650
+      },
+      "writtenOn": "2015-10-05T22:53:02Z",
+      "side": 1,
+      "message": "instead of this extra local variable, you might want to consider doing:\n\nif \u0027region\u0027 not in new_dimension_dict:\n\nThis might perform slightly better, though this is a nitpick",
+      "revId": "ef26b3598f91b35354cb4ef347050d3d041d8aa5",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
