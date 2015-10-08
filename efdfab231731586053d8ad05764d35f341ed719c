@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a2fa921_6ae686b1",
+        "filename": "monitoring/alarms/constants.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 15799
+      },
+      "writtenOn": "2015-10-08T14:04:05Z",
+      "side": 1,
+      "message": "Should import from django.conf, see;\n\nhttps://docs.djangoproject.com/en/1.7/topics/settings/#using-settings-in-python-code",
+      "revId": "efdfab231731586053d8ad05764d35f341ed719c",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a2fa921_c5678b4b",
+        "filename": "monitoring/alarms/constants.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 15799
+      },
+      "writtenOn": "2015-10-08T14:04:05Z",
+      "side": 1,
+      "message": "STATIC_URL may be None (the default: https://docs.djangoproject.com/en/1.7/ref/settings/#static-url) in which case this will raise a TypeError.\n\nFurther, if not None, then STATIC_URL is defined to always end with a slash, so the leading slash in the png paths should be removed if STATIC_URL is prefixed.",
+      "revId": "efdfab231731586053d8ad05764d35f341ed719c",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a2fa921_05c02329",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 15799
+      },
+      "writtenOn": "2015-10-08T14:04:05Z",
+      "side": 1,
+      "message": "Should import from django.conf, see;\n\nhttps://docs.djangoproject.com/en/1.7/topics/settings/#using-settings-in-python-code",
+      "revId": "efdfab231731586053d8ad05764d35f341ed719c",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a2fa921_c50b0b8d",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 15799
+      },
+      "writtenOn": "2015-10-08T14:04:05Z",
+      "side": 1,
+      "message": "See comment in constants.py",
+      "revId": "efdfab231731586053d8ad05764d35f341ed719c",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a2fa921_e5aba773",
+        "filename": "monitoring/config/local_settings.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 15799
+      },
+      "writtenOn": "2015-10-08T14:04:05Z",
+      "side": 1,
+      "message": "I don\u0027t think this should be part of the default set of Monasca configuration options - this isn\u0027t a Monasca specific setting, and many deployments will not use this URL.\n\nThat aside, as per https://docs.djangoproject.com/en/1.7/ref/settings/#static-url this should end in a slash.",
+      "revId": "efdfab231731586053d8ad05764d35f341ed719c",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a2fa921_0a4592b1",
+        "filename": "monitoring/overview/templates/overview/index.html",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 15799
+      },
+      "writtenOn": "2015-10-08T14:04:05Z",
+      "side": 1,
+      "message": "Why not convert to use Django\u0027s \u0027static\u0027 tag, or the \u0027get_static_prefix\u0027 tag?\n\nSee:\n* https://docs.djangoproject.com/en/1.7/ref/templates/builtins/#std:templatetag-static\n* https://docs.djangoproject.com/en/1.7/ref/templates/builtins/#get-static-prefix",
+      "revId": "efdfab231731586053d8ad05764d35f341ed719c",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
