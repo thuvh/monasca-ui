@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a2fa921_df7ac9bc",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 15799
+      },
+      "writtenOn": "2015-10-09T12:04:18Z",
+      "side": 1,
+      "message": "You don\u0027t need this line anymore (or the import on line 22)",
+      "revId": "dee2d0c4ee02dc58974d1cc99d4ed1b4323a0f18",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
