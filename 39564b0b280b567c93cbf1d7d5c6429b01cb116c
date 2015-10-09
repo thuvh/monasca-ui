@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a2fa921_1f012406",
+        "filename": "monitoring/alarms/constants.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 15799
+      },
+      "writtenOn": "2015-10-09T10:55:17Z",
+      "side": 1,
+      "message": "Here (and elsewhere) this will mean that if the deployment has configured STATIC_URL\u003d\u0027\u0027 then this will change it to \u0027/\u0027, which is not equivalent. The suggestion was to use;\n\n    settings.STATIC_URL or \u0027\u0027\n\nto avoid exceptions from attempting to concatenate None and a string.",
+      "revId": "39564b0b280b567c93cbf1d7d5c6429b01cb116c",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a2fa921_5a400a34",
+        "filename": "monitoring/overview/templates/overview/index.html",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 15799
+      },
+      "writtenOn": "2015-10-09T10:55:17Z",
+      "side": 1,
+      "message": "You don\u0027t need to explicitly pass in static_url in the context, you can just use the {% get-static-prefix %} tag:\n\nhttps://docs.djangoproject.com/en/1.7/ref/templates/builtins/#get-static-prefix",
+      "revId": "39564b0b280b567c93cbf1d7d5c6429b01cb116c",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
