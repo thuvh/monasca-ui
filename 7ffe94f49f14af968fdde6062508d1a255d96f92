@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a2fa921_eb1fceb4",
+        "filename": "monitoring/overview/constants.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 15799
+      },
+      "writtenOn": "2015-10-09T09:12:40Z",
+      "side": 1,
+      "message": "This logic is already present in the default horizon settings.py:\n\nhttps://github.com/openstack/horizon/blob/master/openstack_dashboard/settings.py#L286\n\nIf a deployment has deliberately changed STATIC_URL in the main horizon settings to an empty string or None then that is probably intentional and I don\u0027t think there\u0027s a reason to change it here.",
+      "revId": "7ffe94f49f14af968fdde6062508d1a255d96f92",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a2fa921_2b7b86c2",
+        "filename": "monitoring/overview/constants.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 15799
+      },
+      "writtenOn": "2015-10-09T09:12:40Z",
+      "side": 1,
+      "message": "So I think this would be better as:\n\n    prefix \u003d django.conf.settings.STATIC_URL or \u0027\u0027",
+      "revId": "7ffe94f49f14af968fdde6062508d1a255d96f92",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
