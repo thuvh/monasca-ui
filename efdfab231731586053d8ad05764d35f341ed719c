@@ -87,6 +87,24 @@
     },
     {
       "key": {
+        "uuid": "7a2fa921_f89ec661",
+        "filename": "monitoring/config/local_settings.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2015-10-09T08:43:30Z",
+      "side": 1,
+      "message": "Thank you, Ben! I changed the code.",
+      "parentUuid": "7a2fa921_e5aba773",
+      "revId": "efdfab231731586053d8ad05764d35f341ed719c",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a2fa921_0a4592b1",
         "filename": "monitoring/overview/templates/overview/index.html",
         "patchSetId": 1
