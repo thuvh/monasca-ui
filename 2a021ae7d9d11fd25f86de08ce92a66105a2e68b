@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a2ca52d_38e2afd6",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 6650
+      },
+      "writtenOn": "2015-10-13T16:20:08Z",
+      "side": 1,
+      "message": "this check, for every item in the loop - there is a possible improvement to move this outside of this loop, afterwards.\n\nif \u0027region\u0027 in new_dimensions and new_dimensions[\u0027region\u0027] \u003d\u003d \u0027inject_scoped_region\u0027:\n   then set it to user\u0027s region",
+      "revId": "2a021ae7d9d11fd25f86de08ce92a66105a2e68b",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
