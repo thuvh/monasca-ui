@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5a2ca52d_491e9a0d",
+        "filename": "monitoring/static/monitoring/js/controllers.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2015-10-14T10:35:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a2ca52d_76fedc6c",
+      "revId": "210d0f84073f830ec11fc4589f0407731936ab97",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a2ca52d_b61234b3",
         "filename": "monitoring/static/monitoring/js/controllers.js",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2015-10-14T08:58:37Z",
       "side": 1,
       "message": "Nitpick: missing semicolon\n\n(JS may not need it, but most other places in this file use it, so consistency)",
+      "revId": "210d0f84073f830ec11fc4589f0407731936ab97",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a2ca52d_29e8fee1",
+        "filename": "monitoring/static/monitoring/js/controllers.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2015-10-14T10:35:43Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "5a2ca52d_b61234b3",
       "revId": "210d0f84073f830ec11fc4589f0407731936ab97",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
