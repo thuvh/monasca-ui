@@ -1,0 +1,11 @@
+Verified+2: Jenkins
+Code-Review+1: Roland Hochmuth <roland.hochmuth@hp.com>
+Code-Review+2: Michael Hoppal <michael.jam.hoppal@hp.com>
+Workflow+1: Michael Hoppal <michael.jam.hoppal@hp.com>
+Code-Review+1: Ben Motz <bmotz@cray.com>
+Code-Review+1: Witold Bedyk <witold.bedyk@est.fujitsu.com>
+Submitted-by: Jenkins
+Submitted-at: Fri, 16 Oct 2015 15:17:54 +0000
+Reviewed-on: https://review.openstack.org/234589
+Project: stackforge/monasca-ui
+Branch: refs/heads/master
