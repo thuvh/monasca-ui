@@ -213,7 +213,7 @@ def transform_alarm_history(results, name, ts_mode, ts_offset):
             offset = int((ts_offset or '0').replace('+', ''))
             dt_val = parse_datetime(val) + timedelta(hours=offset)
             dt_val_formatter = dt_val.strftime('%Y-%m-%dT%H:%M:%S.%fZ')
-            return dt_val_formatter.replace('000Z', 'Z')
+            return dt_val_formatter.replace('000Z', '')
         elif ts_mode != 'utc':
             raise ValueError('%s is not supported timestamp format' % ts_mode)
         else:
@@ -266,6 +266,7 @@ class AlarmHistoryView(tables.DataTableView):
                            _("Could not retrieve alarm history for %s") % object_id)
 
         try:
+            # TODO (feature) use build transorm python
             return transform_alarm_history(contacts, name, ts_mode, ts_offset)
         except ValueError as err:
             LOG.warning('Failed to transform alarm history due to %s' %
