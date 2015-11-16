@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ba8a016a_0700a133",
+        "filename": "monitoring/config/local_settings.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 11155
+      },
+      "writtenOn": "2015-11-16T23:44:53Z",
+      "side": 1,
+      "message": "This could certainly be a bit confusing, but I didn\u0027t see a way around it.  The grafana links had seperate names for the list (GRAFANA_LINKS) and attribute (DASHBOARDS) to begin with, but the variable names were the same in this case and needed to be split out.  I\u0027m open to any suggests though.",
+      "parentUuid": "da85f559_4708ee28",
+      "revId": "4fa598009cca21ae6fa0d33bfb84577d6aef16b0",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da85f559_dce1159c",
         "filename": "monitoring/config/local_settings.py",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2015-11-13T12:57:02Z",
       "side": 1,
       "message": "I\u0027d usually expect a comment documenting a configuration setting to be next to the setting in the file. That aside, maybe change to using the new format by default?",
+      "revId": "4fa598009cca21ae6fa0d33bfb84577d6aef16b0",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba8a016a_87657146",
+        "filename": "monitoring/config/local_settings.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 11155
+      },
+      "writtenOn": "2015-11-16T23:44:53Z",
+      "side": 1,
+      "message": "I was just the same format we used to make the grafana links configurable.  I can move this up, but I didn\u0027t want to break anyone by switching over to the new format by default.",
+      "parentUuid": "da85f559_dce1159c",
       "revId": "4fa598009cca21ae6fa0d33bfb84577d6aef16b0",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
