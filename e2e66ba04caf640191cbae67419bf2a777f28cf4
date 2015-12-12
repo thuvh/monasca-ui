@@ -1,0 +1,9 @@
+Verified+2: Jenkins
+Code-Review+2: Roland Hochmuth <roland.hochmuth@hp.com>
+Workflow+1: Roland Hochmuth <roland.hochmuth@hp.com>
+Code-Review+1: venkatamahesh <venkatamaheshkotha@gmail.com>
+Submitted-by: Jenkins
+Submitted-at: Sat, 12 Dec 2015 04:17:31 +0000
+Reviewed-on: https://review.openstack.org/256786
+Project: openstack/monasca-ui
+Branch: refs/heads/master
