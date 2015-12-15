@@ -64,10 +64,11 @@ priorities = [
 ]
 index_by_severity = {d['severity']: i for i, d in enumerate(priorities)}
 
+from django.utils.translation import ugettext_lazy
 alarm_history_default_ts_format = 'utc'
 alarm_history_ts_formats = (
-    ('utc', _('UTC'),),
-    ('bl', _('Browser local'),),
+    ('utc', ugettext_lazy('UTC'),),
+    ('bl', ugettext_lazy('Browser local'),),
 )
 
 
