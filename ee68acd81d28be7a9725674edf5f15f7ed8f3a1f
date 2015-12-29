@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "fa69d971_2a46ffbf",
+        "filename": "monitoring/alarmdefs/forms.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 8126
+      },
+      "writtenOn": "2015-12-29T16:09:24Z",
+      "side": 1,
+      "message": "Can probably drop the second sentence, it seems redundant.",
+      "revId": "ee68acd81d28be7a9725674edf5f15f7ed8f3a1f",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a7b0d38_74e2fa30",
         "filename": "monitoring/alarmdefs/forms.py",
         "patchSetId": 1
