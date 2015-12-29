@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a7b0d38_74e2fa30",
+        "filename": "monitoring/alarmdefs/forms.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 9526
+      },
+      "writtenOn": "2015-12-29T02:28:06Z",
+      "side": 1,
+      "message": "Hi\n\nOne suggestion: s/to use/used.\n\nThanks",
+      "range": {
+        "startLine": 126,
+        "startChar": 62,
+        "endLine": 127,
+        "endChar": 87
+      },
+      "revId": "ee68acd81d28be7a9725674edf5f15f7ed8f3a1f",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
