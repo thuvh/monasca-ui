@@ -55,7 +55,7 @@ class BaseNotificationMethodForm(forms.SelfHandlingForm):
             initial=constants.NotificationType.EMAIL)
         self.fields['address'] = forms.CharField(label=_("Address"),
                                                  required=required,
-                                                 max_length="100",
+                                                 max_length="512",
                                                  widget=textWidget)
 
 
