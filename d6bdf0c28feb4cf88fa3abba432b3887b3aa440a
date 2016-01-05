@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa69d971_48208d48",
+        "filename": "monitoring/notifications/forms.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-01-05T07:45:16Z",
+      "side": 1,
+      "message": "I\u0027d say that list of possible notification method may change, at least I remember such case. Taking it under consideration, I think that it might be better to actually say \n\n the type of notification method (i.e. email)\n\ninstead of list every possible one.\nIdeally, if that\u0027s possible, help_text could actually include available notifications somehow.",
+      "range": {
+        "startLine": 58,
+        "startChar": 22,
+        "endLine": 58,
+        "endChar": 90
+      },
+      "revId": "d6bdf0c28feb4cf88fa3abba432b3887b3aa440a",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
