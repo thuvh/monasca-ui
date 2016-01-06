@@ -22,6 +22,30 @@
       "revId": "d6bdf0c28feb4cf88fa3abba432b3887b3aa440a",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa69d971_bf3916d9",
+        "filename": "monitoring/notifications/forms.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 18286
+      },
+      "writtenOn": "2016-01-06T01:14:35Z",
+      "side": 1,
+      "message": "Hi Tomasz, thank you for advice.\nI have understood possibility of change of notification method.\nAnd I think email is representative of notification method, so I will fix this as your suggestion.",
+      "parentUuid": "fa69d971_48208d48",
+      "range": {
+        "startLine": 58,
+        "startChar": 22,
+        "endLine": 58,
+        "endChar": 90
+      },
+      "revId": "d6bdf0c28feb4cf88fa3abba432b3887b3aa440a",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
