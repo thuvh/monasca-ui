@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa69d971_deab1a1d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 13111
+      },
+      "writtenOn": "2016-01-08T09:09:04Z",
+      "side": 1,
+      "message": "You should correct \u0027rouded\u0027 to \u0027rounded\u0027 ;)",
+      "range": {
+        "startLine": 7,
+        "startChar": 4,
+        "endLine": 7,
+        "endChar": 10
+      },
+      "revId": "0a8735be54cc97e76a17421ad82f96e3f9ffd40d",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
