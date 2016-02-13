@@ -1,3 +1,5 @@
+# KATO Tomoyuki <kato.tomoyuki@jp.fujitsu.com>, 2016. #zanata
+# Shinya Kawabata <s-kawabata@wx.jp.nec.com>, 2016. #zanata
 # haruki yamanashi <h.yamanashi@jp.fujitsu.com>, 2016. #zanata
 msgid ""
 msgstr ""
@@ -7,12 +9,18 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-02-03 06:15+0000\n"
-"Last-Translator: haruki yamanashi <h.yamanashi@jp.fujitsu.com>\n"
+"PO-Revision-Date: 2016-02-12 02:50+0000\n"
+"Last-Translator: KATO Tomoyuki <kato.tomoyuki@jp.fujitsu.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
 "X-Generator: Zanata 3.7.3\n"
 "Plural-Forms: nplurals=1; plural=0\n"
+
+msgid "\"Monitoring\""
+msgstr "\"モニタリング\""
+
+msgid "\"Notifications\""
+msgstr "\"通知\""
 
 #, python-format
 msgid "%s"
@@ -23,6 +31,9 @@ msgstr "+ さらに追加"
 
 msgid "---Please select---"
 msgstr "---選択してください---"
+
+msgid "A description of an alarm."
+msgstr "アラームの説明"
 
 msgid "Add"
 msgstr "追加"
@@ -167,6 +178,9 @@ msgstr "High"
 msgid "Info"
 msgstr "情報"
 
+msgid "Key"
+msgstr "キー"
+
 msgid "Low"
 msgstr "Low"
 
@@ -210,6 +224,11 @@ msgstr "通知は正常に更新されました。"
 msgid "Notification method has been created successfully."
 msgstr "通知方法は正常に作成されました。"
 
+msgid ""
+"Notification methods. Notifications can be sent when an alarm state "
+"transition occurs."
+msgstr "通知方法。アラーム状態遷移が起こると通知が送られます。"
+
 msgid "Notifications"
 msgstr "通知"
 
@@ -226,10 +245,10 @@ msgid "Overview"
 msgstr "概要"
 
 msgid "PagerDuty"
-msgstr "Pagerduty"
+msgstr "PagerDuty"
 
 msgid "Password must be between 8 and 18 characters."
-msgstr "パスワードは8文字以上、18文字以下で指定する必要があります。"
+msgstr "パスワードは 8 文字以上、18 文字以下で指定する必要があります。"
 
 msgid "Reason"
 msgstr "理由"
@@ -249,6 +268,9 @@ msgstr "通知の選択"
 msgid "Servers"
 msgstr "サーバー"
 
+msgid "Service :"
+msgstr "サービス :"
+
 msgid "Severity"
 msgstr "重大度"
 
@@ -263,6 +285,9 @@ msgstr "状態"
 
 msgid "Status"
 msgstr "ステータス"
+
+msgid "Submit"
+msgstr "送信"
 
 msgid "Timestamp"
 msgstr "タイムスタンプ"
@@ -306,6 +331,13 @@ msgstr "アラームの詳細を取得できません。"
 
 msgid "Unable to retrieve notification details."
 msgstr "通知の詳細を取得できません"
+
+#, python-format
+msgid "Unable to retrieve notifications: %s"
+msgstr "通知を取得できません。 %s"
+
+msgid "Value"
+msgstr "値"
 
 msgid "Webhook"
 msgstr "Webhook"
