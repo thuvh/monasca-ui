@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dae33548_16bed3d3",
+        "filename": "monitoring/locale/ja/LC_MESSAGES/django.po",
+        "patchSetId": 4
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 18286
+      },
+      "writtenOn": "2016-02-17T01:12:14Z",
+      "side": 1,
+      "message": "This translation means that list of Notifications that should be sent when expression is true. Not \"transitioning to another ALARM state\". So I think below is better.\n通知フィールドには、アラーム状態が遷移したときに送信される通知のリストが含まれます。",
+      "range": {
+        "startLine": 86,
+        "startChar": 7,
+        "endLine": 87,
+        "endChar": 8
+      },
+      "revId": "8239125d93620f863449a170812c20367007120c",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dae33548_b13bb1d0",
+        "filename": "monitoring/locale/ja/LC_MESSAGES/django.po",
+        "patchSetId": 4
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 18286
+      },
+      "writtenOn": "2016-02-17T01:12:14Z",
+      "side": 1,
+      "message": "I think descriptive(記述) name(名) is overwritten. I think simple is better like 名前.",
+      "range": {
+        "startLine": 130,
+        "startChar": 13,
+        "endLine": 130,
+        "endChar": 16
+      },
+      "revId": "8239125d93620f863449a170812c20367007120c",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dae33548_1186dd64",
+        "filename": "monitoring/locale/ja/LC_MESSAGES/django.po",
+        "patchSetId": 4
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 18286
+      },
+      "writtenOn": "2016-02-17T01:12:14Z",
+      "side": 1,
+      "message": "This means display. I think expression means 条件式.",
+      "range": {
+        "startLine": 193,
+        "startChar": 12,
+        "endLine": 193,
+        "endChar": 14
+      },
+      "revId": "8239125d93620f863449a170812c20367007120c",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
