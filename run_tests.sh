@@ -337,28 +337,36 @@ function run_tests_all {
   exit $(($MONASCA_UI_RESULT))
 }
 
+function babel_extract {
+  DOMAIN=$1
+  KEYWORDS="-k gettext_noop -k gettext_lazy -k ngettext_lazy:1,2"
+  KEYWORDS+=" -k ugettext_noop -k ugettext_lazy -k ungettext_lazy:1,2"
+  KEYWORDS+=" -k npgettext:1c,2,3 -k pgettext_lazy:1c,2 -k npgettext_lazy:1c,2,3"
+
+  ${command_wrapper} pybabel extract -F ../babel-${DOMAIN}.cfg -o locale/${DOMAIN}.pot $KEYWORDS .
+}
+
 function run_makemessages {
-  cd horizon
-  ${command_wrapper} $root/manage.py makemessages --all --no-obsolete
-  HORIZON_PY_RESULT=$?
-  ${command_wrapper} $root/manage.py makemessages -d djangojs --all --no-obsolete
-  HORIZON_JS_RESULT=$?
-  cd ../openstack_dashboard
-  ${command_wrapper} $root/manage.py makemessages --all --no-obsolete
-  DASHBOARD_RESULT=$?
+
+  echo -n "monitoring: "
+  cd monitoring
+  babel_extract django
+  MONITORING_PY_RESULT=$?
+
+  echo -n "monitoring javascript: "
+  babel_extract djangojs
+  MONITORING_JS_RESULT=$?
+
   cd ..
-  exit $(($HORIZON_PY_RESULT || $HORIZON_JS_RESULT || $DASHBOARD_RESULT))
+  exit $(($MONITORING_PY_RESULT || $MONITORING_JS_RESULT))
 }
 
 function run_compilemessages {
-  cd horizon
+  cd monitoring
   ${command_wrapper} $root/manage.py compilemessages
-  HORIZON_PY_RESULT=$?
-  cd ../openstack_dashboard
-  ${command_wrapper} $root/manage.py compilemessages
-  DASHBOARD_RESULT=$?
+  MONITORING_RESULT=$?
   cd ..
-  exit $(($HORIZON_PY_RESULT || $DASHBOARD_RESULT))
+  exit $MONITORING_RESULT
 }
 
 
