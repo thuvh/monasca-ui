@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5aef4532_d45c224d",
+        "filename": "monitoring/alarmdefs/views.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-03-11T10:16:17Z",
+      "side": 1,
+      "message": "Neat ;-)",
+      "revId": "8ad50319a7c8f1abd814a5411812cc5d539682ed",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
