@@ -7,8 +7,6 @@ by monasca-vagrant.
 #Deployment Set Up
 
 * git clone https://git.openstack.org/openstack/horizon.git  # clone horizon
-* git clone https://github.com/hpcloud-mon/grafana.git
-* ln -r -s grafana/src *apache_document_root*/grafana
 
 * cd horizon
 * Add git+https://git.openstack.org/openstack/monasca-ui.git  to requirements.txt
@@ -24,7 +22,8 @@ by monasca-vagrant.
 ```
 git clone https://git.openstack.org/openstack/monasca-ui.git  # clone monasca-ui
 git clone https://git.openstack.org/openstack/horizon.git  # clone horizon
-git clone https://github.com/hpcloud-mon/grafana.git  # clone grafana
+git clone https://github.com/twc-openstack/grafana.git  # clone grafana
+git https://github.com/twc-openstack/grafana-plugins.git
 ```
 
 ##Set up Horizon
@@ -54,12 +53,11 @@ ln -s ../monasca-ui/monitoring monitoring
 
 ##Set up Grafana
 
-```
-cd ..
-ln -r -s grafana/src <apache_document_root>/grafana
-cd grafana
-cp config.monasca.js config.js
-```
+* The v2.6.0-keystone branch of grafana is stable, as is v2.6.0 in grafana-plugins
+* Use the grafana docs to build and deploy grafana
+* http://docs.grafana.org/project/building_from_source/
+* http://docs.grafana.org/installation/configuration/
+* Copy monasca-ui/grafana-dashboards/* to /public/dashboards/ in your grafana deployment.
 
 ##Start Server
 
