@@ -158,15 +158,16 @@ class GraphMetric(tables.LinkAction):
         return super(self, GraphMetric).render()
 
     def get_link_url(self, datum):
-        name = datum['metrics'][0]['name']
-        threshold = json.dumps(datum['metrics'])
-        endpoint = str(reverse_lazy(ov_constants.URL_PREFIX + 'proxy'))
-        endpoint = self.table.request.build_absolute_uri(endpoint)
+        metric = datum['metrics'][0]['name']
+        dimensions = datum['metrics'][0].get('dimensions', {})
         self.attrs['target'] = '_blank'
-        url = (settings.STATIC_URL or '') + \
-            'grafana/index.html#/dashboard/script/detail.js'
-        query = "?name=%s&threshold=%s&api=%s" % \
-                (name, threshold, endpoint)
+        region = self.table.request.user.services_region
+        grafana_url = getattr(settings, 'GRAFANA_URL', '').get(region)
+        url = grafana_url + \
+            '/dashboard/script/drilldown.js'
+        query = "?metric=%s" % metric
+        for key, value in dimensions.iteritems():
+            query += "&%s=%s" % (key, value)
         return url + query
 
     def allowed(self, request, datum=None):
