@@ -8,8 +8,12 @@
 {% load url from future %}
 {% block main %}
     <div style="padding: 3px;">
+      <a target="Grafana Home" href="{{grafana_url}}" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-dashboard"></span>
+          Grafana Home
+      </a>
       {% for dashboard in dashboards %}
-      <a target={{ dashboard.title }} href="/grafana/index.html#/dashboard/file/{{ dashboard.fileName }}?api={{api}}" class="btn btn-default btn-sm">
+      <a target={{ dashboard.title }} href="{{grafana_url}}/dashboard/db/{{ dashboard.path }}" class="btn btn-default btn-sm">
               <span class="glyphicon glyphicon-dashboard"></span>
               {% trans dashboard.title %}
           </a>
