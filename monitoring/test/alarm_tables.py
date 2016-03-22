@@ -41,8 +41,6 @@ class GraphMetricLinkActionTests(TestCase):
 
         self.assertEqual(
             link_url,
-            r'/static/grafana/index.html#/dashboard/script/detail.js?'
-            r'name=metric1'
-            r'&threshold=[{"name": "metric1"}, {"name": "metric \u2461"}]'
-            r'&api=http://foo/api/'
+            r'/dashboard/script/drilldown.js?metric=metric1'
+            r'metric=metric1'
         )
