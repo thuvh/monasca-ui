@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa0719c6_901e456e",
+        "filename": "monitoring/overview/templates/overview/index.html",
+        "patchSetId": 7
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 6650
+      },
+      "writtenOn": "2016-03-23T17:09:46Z",
+      "side": 1,
+      "message": "this should be localizable",
+      "revId": "0f6430a2873fa9d8532ede3690b1945f8d5406f6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa0719c6_a3006102",
+        "filename": "monitoring/overview/templates/overview/index.html",
+        "patchSetId": 7
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 6650
+      },
+      "writtenOn": "2016-03-23T17:09:46Z",
+      "side": 1,
+      "message": "i18n here too",
+      "revId": "0f6430a2873fa9d8532ede3690b1945f8d5406f6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
