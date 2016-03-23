@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa0719c6_7a6707e9",
+        "filename": "README.md",
+        "patchSetId": 9
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 8126
+      },
+      "writtenOn": "2016-03-23T19:23:14Z",
+      "side": 1,
+      "message": "I think we should keep grafana 1.0 instructions in here until that code is removed?  How about 2 sections?",
+      "revId": "6a7aec2162163d314042b3993433d6a518cb70fe",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa0719c6_fad6774d",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 8126
+      },
+      "writtenOn": "2016-03-23T19:23:14Z",
+      "side": 1,
+      "message": "Maybe add TODO here for when grafana 1.0 is not supported?  It\u0027s not totally obvious to me this catch is for 1.0",
+      "revId": "6a7aec2162163d314042b3993433d6a518cb70fe",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
