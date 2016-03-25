@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da0c15f0_d0732f4c",
+        "filename": "monitoring/overview/templates/overview/index.html",
+        "patchSetId": 12
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 18286
+      },
+      "writtenOn": "2016-03-25T05:08:25Z",
+      "side": 1,
+      "message": "Above dashboard field is \u0027path\u0027 but this is \u0027fileName\u0027. Is this OK?",
+      "range": {
+        "startLine": 24,
+        "startChar": 93,
+        "endLine": 24,
+        "endChar": 101
+      },
+      "revId": "3cb1ff23deaf7e8a39d5cb8ac989e9df58bca44d",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
