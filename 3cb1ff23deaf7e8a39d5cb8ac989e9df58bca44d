@@ -22,6 +22,30 @@
       "revId": "3cb1ff23deaf7e8a39d5cb8ac989e9df58bca44d",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba0121b8_841a236d",
+        "filename": "monitoring/overview/templates/overview/index.html",
+        "patchSetId": 12
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 11155
+      },
+      "writtenOn": "2016-03-28T20:36:13Z",
+      "side": 1,
+      "message": "In the old code, we used \u0027fileName\u0027, but dashboards are no longer stored as files on the server node and are just specified by a path name, so I changed the variable for clarity.  This does not affect backward compatibility, as \u0027fileName\u0027 is still used in the backwards compatible code.",
+      "parentUuid": "da0c15f0_d0732f4c",
+      "range": {
+        "startLine": 24,
+        "startChar": 93,
+        "endLine": 24,
+        "endChar": 101
+      },
+      "revId": "3cb1ff23deaf7e8a39d5cb8ac989e9df58bca44d",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
