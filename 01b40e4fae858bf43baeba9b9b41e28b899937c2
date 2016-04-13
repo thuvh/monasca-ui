@@ -22,6 +22,30 @@
       "revId": "01b40e4fae858bf43baeba9b9b41e28b899937c2",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a18252c_9513120d",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 11155
+      },
+      "writtenOn": "2016-04-13T18:17:30Z",
+      "side": 0,
+      "message": "Are you saying that this causes a problem for the Grafana 2 section, or that that section also needs an update?  I don\u0027t see how this would affect the Grafana 2 path.",
+      "parentUuid": "5a18252c_cd6ea800",
+      "range": {
+        "startLine": 180,
+        "startChar": 12,
+        "endLine": 180,
+        "endChar": 46
+      },
+      "revId": "01b40e4fae858bf43baeba9b9b41e28b899937c2",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
