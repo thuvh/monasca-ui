@@ -12,6 +12,7 @@
                 <th class="name">{% trans 'Name' %}</th>
                 <th class="type">{% trans 'Type' %}</th>
                 <th class="address">{% trans 'Address' %}</th>
+                <th class="periodic_interval">{% trans 'Periodic Interval' %}</th>
                 <th>&nbsp;</th>
             </tr>
         </thead>
@@ -19,7 +20,7 @@
             <tr ng-repeat="notify in ctrl.list">
                 <td class="name">{$ notify.name $}</td>
                 <td class="type">{$ notify.type $}</td>
-                <td class="address" title="{$ notify.address $}">{$ notify.address $}</td>
+                <td class="periodic_interval" title="{$ notify.periodic_interval $}">{$ notify.address $}</td>
                 <td>
                     <a href="#" title="{% trans 'Remove' %}" ng-click="ctrl.remove(notify.id)">X</a>
                     <input type="hidden" name="notifications" value="{$ notify.id $}" />
