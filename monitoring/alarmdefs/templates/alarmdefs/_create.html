@@ -18,6 +18,10 @@
     <p>{% blocktrans %}
       The Notifications field contains the list of Notifications that should be sent when transitioning to another ALARM state.
     {% endblocktrans %}</p>
+    <p>{% blocktrans %}
+      Deterministic alarms never enter UNDETERMINED state.
+      Use them for metrics that are received sporadically.
+    {% endblocktrans %}</p>
     <fieldset>
     {% include "horizon/common/_form_fields.html" %}
     </fieldset>
