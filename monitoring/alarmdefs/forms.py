@@ -162,7 +162,8 @@ class BaseAlarmForm(forms.SelfHandlingForm):
         notification_choices = [(notification['id'],
                                  notification['name'],
                                  notification['type'],
-                                 notification['address'])
+                                 notification['address'],
+                                 notification['period'])
                                 for notification in notifications]
 
         self.fields['notifications'].choices = notification_choices

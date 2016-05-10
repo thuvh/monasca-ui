@@ -1,6 +1,6 @@
 # vim: tabstop=4 shiftwidth=4 softtabstop=4
 
-# Copyright 2013 Hewlett-Packard Development Company, L.P.
+# (C) Copyright 2014-2016 Hewlett Packard Enterprise Development Company LP
 #
 #    Licensed under the Apache License, Version 2.0 (the "License"); you may
 #    not use this file except in compliance with the License. You may obtain
@@ -156,7 +156,8 @@ class AlarmDetailView(TemplateView):
                     notifications.append({"id": id,
                                           "name": unicode(msg),
                                           "type": "",
-                                          "address": ""})
+                                          "address": "",
+                                          "period": ""})
             self._object["notifications"] = notifications
             return self._object
         except Exception:
