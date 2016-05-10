@@ -152,6 +152,7 @@ angular.module('monitoring.controllers', [])
         $scope.currentFunction = "max";
         $scope.currentComparator = ">";
         $scope.currentThreshold = 0;
+        $scope.currentIsDeterministic = false;
         $scope.matchingMetrics= [];
         $scope.tags = [];
         $scope.possibleDimensions = function(query) {
@@ -181,7 +182,7 @@ angular.module('monitoring.controllers', [])
             $scope.saveDimension();
         }
         $scope.saveExpression = function() {
-            $('#dimension').val($scope.formatDimension());
+            $('#expression').val($scope.formatDimension());
         }
         $scope.saveDimension = function() {
             $scope.saveExpression();
@@ -207,14 +208,22 @@ angular.module('monitoring.controllers', [])
             $('#match').val($scope.formatMatchBy());
         }
         $scope.formatDimension = function() {
-            var dim = ''
+            var dim = '';
             angular.forEach($scope.tags, function(value, key) {
                 if (dim.length) {
-                    dim += ','
+                    dim += ',';
                 }
-                dim += value['text']
+                dim += value['text'];
             })
-            return $scope.currentFunction + '(' + $scope.currentMetric + '{' + dim + '}) ' + $scope.currentComparator + ' ' + $scope.currentThreshold;
+            return $scope.currentFunction
+                    + '('
+                    + $scope.currentMetric
+                    + '{' + dim + '}'
+                    + ($scope.currentIsDeterministic ? ',deterministic' : '')
+                    + ') '
+                    + $scope.currentComparator
+                    + ' '
+                    + $scope.currentThreshold;
         }
         $scope.formatMatchBy = function() {
             var dimNames = {}
@@ -233,6 +242,18 @@ angular.module('monitoring.controllers', [])
             $scope.saveDimension();
         }
 
+        $scope.$on('$destroy', (function() {
+            var detWatcher = $scope.$watch('currentIsDeterministic', function detWatcher(newValue, oldValue) {
+                if(newValue != oldValue){
+                    $scope.$emit('mon_deterministic_changed', newValue);
+                }
+            });
+            return function() {
+                // destroy watchers
+                detWatcher();
+            }
+        }()));
+
         function uniqueNames(input, key) {
             var unique = {};
             var uniqueList = [];
@@ -247,7 +268,7 @@ angular.module('monitoring.controllers', [])
     }])
     .controller('alarmNotificationFieldController', NotificationField);
 
-function NotificationField(){
+function NotificationField($rootScope) {
 
     var vm = this;
     var allOptions = {};
@@ -258,6 +279,7 @@ function NotificationField(){
         model:null,
         options:[]
     };
+    vm.isDeterministic = false;
 
 
     vm.init = function(data){
@@ -283,6 +305,8 @@ function NotificationField(){
         }
         vm.select.model = null;
     };
+
+    $rootScope.$on('mon_deterministic_changed', onDeterministicChange)
 
     function prepareNotify(item){
         var selected = item[7]
@@ -313,9 +337,19 @@ function NotificationField(){
             }
          }
     }
+
+    function onDeterministicChange(event, isDeterministic) {
+        vm.isDeterministic = isDeterministic;
+        if (isDeterministic && (vm.list && vm.list.length)) {
+            // if something is set already remove those choices
+            angular.forEach(vm.list, function(item) {
+                item.undetermined = !isDeterministic;
+            });
+        }
+    }
 }
 
-NotificationField.$inject = [];
+NotificationField.$inject = ['$rootScope'];
 
 angular.module('monitoring.filters', [])
     .filter('spacedim', function () {
