@@ -152,6 +152,7 @@ angular.module('monitoring.controllers', [])
         $scope.currentFunction = "max";
         $scope.currentComparator = ">";
         $scope.currentThreshold = 0;
+        $scope.currentIsDeterministic = false;
         $scope.matchingMetrics= [];
         $scope.tags = [];
         $scope.possibleDimensions = function(query) {
@@ -181,7 +182,7 @@ angular.module('monitoring.controllers', [])
             $scope.saveDimension();
         }
         $scope.saveExpression = function() {
-            $('#dimension').val($scope.formatDimension());
+            $('#expression').val($scope.formatDimension());
         }
         $scope.saveDimension = function() {
             $scope.saveExpression();
@@ -207,14 +208,22 @@ angular.module('monitoring.controllers', [])
             $('#match').val($scope.formatMatchBy());
         }
         $scope.formatDimension = function() {
-            var dim = ''
+            var dim = '';
             angular.forEach($scope.tags, function(value, key) {
                 if (dim.length) {
-                    dim += ','
+                    dim += ',';
                 }
-                dim += value['text']
+                dim += value['text'];
             })
-            return $scope.currentFunction + '(' + $scope.currentMetric + '{' + dim + '}) ' + $scope.currentComparator + ' ' + $scope.currentThreshold;
+            return $scope.currentFunction
+                    + '('
+                    + $scope.currentMetric
+                    + '{' + dim + '}'
+                    + ($scope.currentIsDeterministic ? ',deterministic' : '')
+                    + ') '
+                    + $scope.currentComparator
+                    + ' '
+                    + $scope.currentThreshold;
         }
         $scope.formatMatchBy = function() {
             var dimNames = {}
