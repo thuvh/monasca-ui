@@ -3,8 +3,8 @@ from django.utils.translation import ugettext_lazy as _
 
 # Service group names (global across all projects):
 MONITORING_SERVICES_GROUPS = [
-    {'name': _('OpenStack Services'), 'groupBy': 'service'},
-    {'name': _('Servers'), 'groupBy': 'hostname'}
+    {'name': 'OpenStack Services', 'groupBy': 'service'},
+    {'name': 'Servers', 'groupBy': 'hostname'}
 ]
 
 # Services being monitored

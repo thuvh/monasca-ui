@@ -191,7 +191,7 @@ def generate_status(request):
         service_alarms = alarms_by_service.setdefault(service, [])
         service_alarms.append(a)
     for row in get_monitoring_services(request):
-        row['name'] = unicode(row['name'])
+        row['name'] = unicode(_(row['name']))
         if 'groupBy' in row:
             alarms_by_group = {}
             for a in alarms:
