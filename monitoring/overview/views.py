@@ -14,6 +14,7 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+import copy
 import json
 import logging
 import urllib
@@ -190,8 +191,9 @@ def generate_status(request):
         service = alarm_tables.get_service(a)
         service_alarms = alarms_by_service.setdefault(service, [])
         service_alarms.append(a)
-    for row in get_monitoring_services(request):
-        row['name'] = unicode(row['name'])
+    monitoring_services = copy.deepcopy(get_monitoring_services(request))
+    for row in monitoring_services:
+        row['name'] = unicode(_(row['name']))
         if 'groupBy' in row:
             alarms_by_group = {}
             for a in alarms:
@@ -215,7 +217,7 @@ def generate_status(request):
                 service['class'] = get_status(service_alarms)
                 service['icon'] = get_icon(service['class'])
                 service['display'] = unicode(service['display'])
-    return get_monitoring_services(request)
+    return monitoring_services
 
 
 class IndexView(TemplateView):
