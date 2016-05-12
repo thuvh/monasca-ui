@@ -22,6 +22,30 @@
       "revId": "271b4718317a83a5e5a7a29ce0ffee5ec1ccbb79",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dab17558_9687f35f",
+        "filename": "monitoring/config/local_settings.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 17331
+      },
+      "writtenOn": "2016-05-12T05:21:54Z",
+      "side": 1,
+      "message": "Can I confirm your intention?\nYou mean that \u0027OpenStack Services\u0027 should be changed to (\u0027OpenStack Services\u0027)? (only eliminate \"_\")\nIn python, parentheses means tuple.\nI tested it with the only parentheses, but it didn\u0027t work.\nI could change English to Japanese, but these words cannot be changed Japanese to English.\nCould you test it?",
+      "parentUuid": "dab17558_9b171ca2",
+      "range": {
+        "startLine": 6,
+        "startChar": 13,
+        "endLine": 6,
+        "endChar": 33
+      },
+      "revId": "271b4718317a83a5e5a7a29ce0ffee5ec1ccbb79",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
