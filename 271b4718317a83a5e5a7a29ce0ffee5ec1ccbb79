@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dab17558_9b171ca2",
+        "filename": "monitoring/config/local_settings.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 18286
+      },
+      "writtenOn": "2016-05-12T04:50:51Z",
+      "side": 1,
+      "message": "I think eliminating brackets will cause these words are out of translation target. So I think it is better to remain brackets.",
+      "range": {
+        "startLine": 6,
+        "startChar": 13,
+        "endLine": 6,
+        "endChar": 33
+      },
+      "revId": "271b4718317a83a5e5a7a29ce0ffee5ec1ccbb79",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
