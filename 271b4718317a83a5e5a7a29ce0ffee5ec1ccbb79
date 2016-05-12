@@ -70,6 +70,30 @@
       "revId": "271b4718317a83a5e5a7a29ce0ffee5ec1ccbb79",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dab17558_f1dbe94c",
+        "filename": "monitoring/config/local_settings.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 18286
+      },
+      "writtenOn": "2016-05-12T06:21:55Z",
+      "side": 1,
+      "message": "I mean brackets includes _(). Sorry for my short explanation.\nOut of translation target means when creating django.pot from source files. If you eliminate _(), in future it will not be able to translate these words.",
+      "parentUuid": "dab17558_161e630b",
+      "range": {
+        "startLine": 6,
+        "startChar": 13,
+        "endLine": 6,
+        "endChar": 33
+      },
+      "revId": "271b4718317a83a5e5a7a29ce0ffee5ec1ccbb79",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
