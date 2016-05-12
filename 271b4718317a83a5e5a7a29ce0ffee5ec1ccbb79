@@ -46,6 +46,30 @@
       "revId": "271b4718317a83a5e5a7a29ce0ffee5ec1ccbb79",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dab17558_161e630b",
+        "filename": "monitoring/config/local_settings.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 20033
+      },
+      "writtenOn": "2016-05-12T05:30:21Z",
+      "side": 1,
+      "message": "\"_\" it is a method name imported in line 2:\n   from django.utils.translation import ugettext_laxy as _\nSo you should use this method with parameter \"OpenStack \nService\" to this words could be translated.",
+      "parentUuid": "dab17558_9687f35f",
+      "range": {
+        "startLine": 6,
+        "startChar": 13,
+        "endLine": 6,
+        "endChar": 33
+      },
+      "revId": "271b4718317a83a5e5a7a29ce0ffee5ec1ccbb79",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
