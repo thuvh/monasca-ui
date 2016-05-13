@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dab17558_87475176",
+        "filename": "monitoring/alarmdefs/forms.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 15359
+      },
+      "writtenOn": "2016-05-13T23:27:22Z",
+      "side": 1,
+      "message": "Just because of python3 compatibility, I\u0027d suggest that you use \u0027if id in selected:\u0027 instead of \u0027if id in selected.keys():\u0027\n\nReference: https://wiki.openstack.org/wiki/Python3#Common_patterns",
+      "range": {
+        "startLine": 87,
+        "startChar": 30,
+        "endLine": 87,
+        "endChar": 34
+      },
+      "revId": "82a7a1e71ee66c30109128cea408a566ed3f83c4",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
