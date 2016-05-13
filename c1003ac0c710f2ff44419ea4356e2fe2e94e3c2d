@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dab17558_330379ba",
+        "filename": "monitoring/alarmdefs/templates/alarmdefs/expression_field.html",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-05-13T06:46:59Z",
+      "side": 0,
+      "message": "Was it unused ? Why did you remove it ?",
+      "range": {
+        "startLine": 4,
+        "startChar": 24,
+        "endLine": 4,
+        "endChar": 25
+      },
+      "revId": "c1003ac0c710f2ff44419ea4356e2fe2e94e3c2d",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
