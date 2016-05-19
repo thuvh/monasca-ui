@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bab6814e_72f5edc9",
+        "filename": "monitoring/locale/ja/LC_MESSAGES/django.po",
+        "patchSetId": 4
+      },
+      "lineNbr": 471,
+      "author": {
+        "id": 18286
+      },
+      "writtenOn": "2016-05-19T06:38:49Z",
+      "side": 1,
+      "message": "I think this word has different nuance.\nSo I propose \"不定\" instead of \"未決定\".",
+      "range": {
+        "startLine": 471,
+        "startChar": 8,
+        "endLine": 471,
+        "endChar": 11
+      },
+      "revId": "e3ef29322f7e1be0141a51acc4f882b1a2908b35",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
