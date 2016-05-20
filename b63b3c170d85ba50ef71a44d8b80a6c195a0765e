@@ -1,0 +1,9 @@
+Code-Review+1: Koji Nakazono <nakazono_0507@jp.fujitsu.com>
+Code-Review+2: Roland Hochmuth <roland.hochmuth@hp.com>
+Workflow+1: Roland Hochmuth <roland.hochmuth@hp.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Fri, 20 May 2016 04:21:11 +0000
+Reviewed-on: https://review.openstack.org/314823
+Project: openstack/monasca-ui
+Branch: refs/heads/master
