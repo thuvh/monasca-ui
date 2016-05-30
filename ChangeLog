@@ -1,8 +1,23 @@
 CHANGES
 =======
 
+* Restrict access to Kibana for admin
+* Do not filter with empty alarm id
+* Add support of alarm actions of notification
+* FIX the translation for overview page
+* Missing Grafana buttons
+* Imported Translations from Zanata
+* Fix grafana2 link of alarms
+* FIX the grafana link from alarm table
+* Fix compiling messages for i18n
 * Updates for grafana 2
+
+1.0.31
+------
+
+* Remove non license text from license header
 * Dump thresholds as JSON, not python repr()
+* Support dimensions that multibyte characters are contained
 * Fix pagination of alarm_definitions and alarms
 
 1.0.30
@@ -136,7 +151,7 @@ CHANGES
 * Outputting common dimensions for multiple metrics
 * Added a button for the Monasca Health dashboard https://blueprints.launchpad.net/monasca/+spec/monitoring-of-monitoring
 * Fix filter action logic to allow server side filtering in future
-* Fixed a dead link in the documentation to alarm expressions. Changed it to the github repo docs
+* Fixed a dead link in the documentation to alarm expressions.  Changed it to the github repo docs
 * Remove some old unused code
 
 1.0.19
