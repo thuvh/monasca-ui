@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9abb7d3a_9ceb0478",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 379,
+      "author": {
+        "id": 21922
+      },
+      "writtenOn": "2016-05-31T12:19:08Z",
+      "side": 1,
+      "message": "Does it really need to be Error level log?\nMaybe Warning level would be sufficient, it does not need immediate administrator investigation. Access was blocked so no problem from server point of view.",
+      "range": {
+        "startLine": 379,
+        "startChar": 0,
+        "endLine": 379,
+        "endChar": 32
+      },
+      "revId": "b418fcb3153cea98d1cfb6f9fbd497ba4e179bef",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
