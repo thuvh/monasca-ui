@@ -22,6 +22,30 @@
       "revId": "b418fcb3153cea98d1cfb6f9fbd497ba4e179bef",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abb7d3a_1b6c27cf",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 379,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-05-31T16:45:26Z",
+      "side": 1,
+      "message": "HTTPError - 403 - thus error from my POV.\nHowever, it seems like error might be too much.",
+      "parentUuid": "9abb7d3a_9ceb0478",
+      "range": {
+        "startLine": 379,
+        "startChar": 0,
+        "endLine": 379,
+        "endChar": 32
+      },
+      "revId": "b418fcb3153cea98d1cfb6f9fbd497ba4e179bef",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
