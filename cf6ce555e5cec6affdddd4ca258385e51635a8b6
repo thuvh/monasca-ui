@@ -22,6 +22,53 @@
       "revId": "cf6ce555e5cec6affdddd4ca258385e51635a8b6",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7aa08908_5ccd9f5c",
+        "filename": "monitoring/alarmdefs/templates/alarmdefs/_create.html",
+        "patchSetId": 7
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2016-06-09T14:32:00Z",
+      "side": 1,
+      "message": "Could you place that information as the tooltip for the checkbox? I don\u0027t think it fits well here.",
+      "parentUuid": "7aa08908_e3479075",
+      "range": {
+        "startLine": 22,
+        "startChar": 6,
+        "endLine": 23,
+        "endChar": 40
+      },
+      "revId": "cf6ce555e5cec6affdddd4ca258385e51635a8b6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7aa08908_9c51c7db",
+        "filename": "monitoring/alarmdefs/templates/alarmdefs/expression_field.html",
+        "patchSetId": 7
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2016-06-09T14:32:00Z",
+      "side": 1,
+      "message": "The dynamic description of the checkbox is misleading. I would expect to see the static description \"deterministic\" and the checkbox unchecked as default.",
+      "range": {
+        "startLine": 39,
+        "startChar": 19,
+        "endLine": 40,
+        "endChar": 95
+      },
+      "revId": "cf6ce555e5cec6affdddd4ca258385e51635a8b6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
