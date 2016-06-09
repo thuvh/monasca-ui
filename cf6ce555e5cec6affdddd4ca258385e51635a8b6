@@ -69,6 +69,30 @@
       "revId": "cf6ce555e5cec6affdddd4ca258385e51635a8b6",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7aa08908_6d1c1814",
+        "filename": "monitoring/alarmdefs/templates/alarmdefs/expression_field.html",
+        "patchSetId": 7
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 15359
+      },
+      "writtenOn": "2016-06-09T17:36:15Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "7aa08908_9c51c7db",
+      "range": {
+        "startLine": 39,
+        "startChar": 19,
+        "endLine": 40,
+        "endChar": 95
+      },
+      "revId": "cf6ce555e5cec6affdddd4ca258385e51635a8b6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
