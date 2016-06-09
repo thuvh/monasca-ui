@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7aa08908_e3479075",
+        "filename": "monitoring/alarmdefs/templates/alarmdefs/_create.html",
+        "patchSetId": 7
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2016-06-09T13:15:45Z",
+      "side": 1,
+      "message": "I would suggest:\n\n\"\u0027Deterministic\u0027 alarms never enter UNDETERMINED state.\"",
+      "range": {
+        "startLine": 22,
+        "startChar": 6,
+        "endLine": 23,
+        "endChar": 40
+      },
+      "revId": "cf6ce555e5cec6affdddd4ca258385e51635a8b6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
