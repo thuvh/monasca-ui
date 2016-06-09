@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "7aa08908_4f166656",
+        "filename": "monitoring/alarmdefs/templates/alarmdefs/_create.html",
+        "patchSetId": 7
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-06-09T21:43:37Z",
+      "side": 1,
+      "message": "I am not sure that\u0027s possible or rather I am not sure if that\u0027s easy to implement. In Django (or Horizon) forms we can add tooltips to each widget (i.e. text field, number picker) telling what value there means. However entire expression is considered a widget even though it is composed from several fields.",
+      "parentUuid": "7aa08908_5ccd9f5c",
+      "range": {
+        "startLine": 22,
+        "startChar": 6,
+        "endLine": 23,
+        "endChar": 40
+      },
+      "revId": "cf6ce555e5cec6affdddd4ca258385e51635a8b6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7aa08908_9c51c7db",
         "filename": "monitoring/alarmdefs/templates/alarmdefs/expression_field.html",
         "patchSetId": 7
@@ -84,6 +108,30 @@
       "side": 1,
       "message": "+1",
       "parentUuid": "7aa08908_9c51c7db",
+      "range": {
+        "startLine": 39,
+        "startChar": 19,
+        "endLine": 40,
+        "endChar": 95
+      },
+      "revId": "cf6ce555e5cec6affdddd4ca258385e51635a8b6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7aa08908_f21c596c",
+        "filename": "monitoring/alarmdefs/templates/alarmdefs/expression_field.html",
+        "patchSetId": 7
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-06-09T21:43:37Z",
+      "side": 1,
+      "message": "Yeah, I think that\u0027s actually true that it is misleading. But at least it looks cool :)",
+      "parentUuid": "7aa08908_6d1c1814",
       "range": {
         "startLine": 39,
         "startChar": 19,
