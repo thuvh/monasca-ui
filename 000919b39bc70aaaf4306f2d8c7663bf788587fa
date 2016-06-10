@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "7aa08908_b5810292",
+        "filename": "monitoring/static/monitoring/js/controllers.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 18286
+      },
+      "writtenOn": "2016-06-10T10:49:00Z",
+      "side": 1,
+      "message": "Oops, I found words which is \"resembles ES6 style\" in AngularJS.\nSo as you mentioned, it is able to write like \"return $q(function(resolve, reject) {})\".",
+      "parentUuid": "7aa08908_5acc4d61",
+      "range": {
+        "startLine": 179,
+        "startChar": 30,
+        "endLine": 179,
+        "endChar": 35
+      },
+      "revId": "000919b39bc70aaaf4306f2d8c7663bf788587fa",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7aa08908_e0abd1d4",
         "filename": "monitoring/static/monitoring/js/controllers.js",
         "patchSetId": 1
