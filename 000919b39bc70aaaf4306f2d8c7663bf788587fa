@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "7aa08908_da2e7d41",
+        "filename": "monitoring/static/monitoring/js/controllers.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 18286
+      },
+      "writtenOn": "2016-06-10T10:16:01Z",
+      "side": 1,
+      "message": "Yes it does.\nI tested ES6 style that you mentioned above, and it works.\nBut I don\u0027t know applying ES6 style is correct.\nSo I leave code as it is.",
+      "parentUuid": "7aa08908_e06471e6",
+      "range": {
+        "startLine": 179,
+        "startChar": 30,
+        "endLine": 179,
+        "endChar": 35
+      },
+      "revId": "000919b39bc70aaaf4306f2d8c7663bf788587fa",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7aa08908_e0abd1d4",
         "filename": "monitoring/static/monitoring/js/controllers.js",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2016-06-10T07:05:21Z",
       "side": 1,
       "message": "Wouldn\u0027t be possible to use single loop here ?",
+      "range": {
+        "startLine": 189,
+        "startChar": 20,
+        "endLine": 189,
+        "endChar": 27
+      },
+      "revId": "000919b39bc70aaaf4306f2d8c7663bf788587fa",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7aa08908_e93619b3",
+        "filename": "monitoring/static/monitoring/js/controllers.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 18286
+      },
+      "writtenOn": "2016-06-10T10:16:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7aa08908_e0abd1d4",
       "range": {
         "startLine": 189,
         "startChar": 20,
