@@ -25,6 +25,7 @@ from django.views.generic import TemplateView  # noqa
 from horizon import exceptions
 from horizon import forms
 from horizon import tables
+from horizon import workflows
 
 import monascaclient.exc as exc
 from monitoring.alarmdefs import constants
@@ -108,21 +109,22 @@ class IndexView(tables.DataTableView):
         return context
 
 
-class AlarmCreateView(forms.ModalFormView):
-    form_class = alarm_forms.CreateAlarmForm
-    template_name = constants.TEMPLATE_PREFIX + 'create.html'
+class AlarmCreateView(workflows.WorkflowView):
+    workflow_class = alarm_forms.CreateAlarmWorkflow
 
-    def get_context_data(self, **kwargs):
-        context = super(AlarmCreateView, self).get_context_data(**kwargs)
-        context["cancel_url"] = self.get_success_url()
-        context["action_url"] = reverse(constants.URL_PREFIX + 'alarm_create',
-                                        args=())
-        metrics = api.monitor.metrics_list(self.request)
-
-        context["metrics"] = json.dumps(metrics)
+    def get_initial(self):
+        context = super(AlarmCreateView, self).get_initial()
+        context['cancel_url'] = self.get_success_url()
+        context['action_url'] = self.get_action_url()
         return context
 
-    def get_success_url(self):
+    @staticmethod
+    def get_action_url():
+        return reverse(constants.URL_PREFIX + 'alarm_create',
+                       args=())
+
+    @staticmethod
+    def get_success_url():
         return reverse_lazy(constants.URL_PREFIX + 'index',
                             args=())
 
