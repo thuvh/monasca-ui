@@ -25,7 +25,7 @@ class AlarmDefinitionsTest(helpers.TestCase):
             self.assertEqual(mock.alarmdef_list.call_count, 2)
 
         self.assertTemplateUsed(
-            res, 'monitoring/alarmdefs/alarm.html')
+            res, 'horizon/common/_workflow_base.html')
 
     def test_alarmdefs_create(self):
         with patch('monitoring.api.monitor', **{
