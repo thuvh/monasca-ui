@@ -1,0 +1,19 @@
+{% load i18n %}
+
+{% block help_message %}
+ <div>
+    <p>{% blocktrans %}
+      The Name field is used to identify the alarm definition.
+    {% endblocktrans %}</p>
+    <p>{% blocktrans %}
+      The Expression field  which if true, triggers a notification to be sent.
+    {% endblocktrans %}</p>
+    <p>{% blocktrans %}
+      The Notifications field contains the list of Notifications that should be sent when transitioning to another ALARM state.
+    {% endblocktrans %}</p>
+    <p>{% blocktrans %}
+      The deterministic alarms never enter UNDETERMINED state.
+      Use them for metrics that are received sporadically.
+    {% endblocktrans %}</p>
+ </div>
+{% endblock %}
