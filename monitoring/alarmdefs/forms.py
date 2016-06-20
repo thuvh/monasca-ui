@@ -17,34 +17,74 @@
 import json
 from itertools import chain
 
+from django.core.urlresolvers import reverse_lazy
 from django.template.loader import get_template
 from django.template import Context
 from django.utils.translation import ugettext as _  # noqa
+from django.views.decorators.debug import sensitive_variables  # noqa
 
 from horizon import exceptions
 from horizon import forms
 from horizon import messages
+from horizon import workflows
+from horizon.utils import memoized
 
 from monitoring import api
 from monitoring.alarmdefs import constants
 
 
+def _get_metrics(request):
+    metrics = api.monitor.metrics_list(request)
+    return json.dumps(metrics)
+
+
+def _get_notifications(request):
+    notifications = api.monitor.notification_list(request)
+    return [(notification['id'],
+             notification['name'],
+             notification['type'],
+             notification['address'])
+            for notification in notifications]
+
+
 class ExpressionWidget(forms.Widget):
+
+    func = json.dumps(
+        [('min', _('min')), ('max', _('max')), ('sum', _('sum')),
+         ('count', _('count')), ('avg', _('avg'))])
+    comparators = [['>', '>'], ['>=', '>='], ['<', '<'], ['<=', '<=']]
+    operators = json.dumps([('AND', _('AND')), ('OR', _('OR'))])
+
     def __init__(self, initial, attrs=None):
         super(ExpressionWidget, self).__init__(attrs)
         self.initial = initial
 
-    def render(self, name, value, attrs):
+    def render(self, name, value, attrs=None):
         final_attrs = self.build_attrs(attrs, name=name)
         t = get_template(constants.TEMPLATE_PREFIX + 'expression_field.html')
-        func = json.dumps([('min', _('min')), ('max', _('max')), ('sum', _('sum')),
-        ('count', _('count')), ('avg', _('avg'))])
-        comparators = [['>', '>'], ['>=', '>='], ['<', '<'], ['<=', '<=']]
 
-        local_attrs = {'service': '', 'func': func, 'comparators': comparators}
+        local_attrs = {
+            'service': '',
+            'func': ExpressionWidget.func,
+            'comparators': ExpressionWidget.comparators,
+            'operators': ExpressionWidget.operators,
+            'metrics': self.metrics
+        }
+
         local_attrs.update(final_attrs)
-        context = Context(local_attrs)
-        return t.render(context)
+
+        return t.render(Context(local_attrs))
+
+
+class ExpressionField(forms.CharField):
+
+    def _get_metrics(self):
+        return self._metrics
+
+    def _set_metrics(self, value):
+        self._metrics = self.widget.metrics = value
+
+    metrics = property(_get_metrics, _set_metrics)
 
 
 class MatchByWidget(forms.Widget):
@@ -52,7 +92,7 @@ class MatchByWidget(forms.Widget):
         super(MatchByWidget, self).__init__(attrs)
         self.initial = initial
 
-    def render(self, name, value, attrs):
+    def render(self, name, value, attrs=None):
         final_attrs = self.build_attrs(attrs, name=name)
         t = get_template(constants.TEMPLATE_PREFIX + 'match_by_field.html')
 
@@ -114,7 +154,13 @@ class NotificationCreateWidget(forms.Select):
         return [{"id": _id} for _id in data.getlist(name)]
 
 
-class BaseAlarmForm(forms.SelfHandlingForm):
+class EditAlarmForm(forms.SelfHandlingForm):
+
+    def __init__(self, request, *args, **kwargs):
+        super(EditAlarmForm, self).__init__(request, *args, **kwargs)
+        self._init_fields(readOnly=False)
+        self.set_notification_choices(request)
+
     @classmethod
     def _instantiate(cls, request, *args, **kwargs):
         return cls(request, *args, **kwargs)
@@ -210,41 +256,6 @@ class BaseAlarmForm(forms.SelfHandlingForm):
         # not.
         return data
 
-
-class CreateAlarmForm(BaseAlarmForm):
-    def __init__(self, request, *args, **kwargs):
-        super(CreateAlarmForm, self).__init__(request, *args, **kwargs)
-        super(CreateAlarmForm, self)._init_fields(readOnly=False, create=True,
-                                                  initial=kwargs['initial'])
-        super(CreateAlarmForm, self).set_notification_choices(request)
-
-    def handle(self, request, data):
-        try:
-            api.monitor.alarmdef_create(
-                request,
-                name=data['name'],
-                expression=data['expression'],
-                description=data['description'],
-                severity=data['severity'],
-                match_by=data['match_by'].split(',') if data['match_by'] else [],
-                alarm_actions=data['alarm_actions'],
-                ok_actions=data['ok_actions'],
-                undetermined_actions=data['undetermined_actions'],
-            )
-            messages.success(request,
-                             _('Alarm Definition has been created successfully.'))
-        except Exception as e:
-            exceptions.handle(request, _('Unable to create the alarm definition: %s') % e)
-            return False
-        return True
-
-
-class EditAlarmForm(BaseAlarmForm):
-    def __init__(self, request, *args, **kwargs):
-        super(EditAlarmForm, self).__init__(request, *args, **kwargs)
-        super(EditAlarmForm, self)._init_fields(readOnly=False)
-        super(EditAlarmForm, self).set_notification_choices(request)
-
     def handle(self, request, data):
         try:
             alarm_def = api.monitor.alarmdef_get(request, self.initial['id'])
@@ -266,4 +277,199 @@ class EditAlarmForm(BaseAlarmForm):
         except Exception as e:
             exceptions.handle(request, _('%s') % e)
             return False
+        return True
+
+
+class SetAlarmNotificationsAction(workflows.Action):
+
+    notifications = NotificationField(
+        label=_('Notifications'),
+        required=False,
+        widget=NotificationCreateWidget(),
+        help_text=_('Notification methods. '
+                    'Notifications can be sent when an alarm '
+                    'state transition occurs.'))
+
+    alarm_actions = NotificationField(
+        label=_("Alarm Actions"),
+        required=False,
+        widget=forms.MultipleHiddenInput()
+    )
+    ok_actions = NotificationField(
+        label=_("OK Actions"),
+        required=False,
+        widget=forms.MultipleHiddenInput()
+    )
+    undetermined_actions = NotificationField(
+        label=_("Undetermined Actions"),
+        required=False,
+        widget=forms.MultipleHiddenInput()
+    )
+
+    class Meta(object):
+        name = _('Notifications')
+
+    def __init__(self, request, context, *args, **kwargs):
+        super(SetAlarmNotificationsAction, self).__init__(
+            request, context, *args, **kwargs
+        )
+        try:
+            notifications = _get_notifications(request)
+            self.fields['notifications'].choices = notifications
+        except Exception as e:
+            exceptions.handle(request,
+                              _('Unable to retrieve notifications: %s') % e)
+
+
+_SEVERITY_CHOICES = [("LOW", _("Low")),
+                     ("MEDIUM", _("Medium")),
+                     ("HIGH", _("High")),
+                     ("CRITICAL", _("Critical"))]
+
+
+class SetAlarmDefinitionAction(workflows.Action):
+    name = forms.CharField(label=_('Name'),
+                           required=True,
+                           max_length=250,
+                           help_text=_('An unique name of the alarm.'))
+
+    description = forms.CharField(label=_('Description'),
+                                  required=False,
+                                  help_text=_('A description of an alarm.'))
+
+    severity = forms.ChoiceField(label=_('Severity'),
+                                 choices=_SEVERITY_CHOICES,
+                                 initial=_SEVERITY_CHOICES[0],
+                                 widget=forms.SelectWidget,
+                                 required=False,
+                                 help_text=_('Severity of an alarm. Must be '
+                                             'either LOW, MEDIUM, HIGH '
+                                             'or CRITICAL. Default is LOW.'))
+
+    class Meta(object):
+        name = _('Details')
+        help_text_template = ("monitoring/alarmdefs/"
+                              "_create_ad_details_help.html")
+
+    def clean(self):
+        cleaned_data = super(SetAlarmDefinitionAction, self).clean()
+
+        alarm_def_name = cleaned_data.get('name', '')
+        is_name_valid = self._is_alarm_def_name_unique_validator(alarm_def_name)
+        if not is_name_valid:
+            self.add_error('name',
+                           _('Alarm definition with %s name already exists'
+                             % alarm_def_name))
+
+    def _is_alarm_def_name_unique_validator(self, value):
+        try:
+            ret = self._get_alarm_def_by_name(value)
+            return not (ret and len(ret))
+        except Exception as ex:
+            exceptions.handle(request=self.request,
+                              message=_('Failed to validate name'),
+                              ignore=True)
+        return True
+
+    @memoized.memoized_method
+    def _get_alarm_def_by_name(self, value):
+        return api.monitor.alarmdef_get_by_name(self.request, value)
+
+
+class SetAlarmDefinitionExpressionAction(workflows.Action):
+    expression = ExpressionField(label=_("Expression"),
+                                 required=True,
+                                 widget=ExpressionWidget(''),
+                                 help_text=_(
+                                             'An alarm expression.'))
+
+    match_by = forms.CharField(label=_('Match by'),
+                               required=False,
+                               widget=MatchByWidget(''),
+                               help_text=_('The metric dimensions used '
+                                           'to create unique alarms.'))
+
+    class Meta(object):
+        name = _('Expression')
+
+    def __init__(self, request, context, *args, **kwargs):
+        super(SetAlarmDefinitionExpressionAction, self).__init__(request,
+                                                                 context,
+                                                                 *args,
+                                                                 **kwargs)
+
+        try:
+            self.fields['expression'].metrics = _get_metrics(request)
+        except Exception as ex:
+            exceptions.handle(request, _('Unable to retrieve metrics'))
+
+
+class CreateAlarmWorkflowStepDetail(workflows.Step):
+    action_class = SetAlarmDefinitionAction
+    contributes = ('name', 'description', 'severity')
+
+
+class CreateAlarmWorkflowStepExpression(workflows.Step):
+    action_class = SetAlarmDefinitionExpressionAction
+    contributes = ('expression', 'match_by')
+    template_name = 'monitoring/alarmdefs/expression_step.html'
+
+    def contribute(self, data, context):
+        context = (super(CreateAlarmWorkflowStepExpression, self)
+                   .contribute(data, context))
+
+        if 'expression' in data and data['expression']:
+            context['expression'] = data['expression'].strip()
+
+        if 'match_by' in data and data['match_by']:
+            context['match_by'] = context['match_by'].split(',')
+        else:
+            context['match_by'] = []
+
+        return context
+
+
+class CreateAlarmWorkflowStepNotifications(workflows.Step):
+    action_class = SetAlarmNotificationsAction
+    contributes = ('alarm_actions', 'ok_actions', 'undetermined_actions')
+
+
+class CreateAlarmWorkflow(workflows.Workflow):
+    slug = 'create_alarm_definition'
+    name = _('Create Alarm Definition')
+    finalize_button_name = _('Create Alarm Definition')
+    success_message = _('Alarm definition %s has been created')
+    failure_message = _('Unable to create alarm definition %s')
+    success_url = constants.URL_PREFIX + 'index'
+    wizard = True
+    default_steps = (
+        CreateAlarmWorkflowStepDetail,
+        CreateAlarmWorkflowStepExpression,
+        CreateAlarmWorkflowStepNotifications
+    )
+
+    def format_status_message(self, message):
+        name = self.context.get('name', _('Unknown name'))
+        return message % name
+
+    @sensitive_variables('alarm_actions',
+                         'ok_actions',
+                         'undetermined_actions')
+    def handle(self, request, context):
+        try:
+            api.monitor.alarmdef_create(
+                request,
+                name=context['name'],
+                expression=context['expression'],
+                description=context['description'],
+                severity=context['severity'],
+                match_by=context['match_by'],
+                alarm_actions=context['alarm_actions'],
+                ok_actions=context['ok_actions'],
+                undetermined_actions=context['undetermined_actions'],
+            )
+        except Exception as e:
+            exceptions.handle(request, e, escalate=True)
+            return False
+
         return True
