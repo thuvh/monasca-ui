@@ -1,0 +1,30 @@
+.alarm-expression {
+
+    .row {
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+
+    .alarm-sub-expression {
+
+        margin-top: 5px;
+        margin-bottom: 5px;
+
+        .expression-details {
+            margin-bottom: 5px;
+
+            div {
+               padding-left: 2px;
+               padding-right: 2px;
+            }
+        }
+
+    }
+
+    .expression-preview {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+}
