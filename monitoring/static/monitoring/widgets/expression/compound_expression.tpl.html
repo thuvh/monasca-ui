@@ -1,0 +1,70 @@
+<div class="alarm-expression container-fluid">
+
+    <input name="expression"
+           id="expression"
+           ng-model="vm.expression"
+           class="hidden">
+
+    <div class="row center-block">
+        <pre>{{ vm.expression }}</pre>
+    </div>
+
+    <div class="row center-block">
+        <div class="compound-expression" ng-if="vm.metrics.length" ng-cloak>
+            <div class="row" ng-repeat="expr in vm.subExpressions track by $index">
+                <!-- :: one time binding -->
+                <div class="col-lg-11">
+                    <div class="row expression-details" ng-if="$index > 0">
+                        <select class="form-control"
+                                title="{$ 'Operators'|translate $}"
+                                aria-label="{$ 'Operators'|translate $}"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                ng-required="yes"
+                                ng-model="vm.connections[$index]"
+                                ng-options="f[0] as f[1] for f in vm.operators"
+                                ng-change="vm.touch()"></select>
+                    </div>
+                    <mon-alarm-expression metrics="vm.metrics"
+                                  functions="::vm.functions"
+                                  comparators="::vm.comparators"
+                                  sub-expression="vm.subExpressions[$index]"
+                                  ng-cloak></mon-alarm-expression>
+                </div>
+                <div class="col-lg-1">
+                    <button tabindex="0"
+                            class="btn btn-default btn-xs btn-block"
+                            ng-disabled="$index === 0"
+                            ng-click="vm.reorderExpression($event, $index, $index - 1)">
+                        <span class="fa fa-chevron-up"></span>
+                    </button>
+                    <button tabindex="1"
+                            class="btn btn-default btn-xs btn-block"
+                            ng-click="vm.addExpression($event)">
+                        <span class="fa fa-plus"></span>
+                    </button>
+                    <button tabindex="2"
+                            class="btn btn-default btn-xs btn-block"
+                            ng-disabled="vm.subExpressions.length === 1"
+                            ng-click="vm.removeExpression($event, $index)">
+                        <span class="fa fa-minus"></span>
+                    </button>
+                    <button tabindex="3"
+                            class="btn btn-default btn-xs btn-block"
+                            ng-disabled="$index === vm.subExpressions.length - 1"
+                            ng-click="vm.reorderExpression($event, $index, $index + 1)">
+                        <span class="fa fa-chevron-down"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert alert-warning"
+             role="alert"
+             ng-if="!vm.metrics.length"
+             translate>
+            No metric available
+        </div>
+    </div>
+
+</div>
