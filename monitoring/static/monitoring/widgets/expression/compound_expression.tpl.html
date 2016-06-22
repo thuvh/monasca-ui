@@ -1,0 +1,25 @@
+<div class="alarm-expression">
+
+    <input name="expression"
+           id="expression"
+           ng-model="vm.expression"
+           class="hidden">
+
+    <div class="compound-expression" ng-if="vm.metrics.length" ng-cloak>
+        <!-- :: one time binding -->
+        <mon-alarm-expression metrics="vm.metrics"
+                              functions="::vm.functions"
+                              comparators="::vm.comparators"
+                              sub-expression="vm.subExpressions[id]"
+                              ng-repeat="(id, expr) in vm.subExpressions track by id | orderBy:'expr.order'"
+                              ng-cloak></mon-alarm-expression>
+    </div>
+
+    <div class="alert alert-warning"
+         role="alert"
+         ng-if="!vm.metrics.length"
+         translate>
+        No metric available
+    </div>
+
+</div>
