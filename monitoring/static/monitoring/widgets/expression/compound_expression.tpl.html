@@ -1,0 +1,60 @@
+<div class="alarm-expression container-fluid">
+
+    <input name="expression"
+           id="expression"
+           ng-model="vm.expression"
+           class="hidden">
+
+    <div class="row center-block">
+        <pre>{{ vm.expression }}</pre>
+    </div>
+
+    <div class="row center-block">
+        <div class="compound-expression" ng-if="vm.metrics.length" ng-cloak>
+            <div class="row" ng-repeat="expr in vm.subExpressions track by $index">
+                <!-- :: one time binding -->
+                <mon-alarm-expression metrics="vm.metrics"
+                              functions="::vm.functions"
+                              comparators="::vm.comparators"
+                              operators="::vm.operators"
+                              sub-expression="vm.subExpressions[$index]"
+                              connectable="$index > 0"
+                              class="col-lg-11"
+                              ng-cloak></mon-alarm-expression>
+                <div class="col-lg-1">
+                    <button tabindex="0"
+                            class="btn btn-default btn-xs btn-block"
+                            ng-disabled="$index === 0"
+                            ng-click="vm.reorderExpression($event, $index, $index - 1)">
+                        <span class="fa fa-chevron-up ng-scope"></span>
+                    </button>
+                    <button tabindex="1"
+                            class="btn btn-default btn-xs btn-block"
+                            ng-click="vm.addExpression($event)">
+                        <span class="fa fa-plus ng-scope"></span>
+                    </button>
+                    <button tabindex="2"
+                            class="btn btn-default btn-xs btn-block"
+                            ng-disabled="vm.subExpressions.length === 1"
+                            ng-click="vm.removeExpression($event, $index)">
+                        <span class="fa fa-minus ng-scope"></span>
+                    </button>
+                    <button tabindex="3"
+                            class="btn btn-default btn-xs btn-block"
+                            ng-disabled="$index === vm.subExpressions.length - 1"
+                            ng-click="vm.reorderExpression($event, $index, $index + 1)">
+                        <span class="fa fa-chevron-down ng-scope"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert alert-warning"
+             role="alert"
+             ng-if="!vm.metrics.length"
+             translate>
+            No metric available
+        </div>
+    </div>
+
+</div>
