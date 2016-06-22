@@ -1,0 +1,14 @@
+<div class="alarm-expression">
+
+    <input type="hidden" name="expression" id="expression" ng-model="vm.expression">
+
+    <div class="compound-expression">
+        <!-- :: one time binding -->
+        <mon-alarm-expression metrics="vm.metrics"
+                              functions="::vm.functions"
+                              comparators="::vm.comparators"
+                              sub-expression="vm.subExpressions[id]"
+                              ng-repeat="(id, expr) in vm.subExpressions track by id | orderBy:'expr.order'"></mon-alarm-expression>
+    </div>
+
+</div>
