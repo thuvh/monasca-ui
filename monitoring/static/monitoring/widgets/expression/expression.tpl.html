@@ -1,0 +1,101 @@
+<div ng-if="vm.preview" class="expression-preview">
+    <span class="text-muted">{{ vm.expression | monExpression }}</span>
+</div>
+<div class="alarm-expression" ng-if="!vm.preview">
+
+    <div class="row expression-details" ng-if="vm.connectable">
+        <select class="form-control"
+                title="{$ 'Operators'|translate $}"
+                aria-label="{$ 'Operators'|translate $}"
+                data-toggle="tooltip"
+                data-placement="right"
+                ng-required="yes"
+                ng-init="vm.expression.op = vm.operators[0][0]"
+                ng-model="vm.expression.op"
+                ng-options="f[0] as f[1] for f in vm.operators"
+                ng-change="vm.touch()"></select>
+    </div>
+
+    <div class="row expression-details">
+        <div class="col-md-2">
+            <select id="function"
+                    class="form-control"
+                    aria-label="{$ 'Function'|translate $}"
+                    title="{$ 'Function'|translate $}"
+                    ng-model="vm.expression.fun"
+                    ng-options="f[0] as f[1] for f in vm.functions"></select>
+        </div>
+        <div class="col-md-6">
+            <select id="metric-chooser"
+                    class="form-control"
+                    aria-label="{$ 'Metric'|translate $}"
+                    title="{$ 'Metric'|translate $}"
+                    ng-model="vm.expression.metric"
+                    ng-options="metric.name for metric in vm.metrics|monUniqueMetric|orderBy:'name'"
+                    ng-change="vm.reset(); vm.onMetricChanged(vm.expression.metric)"></select>
+        </div>
+        <div class="col-md-2">
+            <select class="form-control"
+                    title="{$ 'Comparator'|translate $}"
+                    aria-label="{$ 'Comparator'|translate $}"
+                    data-toggle="tooltip"
+                    data-placement="right"
+                    ng-model="vm.expression.cmp"
+                    ng-options="f[0] as f[1] for f in vm.comparators"></select>
+        </div>
+        <div class="col-md-2">
+            <input type="number"
+                   step="any"
+                   class="form-control"
+                   aria-label="{$ 'Threshold'|translate $}"
+                   title="{$ 'Threshold'|translate $}"
+                   ng-model="vm.expression.threshold"/>
+        </div>
+    </div>
+
+    <div class="row expression-details">
+        <div class="col-md-10">
+            <tags-input id="dimension-chooser"
+                    ng-model="vm.tags"
+                    placeholder="{$ 'Add a dimension'|translate $}"
+                    add-from-autocomplete-only="true"
+                    on-tag-added="vm.onDimensionsUpdated(); vm.updateExpression()"
+                    on-tag-removed="vm.onDimensionsUpdated(); vm.updateExpression()">
+                <auto-complete source="vm.possibleDimensions($query)"
+                               max-results-to-show="30"
+                               min-length="1">
+                </auto-complete>
+            </tags-input>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label id="is-deterministic-expression"
+                       class="btn expression-deterministic"
+                       ng-class="{'btn-primary': vm.expression.deterministic, 'btn-default': !vm.expression.deterministic}"
+                       ng-click="vm.expression.deterministic = !vm.expression.deterministic"
+                       ng-model="vm.expression.deterministic" translate>Deterministic</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row expression-details">
+        <div class="topologyBalloon" id="metrics" style="position:static;display: block;">
+            <div class="contentBody">
+                <table class="detailInfoTable">
+                    <caption translate>Matching Metrics</caption>
+                    <tbody>
+                    <tr>
+                        <th translate>name</th>
+                        <th translate>dimensions</th>
+                    </tr>
+                    <tr ng-repeat="metric in vm.matchingMetrics track by $id(metric)">
+                        <td>{$ metric.name $}</td>
+                        <td style="white-space:normal">{$ metric.dimensions | json $}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
