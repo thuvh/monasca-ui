@@ -1,0 +1,78 @@
+<div class="alarm-expression container-fluid">
+
+    <input id="expression"
+           name="expression"
+           type="hidden">
+
+    <div class="alert alert-warning"
+         role="alert"
+         ng-if="!vm.metrics.length"
+         translate>
+        No metric available
+    </div>
+
+    <div class="row center-block" ng-if="vm.metrics.length">
+
+        <div class="row center-block" ng-if="vm.expression">
+            <pre class="text-primary expression-preview" ng-class="{'expression-valid': vm.expressionValid, 'expression-invalid': !vm.expressionValid}">{{ vm.expression }}</pre>
+        </div>
+
+        <div class="row"
+             ng-repeat="expr in vm.subExpressions track by $id(expr)"
+             ng-cloak>
+            <!-- :: one time binding -->
+            <mon-alarm-sub-expression metrics="vm.metrics"
+                                      functions="::vm.functions"
+                                      comparators="::vm.comparators"
+                                      operators="::vm.operators"
+                                      sub-expression="vm.subExpressions[$index]"
+                                      preview="expr.preview"
+                                      connectable="expr.connectable"
+                                      class="alarm-sub-expression"
+                                      ng-class="{'col-lg-11': !expr.preview, 'col-lg-9': expr.preview}"
+                                      ng-cloak></mon-alarm-sub-expression>
+            <div ng-class="{'col-lg-1': !expr.preview, 'col-lg-3': expr.preview}">
+                <button tabindex="0"
+                        class="btn btn-default btn-xs"
+                        ng-class="{'btn-block': !expr.preview}"
+                        ng-disabled="$index === 0"
+                        ng-click="vm.reorderExpression($event, $index, $index - 1)">
+                    <span class="fa fa-chevron-up"></span>
+                </button>
+                <button tabindex="1"
+                        class="btn btn-default btn-xs"
+                        ng-class="{'btn-block': !expr.preview}"
+                        ng-click="vm.addExpression($event, $index + 1)">
+                    <span class="fa fa-plus"></span>
+                </button>
+                <button tabindex="2"
+                        class="btn btn-default btn-xs"
+                        ng-class="{'btn-block': !expr.preview}"
+                        ng-disabled="vm.subExpressions.length === 1"
+                        ng-click="vm.removeExpression($event, $index)">
+                    <span class="fa fa-minus"></span>
+                </button>
+                <button tabindex="3"
+                        class="btn btn-default btn-xs"
+                        ng-class="{'btn-block': !expr.preview}"
+                        ng-disabled="$index === vm.subExpressions.length - 1"
+                        ng-click="vm.reorderExpression($event, $index, $index + 1)">
+                    <span class="fa fa-chevron-down"></span>
+                </button>
+                <button tabindex="4"
+                        class="btn btn-default btn-xs"
+                        ng-if="expr.preview"
+                        ng-click="expr.preview = false">
+                    <span class="fa fa-edit"></span>
+                </button>
+                <button tabindex="4"
+                        class="btn btn-default btn-xs btn-block"
+                        ng-if="!expr.preview"
+                        ng-click="expr.preview = true">
+                    <span class="fa fa-check"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
