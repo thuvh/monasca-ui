@@ -39,6 +39,30 @@
       "revId": "f101bcccc9ddb967cfe085e1ceeb4a85a76dedcd",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aaa91ec_ca5412cc",
+        "filename": "monitoring/alarmdefs/templates/alarmdefs/_create_ad_details_help.html",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-06-27T20:39:27Z",
+      "side": 1,
+      "message": "That file was extracted from old form, I did not write it on my own, so I\u0027d like to keep that as it was.",
+      "parentUuid": "3aaa91ec_524594b1",
+      "range": {
+        "startLine": 9,
+        "startChar": 7,
+        "endLine": 9,
+        "endChar": 78
+      },
+      "revId": "f101bcccc9ddb967cfe085e1ceeb4a85a76dedcd",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
