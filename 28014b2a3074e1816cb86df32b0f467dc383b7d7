@@ -1,0 +1,409 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3aaa91ec_5feac9db",
+        "filename": "monitoring/enabled/_50_admin_add_monitoring_panel.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 16204
+      },
+      "writtenOn": "2016-06-27T12:08:51Z",
+      "side": 1,
+      "message": "Looks to me this # todo is not needed any more.",
+      "revId": "28014b2a3074e1816cb86df32b0f467dc383b7d7",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aaa91ec_aaee0a1f",
+        "filename": "monitoring/static/monitoring/js/app.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 16204
+      },
+      "writtenOn": "2016-06-27T12:08:51Z",
+      "side": 1,
+      "message": "We should be consistent about indentation so let\u0027s use either 2 or 4 spaces.",
+      "revId": "28014b2a3074e1816cb86df32b0f467dc383b7d7",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aaa91ec_0ad0fec7",
+        "filename": "monitoring/static/monitoring/js/controllers.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 16204
+      },
+      "writtenOn": "2016-06-27T12:08:51Z",
+      "side": 1,
+      "message": "Missed semicolon.",
+      "revId": "28014b2a3074e1816cb86df32b0f467dc383b7d7",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aaa91ec_9b871e60",
+        "filename": "monitoring/static/monitoring/js/directives.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 16204
+      },
+      "writtenOn": "2016-06-27T12:08:51Z",
+      "side": 1,
+      "message": "Duplicated key \u0027operators\u0027.",
+      "range": {
+        "startLine": 40,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 36
+      },
+      "revId": "28014b2a3074e1816cb86df32b0f467dc383b7d7",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aaa91ec_bbebfa11",
+        "filename": "monitoring/static/monitoring/js/directives.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 16204
+      },
+      "writtenOn": "2016-06-27T12:08:51Z",
+      "side": 1,
+      "message": "Missed semicolon.",
+      "revId": "28014b2a3074e1816cb86df32b0f467dc383b7d7",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aaa91ec_7b6192d2",
+        "filename": "monitoring/static/monitoring/js/directives.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 16204
+      },
+      "writtenOn": "2016-06-27T12:08:51Z",
+      "side": 1,
+      "message": "Clever :)",
+      "range": {
+        "startLine": 102,
+        "startChar": 0,
+        "endLine": 105,
+        "endChar": 17
+      },
+      "revId": "28014b2a3074e1816cb86df32b0f467dc383b7d7",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aaa91ec_7bc35238",
+        "filename": "monitoring/static/monitoring/js/directives.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 16204
+      },
+      "writtenOn": "2016-06-27T12:08:51Z",
+      "side": 1,
+      "message": "Unused param index.",
+      "range": {
+        "startLine": 117,
+        "startChar": 70,
+        "endLine": 117,
+        "endChar": 75
+      },
+      "revId": "28014b2a3074e1816cb86df32b0f467dc383b7d7",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aaa91ec_4544b748",
+        "filename": "monitoring/static/monitoring/js/directives.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 16204
+      },
+      "writtenOn": "2016-06-27T12:08:51Z",
+      "side": 1,
+      "message": "Do you need vm.matchBy and global matchBy? I think it\u0027s a mistake.",
+      "range": {
+        "startLine": 127,
+        "startChar": 12,
+        "endLine": 127,
+        "endChar": 50
+      },
+      "revId": "28014b2a3074e1816cb86df32b0f467dc383b7d7",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aaa91ec_1bc20e85",
+        "filename": "monitoring/static/monitoring/js/directives.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 16204
+      },
+      "writtenOn": "2016-06-27T12:08:51Z",
+      "side": 1,
+      "message": "Missed semicolon.",
+      "revId": "28014b2a3074e1816cb86df32b0f467dc383b7d7",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aaa91ec_6c8f1b76",
+        "filename": "monitoring/static/monitoring/js/directives.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 249,
+      "author": {
+        "id": 16204
+      },
+      "writtenOn": "2016-06-27T12:08:51Z",
+      "side": 1,
+      "message": "Unused variable.",
+      "range": {
+        "startLine": 249,
+        "startChar": 16,
+        "endLine": 249,
+        "endChar": 31
+      },
+      "revId": "28014b2a3074e1816cb86df32b0f467dc383b7d7",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aaa91ec_7b6b5285",
+        "filename": "monitoring/static/monitoring/js/directives.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 16204
+      },
+      "writtenOn": "2016-06-27T12:08:51Z",
+      "side": 1,
+      "message": "Missing semicolons.\nVars can be combined into a single statement.",
+      "range": {
+        "startLine": 266,
+        "startChar": 0,
+        "endLine": 267,
+        "endChar": 32
+      },
+      "revId": "28014b2a3074e1816cb86df32b0f467dc383b7d7",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aaa91ec_db108602",
+        "filename": "monitoring/static/monitoring/js/directives.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 271,
+      "author": {
+        "id": 16204
+      },
+      "writtenOn": "2016-06-27T12:08:51Z",
+      "side": 1,
+      "message": "Missing semicolon.",
+      "revId": "28014b2a3074e1816cb86df32b0f467dc383b7d7",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aaa91ec_3b238a57",
+        "filename": "monitoring/static/monitoring/js/directives.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 306,
+      "author": {
+        "id": 16204
+      },
+      "writtenOn": "2016-06-27T12:08:51Z",
+      "side": 1,
+      "message": "Missing semicolon.",
+      "revId": "28014b2a3074e1816cb86df32b0f467dc383b7d7",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aaa91ec_fbdbc24c",
+        "filename": "monitoring/static/monitoring/js/directives.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 321,
+      "author": {
+        "id": 16204
+      },
+      "writtenOn": "2016-06-27T12:08:51Z",
+      "side": 1,
+      "message": "Missing semicolon.",
+      "revId": "28014b2a3074e1816cb86df32b0f467dc383b7d7",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aaa91ec_459957c3",
+        "filename": "monitoring/static/monitoring/js/directives.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 16204
+      },
+      "writtenOn": "2016-06-27T12:08:51Z",
+      "side": 1,
+      "message": "IMHO these types of assignments are confusing.",
+      "revId": "28014b2a3074e1816cb86df32b0f467dc383b7d7",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aaa91ec_ec566bcd",
+        "filename": "monitoring/static/monitoring/js/filters.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 16204
+      },
+      "writtenOn": "2016-06-27T12:08:51Z",
+      "side": 1,
+      "message": "No strict mode?",
+      "revId": "28014b2a3074e1816cb86df32b0f467dc383b7d7",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aaa91ec_ec0dcbe9",
+        "filename": "monitoring/static/monitoring/js/filters.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 16204
+      },
+      "writtenOn": "2016-06-27T12:08:51Z",
+      "side": 1,
+      "message": "Missed semicolon.",
+      "revId": "28014b2a3074e1816cb86df32b0f467dc383b7d7",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aaa91ec_cc29ef39",
+        "filename": "monitoring/static/monitoring/js/filters.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 16204
+      },
+      "writtenOn": "2016-06-27T12:08:51Z",
+      "side": 1,
+      "message": "Missed semicolon.",
+      "revId": "28014b2a3074e1816cb86df32b0f467dc383b7d7",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aaa91ec_cce0cffd",
+        "filename": "monitoring/static/monitoring/js/filters.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 16204
+      },
+      "writtenOn": "2016-06-27T12:08:51Z",
+      "side": 1,
+      "message": "It\u0027s a good practice to use \"\u003d\u003d\u003d\" for comparison.",
+      "range": {
+        "startLine": 39,
+        "startChar": 44,
+        "endLine": 39,
+        "endChar": 46
+      },
+      "revId": "28014b2a3074e1816cb86df32b0f467dc383b7d7",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aaa91ec_4c9b3f73",
+        "filename": "monitoring/static/monitoring/js/services.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 16204
+      },
+      "writtenOn": "2016-06-27T12:08:51Z",
+      "side": 1,
+      "message": "Missing license block.\nNo strict mode?",
+      "revId": "28014b2a3074e1816cb86df32b0f467dc383b7d7",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aaa91ec_4ca97f7b",
+        "filename": "monitoring/static/monitoring/js/services.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 16204
+      },
+      "writtenOn": "2016-06-27T12:08:51Z",
+      "side": 1,
+      "message": "These vars can be combined.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 22
+      },
+      "revId": "28014b2a3074e1816cb86df32b0f467dc383b7d7",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
