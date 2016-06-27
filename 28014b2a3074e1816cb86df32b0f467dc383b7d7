@@ -53,6 +53,29 @@
     },
     {
       "key": {
+        "uuid": "3aaa91ec_eaa46eba",
+        "filename": "monitoring/static/monitoring/js/controllers.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-06-27T20:48:56Z",
+      "side": 1,
+      "message": "That should be removed from here.",
+      "range": {
+        "startLine": 229,
+        "startChar": 27,
+        "endLine": 229,
+        "endChar": 29
+      },
+      "revId": "28014b2a3074e1816cb86df32b0f467dc383b7d7",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3aaa91ec_9b871e60",
         "filename": "monitoring/static/monitoring/js/directives.js",
         "patchSetId": 8
@@ -150,6 +173,30 @@
       "writtenOn": "2016-06-27T12:08:51Z",
       "side": 1,
       "message": "Do you need vm.matchBy and global matchBy? I think it\u0027s a mistake.",
+      "range": {
+        "startLine": 127,
+        "startChar": 12,
+        "endLine": 127,
+        "endChar": 50
+      },
+      "revId": "28014b2a3074e1816cb86df32b0f467dc383b7d7",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aaa91ec_aae1c69c",
+        "filename": "monitoring/static/monitoring/js/directives.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-06-27T20:48:56Z",
+      "side": 1,
+      "message": "Each expression provide comes with chosen metric. Each metric is associated with several dimensions, each having key and value. Match by is a property where you specify those keys. Now since match by is a property of entire alarm definition, I collect all dimension\u0027s keys and mimic set collection to create global match by.\n\nNow assuming expression composed of metrics\n \n metric_1{dim_a\u003d1,dim_b\u003d2}\n metric_2(dim_a\u003d1,dim_c\u003d3}\n metric_3(dim_a\u003d1,dim_d\u003d4}\n\nglobal match by would contain\n \n {dim_a,dim_b,dim_c,dim_d}\n\neffectively allowing to specify one (or all of them).\n\nAs you can see that value is emitted and picked up by match by controller.",
+      "parentUuid": "3aaa91ec_4544b748",
       "range": {
         "startLine": 127,
         "startChar": 12,
