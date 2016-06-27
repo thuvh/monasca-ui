@@ -16,6 +16,29 @@
       "revId": "f101bcccc9ddb967cfe085e1ceeb4a85a76dedcd",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aaa91ec_524594b1",
+        "filename": "monitoring/alarmdefs/templates/alarmdefs/_create_ad_details_help.html",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 16204
+      },
+      "writtenOn": "2016-06-27T12:43:21Z",
+      "side": 1,
+      "message": "It would be better to say:\nThe \"Expression\" field triggers a notification to be sent when it evaluates to true.",
+      "range": {
+        "startLine": 9,
+        "startChar": 7,
+        "endLine": 9,
+        "endChar": 78
+      },
+      "revId": "f101bcccc9ddb967cfe085e1ceeb4a85a76dedcd",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
