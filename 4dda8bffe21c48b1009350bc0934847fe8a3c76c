@@ -22,6 +22,30 @@
       "revId": "4dda8bffe21c48b1009350bc0934847fe8a3c76c",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aaa91ec_e3605f03",
+        "filename": "monitoring/alarmdefs/templates/alarmdefs/expression_step.html",
+        "patchSetId": 7
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-06-30T20:59:04Z",
+      "side": 1,
+      "message": "That actually depends on screen width.\n\nHere\u0027s pretty decent explanation on that: http://getbootstrap.com/css/#grid",
+      "parentUuid": "3aaa91ec_5d706040",
+      "range": {
+        "startLine": 5,
+        "startChar": 18,
+        "endLine": 5,
+        "endChar": 37
+      },
+      "revId": "4dda8bffe21c48b1009350bc0934847fe8a3c76c",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
