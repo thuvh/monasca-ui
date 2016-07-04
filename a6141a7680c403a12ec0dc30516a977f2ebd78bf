@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1aa78d24_55444573",
+        "filename": "monitoring/static/monitoring/js/controllers.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 21277
+      },
+      "writtenOn": "2016-07-04T05:40:03Z",
+      "side": 1,
+      "message": "Could be merged together; init with `undefined` looks strange. :)",
+      "range": {
+        "startLine": 150,
+        "startChar": 8,
+        "endLine": 152,
+        "endChar": 41
+      },
+      "revId": "a6141a7680c403a12ec0dc30516a977f2ebd78bf",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa78d24_15bc7d6b",
+        "filename": "monitoring/static/monitoring/js/controllers.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 282,
+      "author": {
+        "id": 21277
+      },
+      "writtenOn": "2016-07-04T05:40:03Z",
+      "side": 1,
+      "message": "This could be extracted as service/filter and used via DI.",
+      "range": {
+        "startLine": 282,
+        "startChar": 33,
+        "endLine": 282,
+        "endChar": 44
+      },
+      "revId": "a6141a7680c403a12ec0dc30516a977f2ebd78bf",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
