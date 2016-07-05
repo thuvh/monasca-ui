@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1aa78d24_31f7dbf6",
+        "filename": "monitoring/static/monitoring/js/directives.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 16204
+      },
+      "writtenOn": "2016-07-05T07:02:57Z",
+      "side": 1,
+      "message": "Every time I do something with the expressions I see a lot of warnings on the console.",
+      "revId": "1b65c112208ec1f5e1495b2abf805382d0dac2ca",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
