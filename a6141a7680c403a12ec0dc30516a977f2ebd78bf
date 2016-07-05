@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1aa78d24_25164fa7",
+        "filename": "monitoring/alarmdefs/templates/alarmdefs/_create_ad_details_help.html",
+        "patchSetId": 8
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-07-05T19:51:57Z",
+      "side": 1,
+      "message": "That seems a decent comment. I will refactor that. Also I think I will move notification part into notification step.",
+      "parentUuid": "1aa78d24_e3b3bbe7",
+      "range": {
+        "startLine": 15,
+        "startChar": 6,
+        "endLine": 16,
+        "endChar": 58
+      },
+      "revId": "a6141a7680c403a12ec0dc30516a977f2ebd78bf",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1aa78d24_55444573",
         "filename": "monitoring/static/monitoring/js/controllers.js",
         "patchSetId": 8
