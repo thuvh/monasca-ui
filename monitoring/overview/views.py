@@ -40,25 +40,21 @@ LOG = logging.getLogger(__name__)
 
 
 def get_icon(status):
-    if status == 'chicklet-success':
-        return constants.OK_ICON
-    if status == 'chicklet-error':
-        return constants.CRITICAL_ICON
-    if status == 'chicklet-warning':
-        return constants.WARNING_ICON
-    if status == 'chicklet-unknown':
-        return constants.UNKNOWN_ICON
-    if status == 'chicklet-notfound':
-        return constants.NOTFOUND_ICON
+    status_fa_icon_map = {'btn-success': "fa-check",
+                          'btn-info': "fa-exclamation",
+                          'btn-danger': "fa-exclamation-triangle",
+                          'btn-warning':"fa-exclamation-circle",
+                          'btn-default':"fa-question-circle"}
+    return status_fa_icon_map.get(status,  "fa-question-circle")
 
 
 priorities = [
-    {'status': 'chicklet-success', 'severity': 'OK'},
-    {'status': 'chicklet-unknown', 'severity': 'UNDETERMINED'},
-    {'status': 'chicklet-warning', 'severity': 'LOW'},
-    {'status': 'chicklet-warning', 'severity': 'MEDIUM'},
-    {'status': 'chicklet-warning', 'severity': 'HIGH'},
-    {'status': 'chicklet-error', 'severity': 'CRITICAL'},
+    {'status': 'btn-success', 'severity': 'OK'},
+    {'status': 'btn-default', 'severity': 'UNDETERMINED'},
+    {'status': 'btn-info', 'severity': 'LOW'},
+    {'status': 'btn-warning', 'severity': 'MEDIUM'},
+    {'status': 'btn-warning', 'severity': 'HIGH'},
+    {'status': 'btn-danger', 'severity': 'CRITICAL'},
 ]
 index_by_severity = {d['severity']: i for i, d in enumerate(priorities)}
 
