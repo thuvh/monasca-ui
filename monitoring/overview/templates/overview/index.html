@@ -9,8 +9,8 @@
 {% block main %}
     <div style="padding: 3px;">
       {% if grafana_url %}
-      <a target="Grafana Home" href="{{grafana_url}}" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-dashboard"></span>
+      <a target="Grafana Home" href="{{grafana_url}}" class="btn btn-primary">
+          <span class="fa fa-bar-chart"></span>
           Grafana Home
       </a>
       {% for dashboard in dashboards %}
