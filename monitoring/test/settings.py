@@ -140,13 +140,3 @@ NOSE_ARGS = ['--nocapture',
              '--cover-package=monitoring',
              '--cover-inclusive',
              '--all-modules']
-
-TUSKAR_ENDPOINT_URL = "http://127.0.0.1:8585"
-
-OVERCLOUD_CREDS = {
-    'enabled': True,
-    'user': 'admin',
-    'password': 'password',
-    'tenant': 'admin',
-    'auth_url': 'http://localhost:5000/v2.0/',
-}
