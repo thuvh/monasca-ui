@@ -4,13 +4,13 @@
 # Shu Muto <shu-mutou@rf.jp.nec.com>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: monasca-ui 1.0.32.dev14\n"
+"Project-Id-Version: monasca-ui 1.1.1.dev2\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-06-01 05:21+0000\n"
+"POT-Creation-Date: 2016-07-08 09:24+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-05-19 10:15+0000\n"
+"PO-Revision-Date: 2016-06-24 08:15+0000\n"
 "Last-Translator: Shinya Kawabata <s-kawabata@wx.jp.nec.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -34,16 +34,6 @@ msgid ""
 "\n"
 "      The Expression field  which if true, triggers a notification to be "
 "sent.\n"
-"    "
-msgstr ""
-"\n"
-"      条件式フィールドは、その式が真となった場合に通知が発行されます。\n"
-"    "
-
-msgid ""
-"\n"
-"      The Expression field  which if true, triggers a notification to be "
-"sent.\n"
 "      See <a href=\"https://github.com/openstack/monasca-api/blob/master/"
 "docs/monasca-api-spec.md#alarm-definition-expressions\" target=\"_blank"
 "\">Alarm Expressions</a> for how to write an expression.\n"
@@ -54,15 +44,6 @@ msgstr ""
 "      条件式の記述方法は、 <a href=\"https://github.com/openstack/monasca-"
 "api/blob/master/docs/monasca-api-spec.md#alarm-definition-expressions\" "
 "target=\"_blank\">Alarm Expressions</a>を参照してください。\n"
-"    "
-
-msgid ""
-"\n"
-"      The Name field is used to identify the alarm definition.\n"
-"    "
-msgstr ""
-"\n"
-"      名前フィールドはアラーム定義を識別するために使用されます。\n"
 "    "
 
 msgid ""
@@ -118,6 +99,9 @@ msgstr "追加"
 msgid "Add a dimension"
 msgstr "ディメンションの追加"
 
+msgid "Add a match by"
+msgstr "マッチの追加"
+
 msgid "Address"
 msgstr "アドレス"
 
@@ -138,9 +122,6 @@ msgstr "アラーム定義"
 
 msgid "Alarm Definition Details"
 msgstr "アラーム定義の詳細"
-
-msgid "Alarm Definition has been created successfully."
-msgstr "アラーム定義が正常に作成されました。"
 
 msgid "Alarm Definitions"
 msgstr "アラーム定義"
@@ -193,6 +174,9 @@ msgstr "取り消し"
 msgid "Close"
 msgstr "閉じる"
 
+msgid "Comparator"
+msgstr "比較演算子"
+
 msgid "Could not retrieve alarm definitions"
 msgstr "アラーム定義を取得できませんでした"
 
@@ -236,6 +220,9 @@ msgstr "通知の削除"
 
 msgid "Description"
 msgstr "説明"
+
+msgid "Deterministic"
+msgstr "決定的"
 
 msgid "Dimension(s)"
 msgstr "ディメンション"
@@ -421,6 +408,9 @@ msgstr "一意なアラームを生成するために使われるメトリック
 msgid "The type of notification method (i.e. email)."
 msgstr "通知方法の種別 (例 メール)"
 
+msgid "Threshold"
+msgstr "閾値"
+
 msgid "Timestamp"
 msgstr "タイムスタンプ"
 
@@ -429,10 +419,6 @@ msgstr "種別"
 
 msgid "UTC"
 msgstr "UTC"
-
-#, python-format
-msgid "Unable to create the alarm definition: %s"
-msgstr "アラーム定義が作成できません: %s"
 
 #, python-format
 msgid "Unable to create the alarm: %s"
@@ -473,6 +459,10 @@ msgstr "不明"
 
 msgid "Undetermined Actions"
 msgstr "不明のアクション"
+
+#, python-format
+msgid "User %s does not have sufficient privileges to access Kibana"
+msgstr "ユーザー %s はKibanaにアクセスするための権限がありません"
 
 msgid "Value"
 msgstr "値"
