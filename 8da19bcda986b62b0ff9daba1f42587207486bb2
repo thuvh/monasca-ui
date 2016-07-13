@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1aa78d24_977527fc",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-07-13T20:23:18Z",
+      "side": 1,
+      "message": "Is it really necessary to create this object each time this method is called ?",
+      "revId": "8da19bcda986b62b0ff9daba1f42587207486bb2",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
