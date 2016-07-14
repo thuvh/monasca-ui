@@ -33,6 +33,41 @@
       "revId": "5b7b9dd4313b4894029b33d7ce2f45b1d1c77e46",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa78d24_1e577527",
+        "filename": "monitoring/overview/templates/overview/monitor.html",
+        "patchSetId": 4
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-07-14T10:29:52Z",
+      "side": 1,
+      "message": "Don\u0027t mind that comment, please.",
+      "parentUuid": "1aa78d24_fe5d4916",
+      "revId": "5b7b9dd4313b4894029b33d7ce2f45b1d1c77e46",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa78d24_1e80158b",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-07-14T10:29:52Z",
+      "side": 1,
+      "message": "I think I would rather see warning class here (btn-warning), seems more appropriate, suggesting that something is happening but it not that bad. Blue color does not visually suggest so.",
+      "revId": "5b7b9dd4313b4894029b33d7ce2f45b1d1c77e46",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
