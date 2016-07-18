@@ -61,6 +61,11 @@ class BaseNotificationMethodForm(forms.SelfHandlingForm):
                                                  max_length="512",
                                                  widget=textWidget,
                                                  help_text=_("The email/url address to notify."))
+        self.fields['period'] = forms.IntegerField(label=_("Period"),
+                                                   min_value=0,
+                                                   initial=0,
+                                                   required=required,
+                                                   help_text=_("The notification period."))
 
 
 class CreateMethodForm(BaseNotificationMethodForm):
@@ -72,7 +77,7 @@ class CreateMethodForm(BaseNotificationMethodForm):
         '''Check to make sure address is the correct format depending on the
         type of notification
         '''
-        data = super(forms.Form, self).clean()
+        data = self.cleaned_data
         if data['type'] == constants.NotificationType.EMAIL:
             constants.EMAIL_VALIDATOR(data['address'])
         elif data['type'] == constants.NotificationType.WEBHOOK:
@@ -82,13 +87,23 @@ class CreateMethodForm(BaseNotificationMethodForm):
 
         return data['address']
 
+    def clean_period(self):
+        '''Check to make sure period is zero unless type is WEBHOOK.
+        '''
+        data = self.cleaned_data
+        if data['type'] != constants.NotificationType.WEBHOOK and data['period'] != 0:
+            raise forms.ValidationError("Period must be zero except for type webhook.")
+
+        return data['period']
+
     def handle(self, request, data):
         try:
             api.monitor.notification_create(
                 request,
                 name=data['name'],
                 type=data['type'],
-                address=data['address'])
+                address=data['address'],
+                period=data['period'])
             messages.success(request,
                              _('Notification method has been created '
                                'successfully.'))
@@ -114,6 +129,15 @@ class EditMethodForm(BaseNotificationMethodForm):
         super(EditMethodForm, self).__init__(request, *args, **kwargs)
         super(EditMethodForm, self)._init_fields(readOnly=False)
 
+    def clean_period(self):
+        '''Check to make sure period is zero unless type is WEBHOOK.
+        '''
+        data = self.cleaned_data
+        if data['type'] != constants.NotificationType.WEBHOOK and data['period'] != 0:
+            raise forms.ValidationError("Period must be zero except for type webhook.")
+
+        return data['period']
+
     def handle(self, request, data):
         try:
             kwargs = {}
@@ -121,6 +145,7 @@ class EditMethodForm(BaseNotificationMethodForm):
             kwargs['name'] = data['name']
             kwargs['type'] = data['type']
             kwargs['address'] = data['address']
+            kwargs['period'] = data['period']
             api.monitor.notification_update(
                 request,
                 **kwargs
