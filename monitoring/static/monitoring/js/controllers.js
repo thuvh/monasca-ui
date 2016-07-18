@@ -130,10 +130,10 @@ angular.module('monitoring.controllers', [])
     .controller('alarmEditController', [
       "$window", "$scope", "$http", "$timeout", "$q",
       function ($window, $scope, $http, $timeout, $q) {
-
         $scope.metrics = [];
         $scope.metricNames = []
         $scope.currentMetric = undefined;
+        $scope.currentSporadic = undefined;
 
         $scope.currentFunction = "max";
         $scope.currentComparator = ">";
@@ -185,6 +185,17 @@ angular.module('monitoring.controllers', [])
                 $scope.tags = [{text: $scope.defaultTag}];
             }
             $scope.saveDimension();
+            $scope.updateSporadicInfo();
+        }
+
+        $scope.updateSporadicInfo = function() {
+            for (i = 0; i < $scope.metrics.length; i++) {
+                metric = $scope.metrics[i];
+                if (metric.name === $scope.currentMetric) {
+                    $scope.currentSporadic = metric.sporadic;
+                    break;
+                }
+            }
         }
 
         $scope.saveExpression = function() {
@@ -261,11 +272,10 @@ angular.module('monitoring.controllers', [])
             $scope.defaultTag = defaultTag;
 
             metrics = $window._alarm_edit_ctrl_metrics
-
             $scope.metrics = metrics && metrics.length ? metrics : [];
             $scope.metricNames = uniqueNames($scope.metrics, 'name');
             $scope.currentMetric = $scope.metricNames[0];
-
+            $scope.updateSporadicInfo();
             $scope.saveDimension();
         }
 
