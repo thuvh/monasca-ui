@@ -35,6 +35,7 @@ class BaseNotificationMethodForm(forms.SelfHandlingForm):
     def _init_fields(self, readOnly=False, create=False):
         required = True
         textWidget = None
+        integerWidget = None
         selectWidget = None
         readOnlyTextInput = READONLY_TEXTINPUT
         readOnlySelectInput = forms.Select(attrs={'disabled': 'disabled'})
@@ -61,6 +62,11 @@ class BaseNotificationMethodForm(forms.SelfHandlingForm):
                                                  max_length="512",
                                                  widget=textWidget,
                                                  help_text=_("The email/url address to notify."))
+        self.fields['period'] = forms.IntegerField(label=_("Period"),
+                                                   initial=0,
+                                                   required=required,
+                                                   widget=integerWidget,
+                                                   help_text=_("The notification period."))
 
 
 class CreateMethodForm(BaseNotificationMethodForm):
@@ -82,13 +88,23 @@ class CreateMethodForm(BaseNotificationMethodForm):
 
         return data['address']
 
+    def clean_period(self):
+        '''Check to make sure period is zero unless type is WEBHOOK.
+        '''
+        data = super(forms.Form, self).clean()
+        if data['type'] != constants.NotificationType.WEBHOOK and data['period'] != 0:
+            raise forms.ValidationError("Period must be zero except for type webhook.")
+
+        return data['period']
+
     def handle(self, request, data):
         try:
             api.monitor.notification_create(
                 request,
                 name=data['name'],
                 type=data['type'],
-                address=data['address'])
+                address=data['address'],
+                period=data['period'])
             messages.success(request,
                              _('Notification method has been created '
                                'successfully.'))
@@ -121,6 +137,7 @@ class EditMethodForm(BaseNotificationMethodForm):
             kwargs['name'] = data['name']
             kwargs['type'] = data['type']
             kwargs['address'] = data['address']
+            kwargs['period'] = data['period']
             api.monitor.notification_update(
                 request,
                 **kwargs
