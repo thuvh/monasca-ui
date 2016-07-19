@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "dada55a8_2a3589f6",
+        "filename": "monitoring/notifications/forms.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 18286
+      },
+      "writtenOn": "2016-07-19T21:32:49Z",
+      "side": 1,
+      "message": "I think that forms.NumberInput() is more kindness than None. Or getting rid of \"integerWidget \u003d None\" is more simple because IntegerField has NumberInput widget by default.",
+      "range": {
+        "startLine": 38,
+        "startChar": 24,
+        "endLine": 38,
+        "endChar": 28
+      },
+      "revId": "1d3170b9d9c5521ff199dd7f2f48e9e19055c6c6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dada55a8_d5145245",
+        "filename": "monitoring/notifications/forms.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 18286
+      },
+      "writtenOn": "2016-07-19T21:32:49Z",
+      "side": 1,
+      "message": "Adding min_value\u003d0 argument is useful to prevent keying minus value.",
+      "range": {
+        "startLine": 65,
+        "startChar": 32,
+        "endLine": 65,
+        "endChar": 50
+      },
+      "revId": "1d3170b9d9c5521ff199dd7f2f48e9e19055c6c6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dada55a8_d042b60f",
         "filename": "monitoring/notifications/forms.py",
         "patchSetId": 3
