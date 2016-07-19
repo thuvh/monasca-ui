@@ -16,6 +16,24 @@
       "revId": "03eaf9b94dd23001d782635b1d2c1e1140ff5adb",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dada55a8_39f336d8",
+        "filename": "monitoring/static/monitoring/js/controllers.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 15359
+      },
+      "writtenOn": "2016-07-19T16:53:45Z",
+      "side": 1,
+      "message": "No, actually, currentMetric only holds the name of the current selected metric in the ui. That said, in order to update the sporadic field in the modal, we need to know if the selected metric ($scope.currentMetric) is sporadic.\n\nTo get the information if the currentMetric  is sporadic, we are iterating over the metric list (which holds the sporadic information for each metric).\n\nI Hope it\u0027s clear now.",
+      "parentUuid": "dada55a8_99b995ce",
+      "revId": "03eaf9b94dd23001d782635b1d2c1e1140ff5adb",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
