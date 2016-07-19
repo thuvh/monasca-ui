@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dada55a8_d042b60f",
+        "filename": "monitoring/notifications/forms.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 6650
+      },
+      "writtenOn": "2016-07-19T14:52:43Z",
+      "side": 1,
+      "message": "don\u0027t call clean from within another clean.\n\nhttps://docs.djangoproject.com/en/1.9/ref/forms/validation/#cleaning-a-specific-field-attribute\n\nuse cleaned_data",
+      "revId": "1d3170b9d9c5521ff199dd7f2f48e9e19055c6c6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
