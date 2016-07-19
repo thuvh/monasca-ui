@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dada55a8_99b995ce",
+        "filename": "monitoring/static/monitoring/js/controllers.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-07-19T11:55:34Z",
+      "side": 1,
+      "message": "So the name of metric means that it is sporadic ?\nLooks odd, would you explain this part of the code a bit ?",
+      "revId": "03eaf9b94dd23001d782635b1d2c1e1140ff5adb",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
