@@ -1,0 +1,10 @@
+Code-Review+1: Eric Peterson <eric.peterson@charter.com>
+Code-Review+1: Ryan Bak <ryan.bak@twcable.com>
+Code-Review+2: Bradley Klein <bradley.klein@twcable.com>
+Workflow+1: Bradley Klein <bradley.klein@twcable.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Wed, 20 Jul 2016 19:22:09 +0000
+Reviewed-on: https://review.openstack.org/343934
+Project: openstack/monasca-ui
+Branch: refs/heads/master
