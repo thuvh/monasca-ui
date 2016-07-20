@@ -34,6 +34,24 @@
       "revId": "03eaf9b94dd23001d782635b1d2c1e1140ff5adb",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dada55a8_19545bfd",
+        "filename": "monitoring/static/monitoring/js/controllers.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-07-20T04:38:04Z",
+      "side": 1,
+      "message": "Yes, it is :).\nThough, I had little different idea of implementing that.\nI wanted to make the box where you select metric rich, that said to display an icon next to metric name (on right/left) with some icon. There is plenty of icons @ font-awesome ;-).\n\nWhat do you think of such idea ?",
+      "parentUuid": "dada55a8_39f336d8",
+      "revId": "03eaf9b94dd23001d782635b1d2c1e1140ff5adb",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
