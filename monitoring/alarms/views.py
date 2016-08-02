@@ -14,6 +14,7 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+from __future__ import print_function
 from datetime import timedelta
 import logging
 
@@ -152,8 +153,8 @@ class AlarmServiceView(tables.DataTableView):
                 except Exception as e:
                     messages.error(self.request, _("Could not retrieve alarms"))
                     results = []
-                    print "ERROR"
-                    print e
+                    print("ERROR")
+                    print(e)
                 return results
             else:
                 try:

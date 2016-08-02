@@ -18,7 +18,11 @@ import copy
 import json
 import logging
 import urllib
-import urllib2
+import six
+try:
+    import urllib.request as urllib2
+except ImportError:
+    import urllib2
 
 from django import http
 from django.contrib import messages
@@ -390,7 +394,10 @@ class KibanaProxyView(generic.View):
         return self.read(request.method, url, request.body, headers)
 
     def get_relative_url(self, url):
-        url = urllib.quote(url.encode('utf-8'))
+        if six.PY3:
+            url = urllib.parse.quote(url.encode('utf-8'))
+        else:
+            url = urllib.quote(url.encode('utf-8'))
         params_str = self.request.GET.urlencode()
 
         if params_str:

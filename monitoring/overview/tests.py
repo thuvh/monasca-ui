@@ -1,4 +1,6 @@
 # coding=utf-8
+import six
+
 from django.core import urlresolvers
 from django.test import RequestFactory
 from mock import patch, call  # noqa
@@ -29,7 +31,10 @@ class KibanaProxyViewTest(helpers.TestCase):
 
     def test_get_relative_url_with_unicode(self):
         """Tests if it properly converts multibyte characters"""
-        import urlparse
+        if six.PY3:
+            import urllib.parse as urlparse
+        else:
+            import urlparse
 
         self.view.request = self.request_factory.get(
             '/', data={'a': 1, 'b': 2}
