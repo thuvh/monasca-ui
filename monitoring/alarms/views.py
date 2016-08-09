@@ -31,6 +31,7 @@ from django.views.generic import View  # noqa
 from horizon import exceptions
 from horizon import forms
 from horizon import tables
+from horizon.utils import functions as utils
 
 from monitoring.alarms import constants
 from monitoring.alarms import forms as alarm_forms
@@ -42,7 +43,6 @@ from openstack_dashboard import policy
 LOG = logging.getLogger(__name__)
 SERVICES = getattr(settings, 'MONITORING_SERVICES', [])
 
-LIMIT = 10
 PREV_PAGE_LIMIT = 100
 
 
@@ -137,6 +137,7 @@ class AlarmServiceView(tables.DataTableView):
         if page_offset is None:
             page_offset = 0
 
+        LIMIT = utils.get_page_size(request)
         if self.service == default_service:
             try:
                 results = api.monitor.alarm_list(self.request, page_offset,
@@ -190,7 +191,7 @@ class AlarmServiceView(tables.DataTableView):
             prev_page_stack = []
         else:
             page_offset = int(page_offset)
-
+        LIMIT = utils.get_page_size(request)
         if self.service == 'all':
             try:
                 # To judge whether there is next page, get LIMIT + 1
@@ -297,7 +298,7 @@ class AlarmHistoryView(tables.DataTableView):
             ts_mode = alarm_history_default_ts_format
         if not page_offset:
             page_offset = 0
-
+        LIMIT = utils.get_page_size(request)
         try:
             results = api.monitor.alarm_history(self.request,
                                                 object_id,
@@ -340,7 +341,7 @@ class AlarmHistoryView(tables.DataTableView):
         contacts = []
         prev_page_stack = []
         page_offset = self.request.GET.get('page_offset')
-
+        LIMIT = utils.get_page_size(request)
         if 'prev_page_stack' in self.request.session:
             prev_page_stack = self.request.session['prev_page_stack']
 
