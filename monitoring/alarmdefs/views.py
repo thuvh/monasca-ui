@@ -23,6 +23,7 @@ from django.views.generic import TemplateView  # noqa
 from horizon import exceptions
 from horizon import forms
 from horizon import tables
+from horizon.utils import functions as utils
 from horizon import workflows
 
 import monascaclient.exc as exc
@@ -34,7 +35,7 @@ from monitoring import api
 
 from openstack_dashboard import policy
 
-LIMIT = 10
+
 PREV_PAGE_LIMIT = 100
 
 
@@ -47,6 +48,7 @@ class IndexView(tables.DataTableView):
         results = []
         if page_offset is None:
             page_offset = 0
+        LIMIT = utils.get_page_size(self.request)    
         try:
             results = api.monitor.alarmdef_list(self.request, page_offset, LIMIT)
             paginator = Paginator(results, LIMIT)
@@ -76,6 +78,7 @@ class IndexView(tables.DataTableView):
         else:
             page_offset = int(page_offset)
 
+        LIMIT = utils.get_page_size(self.request)
         try:
             # To judge whether there is next page, get LIMIT + 1
             results = api.monitor.alarmdef_list(self.request, page_offset,
