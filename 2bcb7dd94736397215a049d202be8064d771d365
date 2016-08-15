@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ac371cc_521c2c13",
+        "filename": "monitoring/alarmdefs/views.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 14273
+      },
+      "writtenOn": "2016-08-15T23:28:25Z",
+      "side": 1,
+      "message": "If this is no longer a global it should probably be lowercased.",
+      "range": {
+        "startLine": 51,
+        "startChar": 8,
+        "endLine": 51,
+        "endChar": 13
+      },
+      "revId": "2bcb7dd94736397215a049d202be8064d771d365",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
