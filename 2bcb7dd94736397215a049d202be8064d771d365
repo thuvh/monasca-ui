@@ -22,6 +22,30 @@
       "revId": "2bcb7dd94736397215a049d202be8064d771d365",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1ac06dbe_c792f09e",
+        "filename": "monitoring/alarmdefs/views.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 6650
+      },
+      "writtenOn": "2016-08-22T14:46:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3ac371cc_521c2c13",
+      "range": {
+        "startLine": 51,
+        "startChar": 8,
+        "endLine": 51,
+        "endChar": 13
+      },
+      "revId": "2bcb7dd94736397215a049d202be8064d771d365",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
