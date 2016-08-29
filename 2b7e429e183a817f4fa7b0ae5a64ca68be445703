@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa7ab95a_e31e046f",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 6650
+      },
+      "writtenOn": "2016-08-29T19:36:00Z",
+      "side": 1,
+      "message": "might want to place a default here - \n\nindex_by_severity.get(severity.lower(),UNDETERMINED)\n\nnot required, but maybe a good idea?",
+      "revId": "2b7e429e183a817f4fa7b0ae5a64ca68be445703",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
