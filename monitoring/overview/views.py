@@ -60,7 +60,7 @@ priorities = [
     {'status': 'btn-warning', 'severity': 'HIGH'},
     {'status': 'btn-danger', 'severity': 'CRITICAL'},
 ]
-index_by_severity = {d['severity']: i for i, d in enumerate(priorities)}
+index_by_severity = {d['severity'].lower(): i for i, d in enumerate(priorities)}
 
 
 def get_dashboard_links(request):
@@ -177,7 +177,7 @@ def get_status(alarms):
     status_index = 0
     for a in alarms:
         severity = alarm_tables.show_severity(a)
-        severity_index = index_by_severity[severity]
+        severity_index = index_by_severity[severity.lower()]
         status_index = max(status_index, severity_index)
     return priorities[status_index]['status']
 
