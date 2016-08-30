@@ -298,7 +298,7 @@ class AlarmHistoryView(tables.DataTableView):
             ts_mode = alarm_history_default_ts_format
         if not page_offset:
             page_offset = 0
-        limit = utils.get_page_size(request)
+        limit = utils.get_page_size(self.request)
         try:
             results = api.monitor.alarm_history(self.request,
                                                 object_id,
