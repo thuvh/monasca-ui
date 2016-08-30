@@ -22,6 +22,30 @@
       "revId": "c0e60c9e8f465f3719fa4dcf6ccce839a4e68697",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa7ab95a_bbc87d56",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-08-30T11:26:25Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "fa7ab95a_f1ea400e",
+      "range": {
+        "startLine": 66,
+        "startChar": 15,
+        "endLine": 66,
+        "endChar": 23
+      },
+      "revId": "c0e60c9e8f465f3719fa4dcf6ccce839a4e68697",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
