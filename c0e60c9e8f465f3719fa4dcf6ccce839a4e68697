@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa7ab95a_f1ea400e",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 18286
+      },
+      "writtenOn": "2016-08-30T02:00:35Z",
+      "side": 1,
+      "message": "Why don\u0027t you add .upper() to severity instead of doing in alarms/views and overview/views.\n\nThese 2 files call this show_severity method.",
+      "range": {
+        "startLine": 66,
+        "startChar": 15,
+        "endLine": 66,
+        "endChar": 23
+      },
+      "revId": "c0e60c9e8f465f3719fa4dcf6ccce839a4e68697",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
