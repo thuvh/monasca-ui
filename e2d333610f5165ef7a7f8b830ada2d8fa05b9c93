@@ -70,6 +70,30 @@
       "revId": "e2d333610f5165ef7a7f8b830ada2d8fa05b9c93",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa7ab95a_609c1c6a",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 18286
+      },
+      "writtenOn": "2016-08-31T16:04:25Z",
+      "side": 1,
+      "message": "If you add upper(), I think before line 65 is better.\nBecause If state is lower case, \u0027if instruction\u0027 will be always false.",
+      "parentUuid": "fa7ab95a_aa1fe807",
+      "range": {
+        "startLine": 68,
+        "startChar": 15,
+        "endLine": 68,
+        "endChar": 20
+      },
+      "revId": "e2d333610f5165ef7a7f8b830ada2d8fa05b9c93",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
