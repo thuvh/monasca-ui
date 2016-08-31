@@ -22,6 +22,30 @@
       "revId": "e2d333610f5165ef7a7f8b830ada2d8fa05b9c93",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa7ab95a_2f304a07",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 11155
+      },
+      "writtenOn": "2016-08-31T14:35:46Z",
+      "side": 1,
+      "message": "I believe so.  The issue here is that when defining an alarm you can give a severity in any case.",
+      "parentUuid": "fa7ab95a_e510705c",
+      "range": {
+        "startLine": 68,
+        "startChar": 15,
+        "endLine": 68,
+        "endChar": 20
+      },
+      "revId": "e2d333610f5165ef7a7f8b830ada2d8fa05b9c93",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
