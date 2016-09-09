@@ -22,6 +22,30 @@
       "revId": "cf7c9fca94d7068bd06889e8783462337ff177ac",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a89bdaa_1e74a5fb",
+        "filename": "monitoring/alarmdefs/forms.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-09-09T10:51:27Z",
+      "side": 1,
+      "message": "My bad, that should be using alarm_def variable defined above.",
+      "parentUuid": "9a89bdaa_0481bd4d",
+      "range": {
+        "startLine": 250,
+        "startChar": 31,
+        "endLine": 250,
+        "endChar": 38
+      },
+      "revId": "cf7c9fca94d7068bd06889e8783462337ff177ac",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
