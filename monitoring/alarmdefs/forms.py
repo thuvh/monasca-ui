@@ -239,34 +239,26 @@ class EditAlarmForm(forms.SelfHandlingForm):
 
         self.fields['notifications'].choices = notification_choices
 
-    def clean_expression(self):
-        data = self.cleaned_data['expression']
-        value = data.split(' ')[2]
-        try:
-            float(value)
-        except ValueError:
-            raise forms.ValidationError("Value must be a number")
-
-        # Always return the cleaned data, whether you have changed it or
-        # not.
-        return data
-
     def handle(self, request, data):
         try:
             alarm_def = api.monitor.alarmdef_get(request, self.initial['id'])
-            api.monitor.alarmdef_update(
-                request,
-                alarm_id=self.initial['id'],
-                severity=data['severity'],
-                name=data['name'],
-                expression=data['expression'],
-                description=data['description'],
-                match_by=alarm_def['match_by'],
-                actions_enabled=data['actions_enabled'],
-                alarm_actions=data['alarm_actions'],
-                ok_actions=data['ok_actions'],
-                undetermined_actions=data['undetermined_actions'],
-            )
+            fields = {'alarm_id': self.initial['id']}
+
+            for key in alarm_def.keys():
+                if key == 'id':
+                    continue
+                old_val = self.initial[key]
+                new_val = data[key]
+
+                if old_val != new_val:
+                    fields[key] = new_val
+
+            if len(fields) == 1:
+                messages.warning(
+                    request, _('No changes were made to alarm definition.'))
+                return True
+
+            api.monitor.alarm_patch(request, **fields)
             messages.success(request,
                              _('Alarm definition has been updated.'))
         except Exception as e:
