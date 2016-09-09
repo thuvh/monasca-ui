@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a89bdaa_0481bd4d",
+        "filename": "monitoring/alarmdefs/forms.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 18286
+      },
+      "writtenOn": "2016-09-09T09:55:28Z",
+      "side": 1,
+      "message": "initial does not have alarm_actions, ok_actions and undetermined_actions, so If you set notifications this line will be failed.",
+      "range": {
+        "startLine": 250,
+        "startChar": 31,
+        "endLine": 250,
+        "endChar": 38
+      },
+      "revId": "cf7c9fca94d7068bd06889e8783462337ff177ac",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
