@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a89bdaa_873801f0",
+        "filename": "monitoring/alarmdefs/forms.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-09-12T17:59:03Z",
+      "side": 1,
+      "message": "This part of the code is a bit harder to refactor, so I will just revert it for the sake of the bug fix.",
+      "revId": "0bc0065d3dd05d416e7a18fc89d02b2fe8d966ec",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
