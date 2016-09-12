@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a89bdaa_2c49dab7",
+        "filename": "monitoring/alarmdefs/forms.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-09-12T17:35:29Z",
+      "side": 0,
+      "message": "Heh...see https://review.openstack.org/#/c/367778/\n\nyou will understand ;-)",
+      "revId": "59f17b9e732cc416f0601a17181836c3b9fec7cb",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
