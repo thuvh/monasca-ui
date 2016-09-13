@@ -83,6 +83,7 @@ for (var i = 0; i < rows; i++) {
               }
             ],
             "metric": metricName,
+            "measurement": metricName,
             "period": "300",
           }
         ],
