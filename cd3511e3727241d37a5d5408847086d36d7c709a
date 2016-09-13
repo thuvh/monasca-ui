@@ -1,0 +1,10 @@
+Code-Review+1: Shinya Kawabata <s-kawabata@wx.jp.nec.com>
+Code-Review+1: Eric Peterson <eric.peterson@charter.com>
+Code-Review+2: Bradley Klein <bradley.klein@twcable.com>
+Workflow+1: Bradley Klein <bradley.klein@twcable.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Tue, 13 Sep 2016 16:13:11 +0000
+Reviewed-on: https://review.openstack.org/367778
+Project: openstack/monasca-ui
+Branch: refs/heads/master
