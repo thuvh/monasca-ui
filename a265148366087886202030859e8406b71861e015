@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a89bdaa_ee227353",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-09-13T04:15:46Z",
+      "side": 1,
+      "message": "Need to update commit msg.",
+      "revId": "a265148366087886202030859e8406b71861e015",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
