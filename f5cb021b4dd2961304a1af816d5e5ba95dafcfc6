@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a8ec9b2_55f41586",
+        "filename": "grafana-dashboards/drilldown.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-09-15T05:14:53Z",
+      "side": 1,
+      "message": "Are the dimensions, metric properties needed now ?",
+      "revId": "f5cb021b4dd2961304a1af816d5e5ba95dafcfc6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
