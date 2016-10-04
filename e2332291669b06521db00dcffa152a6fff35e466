@@ -22,6 +22,30 @@
       "revId": "e2332291669b06521db00dcffa152a6fff35e466",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a98d1f4_03a48205",
+        "filename": "monitoring/locale/ja/LC_MESSAGES/django.po",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 18286
+      },
+      "writtenOn": "2016-10-04T05:55:29Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "3a98d1f4_b92ea489",
+      "range": {
+        "startLine": 107,
+        "startChar": 7,
+        "endLine": 107,
+        "endChar": 41
+      },
+      "revId": "e2332291669b06521db00dcffa152a6fff35e466",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
