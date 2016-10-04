@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a98d1f4_b92ea489",
+        "filename": "monitoring/locale/ja/LC_MESSAGES/django.po",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 17331
+      },
+      "writtenOn": "2016-10-04T00:32:36Z",
+      "side": 1,
+      "message": "In my feeling, the following is better.\nwebhookの場合のみ有効です。",
+      "range": {
+        "startLine": 107,
+        "startChar": 7,
+        "endLine": 107,
+        "endChar": 41
+      },
+      "revId": "e2332291669b06521db00dcffa152a6fff35e466",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
