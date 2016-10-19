@@ -52,6 +52,24 @@
       "revId": "f5cb021b4dd2961304a1af816d5e5ba95dafcfc6",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa6399be_8b2044f9",
+        "filename": "grafana-dashboards/drilldown.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 5559
+      },
+      "writtenOn": "2016-10-19T11:31:53Z",
+      "side": 1,
+      "message": "I can\u0027t understand what you\u0027re saying.\n\nI\u0027m kinda using in a \"production\" environment, so I deployed monasca using ansible[1].\n\nMy whole deploy is build upstream on monasca projects repositories, even grafana.\n\n\n[1] https://github.com/eubr-bigsea/monasca-ansible/",
+      "parentUuid": "fa6399be_8bf124d0",
+      "revId": "f5cb021b4dd2961304a1af816d5e5ba95dafcfc6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
