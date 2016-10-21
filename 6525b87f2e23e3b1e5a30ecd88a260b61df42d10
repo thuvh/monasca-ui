@@ -16,6 +16,24 @@
       "revId": "6525b87f2e23e3b1e5a30ecd88a260b61df42d10",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da6895a0_a4ac99ee",
+        "filename": "monitoring/locale/ja/LC_MESSAGES/django.po",
+        "patchSetId": 2
+      },
+      "lineNbr": 458,
+      "author": {
+        "id": 18286
+      },
+      "writtenOn": "2016-10-21T11:24:38Z",
+      "side": 1,
+      "message": "+1\nI\u0027ll change as above. Thanks.",
+      "parentUuid": "da6895a0_1c0cc393",
+      "revId": "6525b87f2e23e3b1e5a30ecd88a260b61df42d10",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
