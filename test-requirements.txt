@@ -5,7 +5,6 @@ coverage>=3.6
 django-nose
 mock>=1.0
 funcsigs
-mox3>=0.7.0
 nodeenv
 nose
 nose-exclude
