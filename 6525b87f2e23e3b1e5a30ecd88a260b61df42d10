@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da6895a0_1c0cc393",
+        "filename": "monitoring/locale/ja/LC_MESSAGES/django.po",
+        "patchSetId": 2
+      },
+      "lineNbr": 458,
+      "author": {
+        "id": 17331
+      },
+      "writtenOn": "2016-10-21T09:25:49Z",
+      "side": 1,
+      "message": "It\u0027s just my feeling, but I like the following.\nWebhook以外のタイプを選択した場合、期間には0を指定してください。",
+      "revId": "6525b87f2e23e3b1e5a30ecd88a260b61df42d10",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
