@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a629dbe_0c9ad914",
+        "filename": "monitoring/notifications/forms.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-11-07T14:49:17Z",
+      "side": 1,
+      "message": "Maybe we could wrap this in the cache decorator. I mean extract the new method to get these. That would similar to other openstack components in horizon ? What do you think of that ? I mean, the notification type list is something that may be the same for longer time therefore having it cached might be good idea.",
+      "revId": "37a7ed467a375ad1ac9c1549b8c4568b849912d4",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
