@@ -14,6 +14,9 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
+import copy
+
+from django.utils.functional import cached_property  # noqa
 from django.utils.translation import ugettext_lazy as _  # noqa
 
 from horizon import exceptions
@@ -43,6 +46,14 @@ class BaseNotificationMethodForm(forms.SelfHandlingForm):
             textWidget = readOnlyTextInput
             selectWidget = readOnlySelectInput
 
+        notification_types = self.notification_types
+        choices = copy.copy(constants.NotificationType.CHOICES)
+
+        for notif_type in notification_types:
+            if notif_type['type'] not in [choice[0] for choice in choices]:
+                type_name = notif_type['type'][0] + notif_type['type'][1:].lower()
+                choices.append((notif_type['type'], type_name))
+
         self.fields['name'] = forms.CharField(label=_("Name"),
                                               required=required,
                                               max_length="250",
@@ -53,7 +64,7 @@ class BaseNotificationMethodForm(forms.SelfHandlingForm):
             label=_("Type"),
             required=required,
             widget=selectWidget,
-            choices=constants.NotificationType.CHOICES,
+            choices=choices,
             initial=constants.NotificationType.EMAIL,
             help_text=_("The type of notification method (i.e. email)."))
         self.fields['address'] = forms.CharField(label=_("Address"),
@@ -75,6 +86,10 @@ class BaseNotificationMethodForm(forms.SelfHandlingForm):
             raise forms.ValidationError(_("Period must be zero except for type webhook."))
 
         return data['period']
+
+    @cached_property
+    def notification_types(self):
+        return api.monitor.notification_type_list(self.request)
 
 
 class CreateMethodForm(BaseNotificationMethodForm):

@@ -263,7 +263,7 @@ function monAlarmSubExpressionDirective(staticPath) {
                 delete vm.tags;
                 delete vm.matchingMetrics;
                 delete vm.model;
-            }
+            };
 
         }
 
