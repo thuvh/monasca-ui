@@ -14,6 +14,8 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
+import copy
+
 from django.utils.translation import ugettext_lazy as _  # noqa
 
 from horizon import exceptions
@@ -32,7 +34,7 @@ class BaseNotificationMethodForm(forms.SelfHandlingForm):
     def _instantiate(cls, request, *args, **kwargs):
         return cls(request, *args, **kwargs)
 
-    def _init_fields(self, readOnly=False, create=False):
+    def _init_fields(self, request, readOnly=False, create=False):
         required = True
         textWidget = None
         selectWidget = None
@@ -42,6 +44,13 @@ class BaseNotificationMethodForm(forms.SelfHandlingForm):
             required = False
             textWidget = readOnlyTextInput
             selectWidget = readOnlySelectInput
+
+        notification_types = api.monitor.notification_type_list(request)
+        choices = copy.copy(constants.NotificationType.CHOICES)
+
+        for notif_type in notification_types:
+            if notif_type['type'] not in [choice[0] for choice in choices]:
+                choices.append((notif_type['type'], notif_type['type']))
 
         self.fields['name'] = forms.CharField(label=_("Name"),
                                               required=required,
@@ -53,7 +62,7 @@ class BaseNotificationMethodForm(forms.SelfHandlingForm):
             label=_("Type"),
             required=required,
             widget=selectWidget,
-            choices=constants.NotificationType.CHOICES,
+            choices=choices,
             initial=constants.NotificationType.EMAIL,
             help_text=_("The type of notification method (i.e. email)."))
         self.fields['address'] = forms.CharField(label=_("Address"),
@@ -80,7 +89,7 @@ class BaseNotificationMethodForm(forms.SelfHandlingForm):
 class CreateMethodForm(BaseNotificationMethodForm):
     def __init__(self, request, *args, **kwargs):
         super(CreateMethodForm, self).__init__(request, *args, **kwargs)
-        super(CreateMethodForm, self)._init_fields(readOnly=False)
+        super(CreateMethodForm, self)._init_fields(request, readOnly=False)
 
     def clean_address(self):
         '''Check to make sure address is the correct format depending on the
@@ -118,7 +127,7 @@ class CreateMethodForm(BaseNotificationMethodForm):
 class DetailMethodForm(BaseNotificationMethodForm):
     def __init__(self, request, *args, **kwargs):
         super(DetailMethodForm, self).__init__(request, *args, **kwargs)
-        super(DetailMethodForm, self)._init_fields(readOnly=True)
+        super(DetailMethodForm, self)._init_fields(request, readOnly=True)
 
     def handle(self, request, data):
         return True
@@ -127,7 +136,7 @@ class DetailMethodForm(BaseNotificationMethodForm):
 class EditMethodForm(BaseNotificationMethodForm):
     def __init__(self, request, *args, **kwargs):
         super(EditMethodForm, self).__init__(request, *args, **kwargs)
-        super(EditMethodForm, self)._init_fields(readOnly=False)
+        super(EditMethodForm, self)._init_fields(request, readOnly=False)
 
     def handle(self, request, data):
         try:
