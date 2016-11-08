@@ -90,6 +90,10 @@ function monAlarmExpressionsDirective(staticPath){
                 $event.preventDefault();
             }
             vm.subExpressions.splice(index, 1);
+            if (index === 0 && vm.subExpressions.length === 0) {
+                delete vm.expression;
+                vm.subExpressions.splice($index, 0, {});
+            }
 
             applyConnectable();
             touch();
