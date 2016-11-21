@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a77a97e_1ce69d16",
+        "filename": "monitoring/alarmdefs/constants.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-11-21T06:46:41Z",
+      "side": 1,
+      "message": "I know that\u0027s rather stupid, but could you remove this extra empty line from the top of the each file you\u0027ve modified.",
+      "revId": "da4de4eff80c6df38d5f0eec838f789297089bac",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
