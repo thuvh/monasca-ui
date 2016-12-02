@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a71b18c_6df792f5",
+        "filename": "monitoring/overview/tests.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-12-02T11:39:27Z",
+      "side": 1,
+      "message": "Can you remove that ?",
+      "revId": "f5be233ff2b4802c6fea9786818886aa5e691145",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
