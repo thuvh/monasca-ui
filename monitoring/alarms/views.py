@@ -207,7 +207,7 @@ class AlarmServiceView(tables.DataTableView):
                 try:
                     name, value = self.service.split("=")
                     results = [api.monitor.alarm_show(self.request, value)]
-                except Exception as e:
+                except Exception:
                     messages.error(self.request, _("Could not retrieve alarms"))
                     results = []
             else:
