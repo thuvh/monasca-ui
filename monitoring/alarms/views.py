@@ -155,8 +155,6 @@ class AlarmServiceView(tables.DataTableView):
                 except Exception as e:
                     messages.error(self.request, _("Could not retrieve alarms"))
                     results = []
-                    print "ERROR"
-                    print e
                 return results
             else:
                 try:
