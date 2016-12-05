@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a71b18c_f81b29c8",
+        "filename": "monitoring/alarmdefs/views.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 14273
+      },
+      "writtenOn": "2016-12-05T03:45:51Z",
+      "side": 1,
+      "message": "This looks like it was trying to restrict our pagination to only the N pages available.  If that is the case it looks like the return of the pagninator.page() call should be set to result so we don\u0027t return an empty list to the caller.",
+      "range": {
+        "startLine": 55,
+        "startChar": 12,
+        "endLine": 55,
+        "endChar": 21
+      },
+      "revId": "4596d66bb6cfafb58fd9d23ac66620c1c292ecd5",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a71b18c_388041c0",
+        "filename": "monitoring/notifications/views.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 14273
+      },
+      "writtenOn": "2016-12-05T03:45:51Z",
+      "side": 1,
+      "message": "This looks like the same problem as before.",
+      "range": {
+        "startLine": 52,
+        "startChar": 12,
+        "endLine": 52,
+        "endChar": 21
+      },
+      "revId": "4596d66bb6cfafb58fd9d23ac66620c1c292ecd5",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
