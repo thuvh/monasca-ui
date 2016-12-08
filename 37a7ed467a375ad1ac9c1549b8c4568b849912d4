@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "3a71b18c_fe53636a",
+        "filename": "monitoring/notifications/forms.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 18286
+      },
+      "writtenOn": "2016-12-08T10:55:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a629dbe_0c9ad914",
+      "revId": "37a7ed467a375ad1ac9c1549b8c4568b849912d4",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3a71b18c_5fd0e0c9",
         "filename": "monitoring/notifications/forms.py",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "3a71b18c_091ab26e",
+        "filename": "monitoring/notifications/forms.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 18286
+      },
+      "writtenOn": "2016-12-08T10:55:26Z",
+      "side": 1,
+      "message": "Constants are used by translation. So I didn\u0027t delete constants.",
+      "parentUuid": "3a71b18c_5fd0e0c9",
+      "revId": "37a7ed467a375ad1ac9c1549b8c4568b849912d4",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3a71b18c_ffe1ac9b",
         "filename": "monitoring/notifications/forms.py",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2016-12-08T06:09:37Z",
       "side": 1,
       "message": "If would drop the constant, we could pick up the first item from the list here I guess, maybe sort it before that to be sure that the same item goes as the first one always.",
+      "revId": "37a7ed467a375ad1ac9c1549b8c4568b849912d4",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a71b18c_be59eb90",
+        "filename": "monitoring/notifications/forms.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 18286
+      },
+      "writtenOn": "2016-12-08T10:55:26Z",
+      "side": 1,
+      "message": "sort is done",
+      "parentUuid": "3a71b18c_ffe1ac9b",
       "revId": "37a7ed467a375ad1ac9c1549b8c4568b849912d4",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
