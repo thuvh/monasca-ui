@@ -16,6 +16,40 @@
       "revId": "37a7ed467a375ad1ac9c1549b8c4568b849912d4",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a71b18c_5fd0e0c9",
+        "filename": "monitoring/notifications/forms.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-12-08T06:09:37Z",
+      "side": 1,
+      "message": "Do we still need this constant ?",
+      "revId": "37a7ed467a375ad1ac9c1549b8c4568b849912d4",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a71b18c_ffe1ac9b",
+        "filename": "monitoring/notifications/forms.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-12-08T06:09:37Z",
+      "side": 1,
+      "message": "If would drop the constant, we could pick up the first item from the list here I guess, maybe sort it before that to be sure that the same item goes as the first one always.",
+      "revId": "37a7ed467a375ad1ac9c1549b8c4568b849912d4",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
