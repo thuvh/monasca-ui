@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "3a71b18c_04dd3070",
+        "filename": "monitoring/notifications/forms.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2016-12-08T11:30:25Z",
+      "side": 1,
+      "message": "Hmm...that\u0027s a problem then, because effectively you are duplicating the code right now :/.\n\nIt would have be translated on the server side (unless there\u0027s some magic way for it to happen in Horizon), but that\u0027s much bigger deal, so maybe you could discuss this problem at the daily ?",
+      "parentUuid": "3a71b18c_091ab26e",
+      "revId": "37a7ed467a375ad1ac9c1549b8c4568b849912d4",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3a71b18c_ffe1ac9b",
         "filename": "monitoring/notifications/forms.py",
         "patchSetId": 2
