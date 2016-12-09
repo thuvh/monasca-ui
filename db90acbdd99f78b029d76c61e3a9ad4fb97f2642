@@ -22,6 +22,30 @@
       "revId": "db90acbdd99f78b029d76c61e3a9ad4fb97f2642",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a71b18c_f1e7db0f",
+        "filename": "setup.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6547
+      },
+      "writtenOn": "2016-12-09T12:59:55Z",
+      "side": 1,
+      "message": "That\u0027s the standard boilerplate that gets copied from requirements repo...",
+      "parentUuid": "3a71b18c_314cf36f",
+      "range": {
+        "startLine": 1,
+        "startChar": 16,
+        "endLine": 1,
+        "endChar": 62
+      },
+      "revId": "db90acbdd99f78b029d76c61e3a9ad4fb97f2642",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
