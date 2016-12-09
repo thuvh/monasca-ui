@@ -70,6 +70,30 @@
       "revId": "db90acbdd99f78b029d76c61e3a9ad4fb97f2642",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a71b18c_156360dd",
+        "filename": "setup.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2016-12-09T14:08:36Z",
+      "side": 1,
+      "message": "Andreas is right. It\u0027s boilerplate.",
+      "parentUuid": "3a71b18c_d2f81e7f",
+      "range": {
+        "startLine": 1,
+        "startChar": 16,
+        "endLine": 1,
+        "endChar": 62
+      },
+      "revId": "db90acbdd99f78b029d76c61e3a9ad4fb97f2642",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
