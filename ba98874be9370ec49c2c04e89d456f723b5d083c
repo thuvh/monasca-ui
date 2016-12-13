@@ -1,0 +1,10 @@
+Code-Review+2: Witold Bedyk <witold.bedyk@est.fujitsu.com>
+Code-Review+1: Steve Martinelli <s.martinelli@gmail.com>
+Code-Review+2: Roland Hochmuth <roland.hochmuth@hpe.com>
+Workflow+1: Roland Hochmuth <roland.hochmuth@hpe.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Tue, 13 Dec 2016 16:26:13 +0000
+Reviewed-on: https://review.openstack.org/409131
+Project: openstack/monasca-ui
+Branch: refs/heads/master
