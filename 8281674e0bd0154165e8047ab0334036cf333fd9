@@ -16,6 +16,29 @@
       "revId": "8281674e0bd0154165e8047ab0334036cf333fd9",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba5201f7_acf40acf",
+        "filename": "monitoring/config/local_settings.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2017-01-11T13:38:56Z",
+      "side": 1,
+      "message": "I would prefer \u0027KIBANA_POLICY_RULE\u0027.",
+      "range": {
+        "startLine": 58,
+        "startChar": 41,
+        "endLine": 58,
+        "endChar": 63
+      },
+      "revId": "8281674e0bd0154165e8047ab0334036cf333fd9",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
