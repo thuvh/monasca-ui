@@ -1,0 +1,10 @@
+Code-Review+2: Tomasz Trębski <tomasz.trebski@ts.fujitsu.com>
+Code-Review+1: Bradley Klein <bradley.klein@charter.com>
+Code-Review+2: Roland Hochmuth <roland.hochmuth@hpe.com>
+Workflow+1: Roland Hochmuth <roland.hochmuth@hpe.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Mon, 23 Jan 2017 20:00:19 +0000
+Reviewed-on: https://review.openstack.org/394323
+Project: openstack/monasca-ui
+Branch: refs/heads/master
