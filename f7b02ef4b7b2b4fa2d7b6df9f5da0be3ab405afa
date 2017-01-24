@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3905b3_96db697b",
+        "filename": "monitoring/notifications/views.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2017-01-24T12:07:19Z",
+      "side": 1,
+      "message": "Maybe you could apply this to other places ? You think that would be possible ?",
+      "revId": "f7b02ef4b7b2b4fa2d7b6df9f5da0be3ab405afa",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
