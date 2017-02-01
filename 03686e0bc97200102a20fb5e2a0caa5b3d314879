@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a461143_39ea9ddb",
+        "filename": "run_tests.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 16168
+      },
+      "writtenOn": "2017-02-01T06:45:07Z",
+      "side": 1,
+      "message": "Ok, I get that you wanted to omit test sources in coverage, but what is shiningpanda ?",
+      "revId": "03686e0bc97200102a20fb5e2a0caa5b3d314879",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
