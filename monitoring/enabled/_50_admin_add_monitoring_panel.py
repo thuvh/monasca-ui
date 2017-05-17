@@ -32,7 +32,7 @@ ADD_SCSS_FILES = [
 from monascaclient import exc
 # A dictionary of exception classes to be added to HORIZON['exceptions'].
 ADD_EXCEPTIONS = {
-    'recoverable': (exc.HTTPUnProcessable, exc.HTTPConflict, exc.HTTPException),
-    'not_found': (exc.HTTPNotFound,),
-    'unauthorized': (exc.HTTPUnauthorized,),
+    'recoverable': (exc.UnprocessableEntity, exc.Conflict, exc.HTTPClientError),
+    'not_found': (exc.NotFound,),
+    'unauthorized': (exc.Unauthorized,),
 }
