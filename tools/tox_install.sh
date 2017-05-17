@@ -36,9 +36,10 @@ elif [ -x "$ZUUL_CLONER" ]; then
         /opt/git \
         --branch $BRANCH_NAME \
         git://git.openstack.org \
-        openstack/requirements
-    cd openstack/requirements
-    $install_cmd -e .
+        openstack/requirements \
+        openstack/python-monascaclient
+    cd openstack/requirements ; $install_cmd -e .
+    cd openstack/python-monascaclient ; $install_cmd -e .
     popd
 else
     echo "PIP HARDCODE" > /tmp/tox_install.txt
