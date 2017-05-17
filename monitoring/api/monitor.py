@@ -12,7 +12,7 @@
 
 import logging
 
-from monascaclient import client as monasca_client
+from monascaclient.osc import migration
 from openstack_dashboard.api import base
 from monitoring.config import local_settings as settings
 
@@ -35,7 +35,7 @@ def monasca_endpoint(request):
     return endpoint
 
 
-def monascaclient(request, password=None):
+def monascaclient(request):
     api_version = "2_0"
     endpoint = monasca_endpoint(request)
     LOG.debug('monascaclient connection created using token "%s" , url "%s"' %
@@ -44,14 +44,13 @@ def monascaclient(request, password=None):
         'token': request.user.token.id,
         'insecure': settings.OPENSTACK_SSL_NO_VERIFY,
         'ca_file': settings.OPENSTACK_SSL_CACERT,
-        'username': request.user.username,
-        'password': password
-        # 'timeout': args.timeout,
-        # 'ca_file': args.ca_file,
-        # 'cert_file': args.cert_file,
-        # 'key_file': args.key_file,
+        'username': request.user.username
     }
-    client = monasca_client.Client(api_version, endpoint, **kwargs)
+    client = migration.make_client(
+            api_version=api_version,
+            endpoint=endpoint,
+            **kwargs
+    )
     client.format_parameters = format_parameters
     return client
 
@@ -62,7 +61,7 @@ def alarm_list(request, offset=0, limit=10000, marker=None, paginate=False):
 
 
 def alarm_list_by_dimension(request, dimensions, offset=0, limit=10000,
-                          marker=None, paginate=False):
+                            marker=None, paginate=False):
     dim_dict = {}
     metric = None
     dimensions = dimensions.split(",")
@@ -137,8 +136,8 @@ def alarmdef_get_by_name(request, name):
     )
 
 
-def alarmdef_create(request, password=None, **kwargs):
-    return monascaclient(request, password).alarm_definitions.create(**kwargs)
+def alarmdef_create(request, **kwargs):
+    return monascaclient(request).alarm_definitions.create(**kwargs)
 
 
 def alarmdef_update(request, **kwargs):
