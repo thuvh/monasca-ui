@@ -4,6 +4,38 @@
 # with installing the package from source. We should replace the version pin in
 # the constraints file before applying it for from-source installation.
 
+function install_dependencies() {
+    local changes=$(echo $1 | tr '^' ' ')
+    local change
+    local project
+    local ref
+    local dir
+
+    if [ -n "$changes" ]; then
+        echo -e "\tAnalyzing changes $changes"
+        for change in $changes; do
+            project=$(echo $change | cut -d: -f1);
+            if [ "$project" = "$ZUUL_PROJECT" ]; then
+                echo -e "\tSkip the change: $change"
+            else
+                echo -e "\tFetching change: $change."
+                ref=$(echo $change | cut -d: -f3);
+                dir=/tmp/$(basename $project)
+                mkdir -p $dir
+                pushd $dir
+                if git fetch $ZUUL_URL/$project $ref; then
+                    git merge FETCH_HEAD
+                fi
+                popd
+                edit-constraint $localfile -- $project "-e git+file://$dir"
+            fi
+        done
+    else
+        edit-constraints $localfile -- "python-monascaclient" \
+            "-e git+http://github.com/openstack/python-monascaclient@master#egg=python-monascaclient"
+    fi
+}
+
 ZUUL_CLONER=/usr/zuul-env/bin/zuul-cloner
 BRANCH_NAME=master
 PACKAGE_NAME=monasca-ui
@@ -52,6 +84,7 @@ fi
 # the current repo. It is listed in constraints file and thus any
 # install will be constrained and we need to unconstrain it.
 edit-constraints $localfile -- $PACKAGE_NAME "-e file://$PWD#egg=$PACKAGE_NAME"
+install_dependencies ${ZUUL_CHANGES:-''}
 
 $install_cmd -U $*
 exit $?
