@@ -52,6 +52,7 @@ fi
 # the current repo. It is listed in constraints file and thus any
 # install will be constrained and we need to unconstrain it.
 edit-constraints $localfile -- $PACKAGE_NAME "-e file://$PWD#egg=$PACKAGE_NAME"
+edit-constraints $localfile -- "python-monascaclient" "-e git+http://github.com/openstack/python-monascaclient@master#egg=python-monascaclient"
 
 $install_cmd -U $*
 exit $?
