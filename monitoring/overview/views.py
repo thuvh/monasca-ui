@@ -32,7 +32,7 @@ from openstack_dashboard import policy
 
 from horizon import exceptions
 
-from monitoring import api
+from monitoring.api import monitor
 from monitoring.alarms import tables as alarm_tables
 from monitoring.config import local_settings as settings
 from monitoring.overview import constants
@@ -182,7 +182,7 @@ def get_status(alarms):
 
 def generate_status(request):
     try:
-        alarms = api.monitor.alarm_list(request)
+        alarms = monitor.alarm_list(request)
     except Exception as e:
         messages.error(request,
                        _('Unable to list alarms: %s') % str(e))
@@ -282,7 +282,7 @@ class MonascaProxyView(TemplateView):
         return req_kwargs
 
     def get(self, request, *args, **kwargs):
-        # monasca_endpoint = api.monitor.monasca_endpoint(self.request)
+        # monasca_endpoint = monitor.monasca_endpoint(self.request)
         restpath = self.kwargs['restpath']
 
         results = None
@@ -291,15 +291,15 @@ class MonascaProxyView(TemplateView):
             req_kwargs = dict(self.request.GET)
             self._convert_dimensions(req_kwargs)
             if len(parts) == 1:
-                results = {'elements': api.monitor.
+                results = {'elements': monitor.
                            metrics_list(request,
                                         **req_kwargs)}
             elif "statistics" == parts[1]:
-                results = {'elements': api.monitor.
+                results = {'elements': monitor.
                            metrics_stat_list(request,
                                              **req_kwargs)}
             elif "measurements" == parts[1]:
-                results = {'elements': api.monitor.
+                results = {'elements': monitor.
                            metrics_measurement_list(request,
                                                     **req_kwargs)}
         if not results:

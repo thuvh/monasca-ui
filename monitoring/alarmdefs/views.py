@@ -12,6 +12,8 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+import logging
+
 from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage
 from django.core.urlresolvers import reverse_lazy, reverse  # noqa
@@ -24,16 +26,17 @@ from horizon import tables
 from horizon.utils import functions as utils
 from horizon import workflows
 
-import monascaclient.exc as exc
+from monascaclient import exc
 from monitoring.alarmdefs import constants
 from monitoring.alarmdefs import forms as alarm_forms
 from monitoring.alarmdefs import tables as alarm_tables
 from monitoring.alarmdefs import workflows as alarm_workflows
-from monitoring import api
+from monitoring.api import monitor
 
 from openstack_dashboard import policy
 
 
+LOG = logging.getLogger(__name__)
 PREV_PAGE_LIMIT = 100
 
 
@@ -48,12 +51,13 @@ class IndexView(tables.DataTableView):
             page_offset = 0
         limit = utils.get_page_size(self.request)
         try:
-            results = api.monitor.alarmdef_list(self.request, page_offset, limit)
+            results = monitor.alarmdef_list(self.request, page_offset, limit)
             paginator = Paginator(results, limit)
             results = paginator.page(1)
         except EmptyPage:
             results = paginator.page(paginator.num_pages)
-        except Exception:
+        except Exception as ex:
+            LOG.exception(str(ex))
             messages.error(self.request, _("Could not retrieve alarm definitions"))
 
         return results
@@ -79,7 +83,7 @@ class IndexView(tables.DataTableView):
         limit = utils.get_page_size(self.request)
         try:
             # To judge whether there is next page, get limit + 1
-            results = api.monitor.alarmdef_list(self.request, page_offset,
+            results = monitor.alarmdef_list(self.request, page_offset,
                                                 limit + 1)
             num_results = len(results)
             paginator = Paginator(results, limit)
@@ -131,7 +135,7 @@ class AlarmDetailView(TemplateView):
             if hasattr(self, "_object"):
                 return self._object
             self._object = None
-            self._object = api.monitor.alarmdef_get(self.request, id)
+            self._object = monitor.alarmdef_get(self.request, id)
             notifications = []
             # Fetch the notification object for each alarm_actions
             all_actions = set(self._object["alarm_actions"] +
@@ -139,7 +143,7 @@ class AlarmDetailView(TemplateView):
                               self._object["undetermined_actions"])
             for id in all_actions:
                 try:
-                    notification = api.monitor.notification_get(
+                    notification = monitor.notification_get(
                         self.request,
                         id)
                     notification['alarm'] = False
@@ -147,7 +151,7 @@ class AlarmDetailView(TemplateView):
                     notification['undetermined'] = False
                     notifications.append(notification)
                 # except exceptions.NOT_FOUND:
-                except exc.HTTPException:
+                except exc.HttpError:
                     msg = _("Notification %s has already been deleted.") % id
                     notifications.append({"id": id,
                                           "name": unicode(msg),
@@ -198,7 +202,7 @@ class AlarmEditView(forms.ModalFormView):
             if hasattr(self, "_object"):
                 return self._object
             self._object = None
-            self._object = api.monitor.alarmdef_get(self.request, id)
+            self._object = monitor.alarmdef_get(self.request, id)
             notifications = []
             # Fetch the notification object for each alarm_actions
             all_actions = set(self._object["alarm_actions"] +
@@ -206,7 +210,7 @@ class AlarmEditView(forms.ModalFormView):
                               self._object["undetermined_actions"])
             for id in all_actions:
                 try:
-                    notification = api.monitor.notification_get(
+                    notification = monitor.notification_get(
                         self.request,
                         id)
                     notification['alarm'] = False
@@ -214,7 +218,7 @@ class AlarmEditView(forms.ModalFormView):
                     notification['undetermined'] = False
                     notifications.append(notification)
                 # except exceptions.NOT_FOUND:
-                except exc.HTTPException:
+                except exc.HttpError:
                     msg = _("Notification %s has already been deleted.") % id
                     messages.warning(self.request, msg)
 
