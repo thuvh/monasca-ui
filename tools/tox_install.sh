@@ -36,7 +36,8 @@ elif [ -x "$ZUUL_CLONER" ]; then
         /opt/git \
         --branch $BRANCH_NAME \
         git://git.openstack.org \
-        openstack/requirements
+        openstack/requirements \
+        python-monascaclient
     cd openstack/requirements
     $install_cmd -e .
     popd
