@@ -31,14 +31,20 @@ if [ $requirements_installed -eq 0 ]; then
     echo "Requirements already installed; using existing package"
 elif [ -x "$ZUUL_CLONER" ]; then
     echo "ZUUL CLONER" > /tmp/tox_install.txt
+
+    edit-constraints $localfile -- "python-monascaclient"
+
     pushd $mydir
     $ZUUL_CLONER --cache-dir \
         /opt/git \
         --branch $BRANCH_NAME \
         git://git.openstack.org \
-        openstack/requirements
-    cd openstack/requirements
-    $install_cmd -e .
+        openstack/requirements \
+        openstack/python-monascaclient
+    cd openstack/requirements ; $install_cmd -e . ; cd -
+    cd openstack/python-monascaclient ; \
+        $install_cmd -e . ; \
+        cd - ;
     popd
 else
     echo "PIP HARDCODE" > /tmp/tox_install.txt
