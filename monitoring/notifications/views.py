@@ -25,7 +25,7 @@ from horizon.utils import functions as utils
 from monitoring.notifications import constants
 from monitoring.notifications import forms as notification_forms
 from monitoring.notifications import tables as notification_tables
-from monitoring import api
+from monitoring.api import monitor
 
 from openstack_dashboard import policy
 
@@ -46,7 +46,7 @@ class IndexView(tables.DataTableView):
             page_offset = 0
         limit = utils.get_page_size(self.request)
         try:
-            results = api.monitor.notification_list(self.request, page_offset, limit)
+            results = monitor.notification_list(self.request, page_offset, limit)
             paginator = Paginator(results, limit)
             results = paginator.page(1)
         except EmptyPage:
@@ -77,7 +77,7 @@ class IndexView(tables.DataTableView):
         limit = utils.get_page_size(self.request)
         try:
             # To judge whether there is next page, get LIMIT + 1
-            results = api.monitor.notification_list(self.request, page_offset,
+            results = monitor.notification_list(self.request, page_offset,
                                                     limit + 1)
             num_results = len(results)
             paginator = Paginator(results, limit)
@@ -140,7 +140,7 @@ class NotificationEditView(forms.ModalFormView):
             if hasattr(self, "_object"):
                 return self._object
             self._object = None
-            self._object = api.monitor.notification_get(self.request, id)
+            self._object = monitor.notification_get(self.request, id)
             return self._object
         except Exception:
             redirect = reverse(constants.URL_PREFIX + 'index')
