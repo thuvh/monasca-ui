@@ -34,7 +34,7 @@ from horizon.utils import functions as utils
 from monitoring.alarms import constants
 from monitoring.alarms import forms as alarm_forms
 from monitoring.alarms import tables as alarm_tables
-from monitoring import api
+from monitoring.api import monitor
 
 from openstack_dashboard import policy
 
@@ -89,7 +89,7 @@ def get_status(alarms):
 
 def generate_status(request):
     try:
-        alarms = api.monitor.alarm_list(request)
+        alarms = monitor.alarm_list(request)
     except Exception as e:
         messages.error(request,
                        _('Unable to list alarms: %s') % str(e))
@@ -138,7 +138,7 @@ class AlarmServiceView(tables.DataTableView):
         limit = utils.get_page_size(self.request)
         if self.service == default_service:
             try:
-                results = api.monitor.alarm_list(self.request, page_offset,
+                results = monitor.alarm_list(self.request, page_offset,
                                                  limit)
                 paginator = Paginator(results, limit)
                 contacts = paginator.page(1)
@@ -151,7 +151,7 @@ class AlarmServiceView(tables.DataTableView):
             if self.service[:2] == 'id':
                 try:
                     name, value = self.service.split("=")
-                    results = [api.monitor.alarm_show(self.request, value)]
+                    results = [monitor.alarm_show(self.request, value)]
                 except Exception:
                     messages.error(self.request, _("Could not retrieve alarms"))
                     results = []
@@ -161,7 +161,7 @@ class AlarmServiceView(tables.DataTableView):
                     if self.service[:3] == 'b64':
                         name, value = self.service.split(":")
                         self.service = base64.urlsafe_b64decode(str(value))
-                    results = api.monitor.alarm_list_by_dimension(self.request,
+                    results = monitor.alarm_list_by_dimension(self.request,
                                                                   self.service,
                                                                   page_offset,
                                                                   limit)
@@ -191,7 +191,7 @@ class AlarmServiceView(tables.DataTableView):
         if self.service == 'all':
             try:
                 # To judge whether there is next page, get limit + 1
-                results = api.monitor.alarm_list(self.request, page_offset,
+                results = monitor.alarm_list(self.request, page_offset,
                                                  limit + 1)
                 num_results = len(results)
                 paginator = Paginator(results, limit)
@@ -204,14 +204,14 @@ class AlarmServiceView(tables.DataTableView):
             if self.service[:2] == 'id':
                 try:
                     name, value = self.service.split("=")
-                    results = [api.monitor.alarm_show(self.request, value)]
+                    results = [monitor.alarm_show(self.request, value)]
                 except Exception:
                     messages.error(self.request, _("Could not retrieve alarms"))
                     results = []
             else:
                 try:
                     # To judge whether there is next page, get limit + 1
-                    results = api.monitor.alarm_list_by_dimension(self.request,
+                    results = monitor.alarm_list_by_dimension(self.request,
                                                                   self.service,
                                                                   page_offset,
                                                                   limit + 1)
@@ -296,10 +296,10 @@ class AlarmHistoryView(tables.DataTableView):
             page_offset = 0
         limit = utils.get_page_size(self.request)
         try:
-            results = api.monitor.alarm_history(self.request,
-                                                object_id,
-                                                page_offset,
-                                                limit)
+            results = monitor.alarm_history(self.request,
+                                            object_id,
+                                            page_offset,
+                                            limit)
             paginator = Paginator(results, limit)
             contacts = paginator.page(1)
         except EmptyPage:
@@ -327,7 +327,7 @@ class AlarmHistoryView(tables.DataTableView):
         ts_offset = self.request.GET.get('ts_offset')
 
         try:
-            alarm = api.monitor.alarm_get(self.request, object_id)
+            alarm = monitor.alarm_get(self.request, object_id)
         except Exception:
             messages.error(self.request,
                            _("Could not retrieve alarm for %s") % object_id)
@@ -346,7 +346,7 @@ class AlarmHistoryView(tables.DataTableView):
             prev_page_stack = []
         try:
             # To judge whether there is next page, get limit + 1
-            results = api.monitor.alarm_history(self.request, object_id, page_offset,
+            results = monitor.alarm_history(self.request, object_id, page_offset,
                                                 limit + 1)
             num_results = len(results)
             paginator = Paginator(results, limit)
