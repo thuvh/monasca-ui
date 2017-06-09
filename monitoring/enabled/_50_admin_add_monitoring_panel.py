@@ -36,3 +36,4 @@ ADD_EXCEPTIONS = {
     'not_found': (exc.HTTPNotFound,),
     'unauthorized': (exc.HTTPUnauthorized,),
 }
+
