@@ -36,3 +36,5 @@ ADD_EXCEPTIONS = {
     'not_found': (exc.HTTPNotFound,),
     'unauthorized': (exc.HTTPUnauthorized,),
 }
+
+POLICY_FILES.update({'monitoring': 'monitoring_policy.json',})
