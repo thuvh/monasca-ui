@@ -1,0 +1,5 @@
+{
+    "default": "",
+    "monitoring:kibana_access": "role:monasca-user"
+}
+
