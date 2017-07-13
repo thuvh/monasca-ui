@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1f1a1f67_96bc416a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 20033
+      },
+      "writtenOn": "2017-07-13T07:44:32Z",
+      "side": 1,
+      "message": "Missing dot",
+      "revId": "397e09263a281130005c9d54926fd9f6f27533ef",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f1a1f67_76b1a58f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 20033
+      },
+      "writtenOn": "2017-07-13T07:44:32Z",
+      "side": 1,
+      "message": "capitalize",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 8
+      },
+      "revId": "397e09263a281130005c9d54926fd9f6f27533ef",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f1a1f67_767645db",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 20033
+      },
+      "writtenOn": "2017-07-13T07:44:32Z",
+      "side": 1,
+      "message": "in devstack is 1.10.7. \nwrong order",
+      "range": {
+        "startLine": 11,
+        "startChar": 23,
+        "endLine": 11,
+        "endChar": 45
+      },
+      "revId": "397e09263a281130005c9d54926fd9f6f27533ef",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f1a1f67_3680cd8b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 20033
+      },
+      "writtenOn": "2017-07-13T07:44:32Z",
+      "side": 1,
+      "message": "this line is not needed",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 49
+      },
+      "revId": "397e09263a281130005c9d54926fd9f6f27533ef",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f1a1f67_f64b7584",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 20033
+      },
+      "writtenOn": "2017-07-13T07:44:32Z",
+      "side": 1,
+      "message": "this line is too long",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 105
+      },
+      "revId": "397e09263a281130005c9d54926fd9f6f27533ef",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
