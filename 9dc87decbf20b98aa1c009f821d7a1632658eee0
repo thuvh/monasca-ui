@@ -1,0 +1,10 @@
+Code-Review+1: Adrian Czarnecki <adrian.czarnecki@ts.fujitsu.com>
+Code-Review+1: Dobroslaw Zybort <dobroslaw.zybort@ts.fujitsu.com>
+Code-Review+2: Artur Basiak <artur.basiak@ts.fujitsu.com>
+Workflow+1: Artur Basiak <artur.basiak@ts.fujitsu.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Mon, 17 Jul 2017 04:59:37 +0000
+Reviewed-on: https://review.openstack.org/465532
+Project: openstack/monasca-ui
+Branch: refs/heads/master
