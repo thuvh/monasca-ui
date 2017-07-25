@@ -34,7 +34,7 @@ class ExpressionWidget(forms.Widget):
         self.initial = initial
 
     def render(self, name, value, attrs):
-        final_attrs = self.build_attrs(attrs, name=name)
+        final_attrs = self.build_attrs(attrs, {'name': name})
         if value:
             dim = value
         else:
