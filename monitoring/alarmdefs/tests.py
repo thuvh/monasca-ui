@@ -76,18 +76,19 @@ class AlarmDefinitionsTest(helpers.TestCase):
         step = workflow.get_step('setalarmnotificationsaction')
         self.assertIsNotNone(step)
 
-        self.assertContains(res, '<input class="form-control" id="id_name"')
-        self.assertContains(res, '<input class="form-control" '
-                                 'id="id_description"')
+        self.assertContains(res, '<input type="text" name="name" id="id_name" '
+                                 'required class="form-control"', html=True)
+        self.assertContains(res, '<input type="text" name="description" '
+                                 'class="form-control" id="id_description" />', html=False)
         self.assertContains(res, '<select class="form-control" '
-                                 'id="id_severity"')
+                                 'id="id_severity"', html=False)
 
-        self.assertContains(res, '<mon-alarm-expression')
+        self.assertContains(res, '<mon-alarm-expression', html=False)
 
-        self.assertContains(res, '<input type="hidden" name="alarm_actions"')
-        self.assertContains(res, '<input type="hidden" name="ok_actions"')
+        self.assertContains(res, '<input type="hidden" name="alarm_actions"', html=False)
+        self.assertContains(res, '<input type="hidden" name="ok_actions"', html=False)
         self.assertContains(res, '<input type="hidden" '
-                                 'name="undetermined_actions"')
+                                 'name="undetermined_actions"', html=False)
 
     def test_alarmdefs_detail(self):
         with patch('monitoring.api.monitor', **{
