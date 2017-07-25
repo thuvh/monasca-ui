@@ -54,14 +54,15 @@ class ExpressionWidget(forms.Widget):
         self.initial = initial
 
     def render(self, name, value, attrs=None):
-        final_attrs = self.build_attrs(attrs, name=name)
+        final_attrs = self.build_attrs(attrs)
         t = get_template(constants.TEMPLATE_PREFIX + 'expression_field.html')
 
         local_attrs = {
             'func': ExpressionWidget.func,
             'comparators': ExpressionWidget.comparators,
             'operators': ExpressionWidget.operators,
-            'metrics': self.metrics
+            'metrics': self.metrics,
+            'name': name
         }
 
         local_attrs.update(final_attrs)
@@ -86,10 +87,11 @@ class MatchByWidget(forms.Widget):
         self.initial = initial
 
     def render(self, name, value, attrs=None):
-        final_attrs = self.build_attrs(attrs, name=name)
+        final_attrs = self.build_attrs(attrs)
         t = get_template(constants.TEMPLATE_PREFIX + 'match_by_field.html')
 
-        local_attrs = {'service': ''}
+        local_attrs = {'service': '',
+                       'name': name}
         local_attrs.update(final_attrs)
         context = Context(local_attrs)
         return t.render(context)
@@ -122,7 +124,7 @@ class NotificationCreateWidget(forms.Select):
         super(NotificationCreateWidget, self).__init__(*args, **kwargs)
 
     def render(self, name, value, attrs=None, choices=()):
-        final_attrs = self.build_attrs(attrs, name=name)
+        final_attrs = self.build_attrs(attrs)
         tpl = get_template(constants.TEMPLATE_PREFIX + 'notification_field.html')
 
         selected = {}
@@ -139,7 +141,8 @@ class NotificationCreateWidget(forms.Select):
             else:
                 data.append((id, label, type, address, True, True, True, False))
 
-        local_attrs = {'data': json.dumps(data)}
+        local_attrs = {'data': json.dumps(data),
+                       'name': name}
         local_attrs.update(final_attrs)
         return tpl.render(Context(local_attrs))
 

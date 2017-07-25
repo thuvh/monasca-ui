@@ -34,7 +34,7 @@ class ExpressionWidget(forms.Widget):
         self.initial = initial
 
     def render(self, name, value, attrs):
-        final_attrs = self.build_attrs(attrs, name=name)
+        final_attrs = self.build_attrs(attrs)
         if value:
             dim = value
         else:
@@ -43,7 +43,8 @@ class ExpressionWidget(forms.Widget):
             else:
                 dim = next(("%s=%s" % (k, v) for k, v in self.initial.items()), '')
         t = get_template(constants.TEMPLATE_PREFIX + 'expression_field.html')
-        local_attrs = {'service': dim}
+        local_attrs = {'service': dim,
+                       'name': name}
         local_attrs.update(final_attrs)
         context = Context(local_attrs)
         return t.render(context)
