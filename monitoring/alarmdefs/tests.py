@@ -1,5 +1,5 @@
 # Copyright 2013 Hewlett-Packard Development Company, L.P.
-# Copyright 2016 FUJITSU LIMITED
+# Copyright 2016-2017 FUJITSU LIMITED
 #
 # Licensed under the Apache License, Version 2.0 (the "License"); you may
 # not use this file except in compliance with the License. You may obtain
@@ -75,10 +75,13 @@ class AlarmDefinitionsTest(helpers.TestCase):
 
         step = workflow.get_step('setalarmnotificationsaction')
         self.assertIsNotNone(step)
-
-        self.assertContains(res, '<input class="form-control" id="id_name"')
-        self.assertContains(res, '<input class="form-control" '
-                                 'id="id_description"')
+	for l in str(res).split('\n'):
+            try:
+                print(l)
+            except (UnicodeDecodeError, UnicodeEncodeError):
+                pass
+        self.assertContains(res, '<input type="text" name="description" '
+                                 'id="id_description" class="form-control" />')
         self.assertContains(res, '<select class="form-control" '
                                  'id="id_severity"')
 
