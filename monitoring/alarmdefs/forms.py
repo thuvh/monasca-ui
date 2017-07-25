@@ -54,7 +54,7 @@ class ExpressionWidget(forms.Widget):
         self.initial = initial
 
     def render(self, name, value, attrs=None):
-        final_attrs = self.build_attrs(attrs, name=name)
+        final_attrs = self.build_attrs(attrs, {'name': name})
         t = get_template(constants.TEMPLATE_PREFIX + 'expression_field.html')
 
         local_attrs = {
@@ -65,8 +65,7 @@ class ExpressionWidget(forms.Widget):
         }
 
         local_attrs.update(final_attrs)
-
-        return t.render(Context(local_attrs))
+        return t.render(local_attrs)
 
 
 class ExpressionField(forms.CharField):
@@ -86,13 +85,12 @@ class MatchByWidget(forms.Widget):
         self.initial = initial
 
     def render(self, name, value, attrs=None):
-        final_attrs = self.build_attrs(attrs, name=name)
+        final_attrs = self.build_attrs(attrs, {'name': name})
         t = get_template(constants.TEMPLATE_PREFIX + 'match_by_field.html')
 
         local_attrs = {'service': ''}
         local_attrs.update(final_attrs)
-        context = Context(local_attrs)
-        return t.render(context)
+        return t.render(local_attrs)
 
 
 class NotificationField(forms.MultiValueField):
@@ -122,7 +120,7 @@ class NotificationCreateWidget(forms.Select):
         super(NotificationCreateWidget, self).__init__(*args, **kwargs)
 
     def render(self, name, value, attrs=None, choices=()):
-        final_attrs = self.build_attrs(attrs, name=name)
+        final_attrs = self.build_attrs(attrs, {'name': name})
         tpl = get_template(constants.TEMPLATE_PREFIX + 'notification_field.html')
 
         selected = {}
@@ -141,7 +139,7 @@ class NotificationCreateWidget(forms.Select):
 
         local_attrs = {'data': json.dumps(data)}
         local_attrs.update(final_attrs)
-        return tpl.render(Context(local_attrs))
+        return tpl.render(local_attrs)
 
     def value_from_datadict(self, data, files, name):
         return [{"id": _id} for _id in data.getlist(name)]

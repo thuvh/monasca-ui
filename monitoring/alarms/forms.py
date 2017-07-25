@@ -34,7 +34,7 @@ class ExpressionWidget(forms.Widget):
         self.initial = initial
 
     def render(self, name, value, attrs):
-        final_attrs = self.build_attrs(attrs, name=name)
+        final_attrs = self.build_attrs(attrs, {'name': name})
         if value:
             dim = value
         else:
@@ -45,8 +45,8 @@ class ExpressionWidget(forms.Widget):
         t = get_template(constants.TEMPLATE_PREFIX + 'expression_field.html')
         local_attrs = {'service': dim}
         local_attrs.update(final_attrs)
-        context = Context(local_attrs)
-        return t.render(context)
+
+        return t.render(local_attrs)
 
 
 class SimpleExpressionWidget(django_forms.MultiWidget):
