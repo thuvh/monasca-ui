@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff346bd7_2ee27530",
+        "filename": "grafana-dashboards/drilldown.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 20033
+      },
+      "writtenOn": "2017-07-26T08:08:27Z",
+      "side": 1,
+      "message": "Please remove this extra space",
+      "revId": "eef307d98aaf07dc2dabacadd992b7e054d7d846",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff346bd7_0ed33162",
+        "filename": "grafana-dashboards/drilldown.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 20033
+      },
+      "writtenOn": "2017-07-26T08:08:27Z",
+      "side": 1,
+      "message": "the same as above",
+      "revId": "eef307d98aaf07dc2dabacadd992b7e054d7d846",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
