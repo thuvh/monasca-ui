@@ -76,6 +76,12 @@ class AlarmDefinitionsTest(helpers.TestCase):
         step = workflow.get_step('setalarmnotificationsaction')
         self.assertIsNotNone(step)
         print(res.status_code)
+        for l in str(res).split('\n'):
+            try:
+                print(l)
+            except (UnicodeDecodeError, UnicodeEncodeError):
+                pass
+
         self.assertContains(res, '<input type="text" name="name" id="id_name" '
                                  'required class="form-control"', html=False)
         self.assertContains(res, '<input type="text" name="description" '
