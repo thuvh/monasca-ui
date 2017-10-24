@@ -1,0 +1,8 @@
+Code-Review+2: Dobroslaw Zybort <dobroslaw.zybort@ts.fujitsu.com>
+Workflow+1: Dobroslaw Zybort <dobroslaw.zybort@ts.fujitsu.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Tue, 24 Oct 2017 08:42:32 +0000
+Reviewed-on: https://review.openstack.org/514541
+Project: openstack/monasca-ui
+Branch: refs/heads/master
