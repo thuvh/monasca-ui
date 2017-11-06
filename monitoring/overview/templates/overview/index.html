@@ -7,7 +7,7 @@
 {% endblock page_header %}
 {% block main %}
     <div style="padding: 3px;">
-      {% if grafana_url %}
+      {% if grafana_url and not raw_dashboard_links %}
       <a target="Grafana Home" href="{{grafana_url}}" class="btn btn-primary">
           <span class="fa fa-bar-chart"></span>
           Grafana Home
@@ -20,7 +20,11 @@
       {% endfor %}
       {% else %}
       {% for dashboard in dashboards %}
+      {% if raw_dashboard_links %}
+      <a target={{ dashboard.title }} href="{{ dashboard.fileName }}" class="btn btn-default">
+      {% else %}
       <a target={{ dashboard.title }} href="/grafana/index.html#/dashboard/file/{{ dashboard.fileName }}?api={{api}}" class="btn btn-default">
+      {% endif %}
           <span class="fa fa-bar-chart"></span>
               {% trans dashboard.title %}
       </a>
