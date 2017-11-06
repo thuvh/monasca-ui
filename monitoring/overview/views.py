@@ -244,7 +244,14 @@ class IndexView(TemplateView):
             ((getattr(settings, 'KIBANA_POLICY_SCOPE'), getattr(settings, 'KIBANA_POLICY_RULE')), ), self.request
         )
         context['enable_kibana_button'] = settings.ENABLE_KIBANA_BUTTON
+        context['raw_dashboard_links'] = self._raw_link_style()
         return context
+
+    def _raw_link_style(self):
+        style = getattr(settings, 'GRAFANA_LINK_STYLE')
+        if style == 'raw':
+            return True
+        return False
 
 
 class MonascaProxyView(TemplateView):
