@@ -71,6 +71,21 @@ DASHBOARDS = getattr(settings, 'GRAFANA_LINKS', GRAFANA_LINKS)
 #        {'title': _('OpenStack Dashboard'), 'path': 'project'}]}
 # ]
 
+# Link paths in GRAFANA_LINKS are modified or left alone depending on the
+# GRAFANA_LINK_STYLE setting:
+# * If GRAFANA_LINK_STYLE is 'names' it will generate links suitable for
+#   Grafana 1.5 with Monasca patches, e.g. a path of "openstack" will turn into
+#
+#     "/grafana/index.html#dashboard/file/openstack.json?api=<proxy URL>"
+#
+#   where <proxy URL> is the metrics API proxy URL provided by the Monasca
+#   Horizon plugin.
+# * If GRAFANA_LINK_STYLE is 'raw', the contents of any link's path will simply
+#   be used verbatim. This can be used to point to a Grafana 4 instance which
+#   uses a different path for its dashboards.
+
+GRAFANA_LINK_STYLE = getattr(settings, 'GRAFANA_LINK_STYLE', 'names')
+
 GRAFANA_URL = getattr(settings, 'GRAFANA_URL', None)
 
 ENABLE_KIBANA_BUTTON = getattr(settings, 'ENABLE_KIBANA_BUTTON', False)
