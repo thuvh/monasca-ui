@@ -22,6 +22,30 @@
       "revId": "1eb0d682d7d2d022459eb24df25cc8fcfc3abdf7",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f485f77_78830558",
+        "filename": "monitoring/overview/templates/overview/index.html",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 12542
+      },
+      "writtenOn": "2017-11-09T13:22:33Z",
+      "side": 1,
+      "message": "Oh...nasty one. Thanks for spotting!\n\nIt didn\u0027t become apparent when I tested this because I\u0027d hardwired GRAFANA_LINK_STYLE\u003d\u0027names\u0027. I fixed both problems now (see diff).",
+      "parentUuid": "1f485f77_b76cf09c",
+      "range": {
+        "startLine": 23,
+        "startChar": 9,
+        "endLine": 23,
+        "endChar": 31
+      },
+      "revId": "1eb0d682d7d2d022459eb24df25cc8fcfc3abdf7",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
