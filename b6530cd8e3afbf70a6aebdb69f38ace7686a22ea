@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff82abbf_3233b5f8",
+        "filename": "monitoring/overview/templates/overview/index.html",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 21922
+      },
+      "writtenOn": "2017-11-24T14:15:05Z",
+      "side": 1,
+      "message": "When I set GRAFANA_LINK_STYLE to raw I don\u0027t see `Grafana Home` button any more. That\u0027s wrong.",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 10
+      },
+      "revId": "b6530cd8e3afbf70a6aebdb69f38ace7686a22ea",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
