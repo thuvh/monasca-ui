@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "ff82abbf_e89b1c63",
+        "filename": "monitoring/config/local_settings.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2017-11-24T16:19:22Z",
+      "side": 1,
+      "message": "I find it somewhat misleading. GRAFANA_LINKS has three attributes: title, path and fileName. path and fileName translate to following URLs:\n\n {{grafana_url}}/dashboard/db/{{ dashboard.path }}\n /grafana/index.html#/dashboard/file/{{ dashboard.fileName }}?api\u003d{{api}}\n\nI would suggest to introduce the third optional attribute `rawUrl` which would be taken as it is. Then we can drop GRAFANA_LINK_STYLE setting, which in current shape only affects `fileName` attribute.",
+      "range": {
+        "startLine": 74,
+        "startChar": 0,
+        "endLine": 85,
+        "endChar": 45
+      },
+      "revId": "b6530cd8e3afbf70a6aebdb69f38ace7686a22ea",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ff82abbf_3233b5f8",
         "filename": "monitoring/overview/templates/overview/index.html",
         "patchSetId": 4
@@ -13,6 +36,30 @@
       "writtenOn": "2017-11-24T14:15:05Z",
       "side": 1,
       "message": "When I set GRAFANA_LINK_STYLE to raw I don\u0027t see `Grafana Home` button any more. That\u0027s wrong.",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 10
+      },
+      "revId": "b6530cd8e3afbf70a6aebdb69f38ace7686a22ea",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff82abbf_e85c7cee",
+        "filename": "monitoring/overview/templates/overview/index.html",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2017-11-24T16:19:22Z",
+      "side": 1,
+      "message": "Please introduce the dedicated setting if you want to control if `Grafana Home` is displayed.",
+      "parentUuid": "ff82abbf_3233b5f8",
       "range": {
         "startLine": 11,
         "startChar": 0,
