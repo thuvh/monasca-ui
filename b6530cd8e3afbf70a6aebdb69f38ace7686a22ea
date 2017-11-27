@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "ff82abbf_22ca6a4d",
+        "filename": "monitoring/config/local_settings.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 12542
+      },
+      "writtenOn": "2017-11-27T11:13:39Z",
+      "side": 1,
+      "message": "Good idea. Thanks! Done (I called it just \u0027raw\u0027 for brevity\u0027s sake).",
+      "parentUuid": "ff82abbf_e89b1c63",
+      "range": {
+        "startLine": 74,
+        "startChar": 0,
+        "endLine": 85,
+        "endChar": 45
+      },
+      "revId": "b6530cd8e3afbf70a6aebdb69f38ace7686a22ea",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ff82abbf_3233b5f8",
         "filename": "monitoring/overview/templates/overview/index.html",
         "patchSetId": 4
@@ -60,6 +84,30 @@
       "side": 1,
       "message": "Please introduce the dedicated setting if you want to control if `Grafana Home` is displayed.",
       "parentUuid": "ff82abbf_3233b5f8",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 10
+      },
+      "revId": "b6530cd8e3afbf70a6aebdb69f38ace7686a22ea",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff82abbf_82ded60e",
+        "filename": "monitoring/overview/templates/overview/index.html",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 12542
+      },
+      "writtenOn": "2017-11-27T11:13:39Z",
+      "side": 1,
+      "message": "Done. The setting is called SHOW_GRAFANA_HOME and defaults to `True`.",
+      "parentUuid": "ff82abbf_e85c7cee",
       "range": {
         "startLine": 11,
         "startChar": 0,
