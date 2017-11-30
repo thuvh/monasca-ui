@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "ff82abbf_a9083ed9",
+        "filename": "monitoring/config/local_settings.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 12542
+      },
+      "writtenOn": "2017-11-30T15:04:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ff82abbf_d15e8e11",
+      "range": {
+        "startLine": 74,
+        "startChar": 0,
+        "endLine": 78,
+        "endChar": 39
+      },
+      "revId": "d7342f2fe376bda30171d17020a36e00a045a14e",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ff82abbf_510cbe3a",
         "filename": "monitoring/overview/templates/overview/index.html",
         "patchSetId": 5
@@ -36,6 +60,24 @@
       "writtenOn": "2017-11-30T13:26:12Z",
       "side": 1,
       "message": "Should be:\n\n {{grafana_url}}{{ dashboard.path }}",
+      "revId": "d7342f2fe376bda30171d17020a36e00a045a14e",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff82abbf_c96b4283",
+        "filename": "monitoring/overview/templates/overview/index.html",
+        "patchSetId": 5
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 12542
+      },
+      "writtenOn": "2017-11-30T15:04:04Z",
+      "side": 1,
+      "message": "Hmm. I\u0027d rather not do that since that would break the promise of the \u0027raw\u0027 attribute by adding things to the raw URL again even though the documentation claims that does not happen (and I think documenting another exception to what is already a fairly complex rule in the documentation does not exactly help matters either).",
+      "parentUuid": "ff82abbf_510cbe3a",
       "revId": "d7342f2fe376bda30171d17020a36e00a045a14e",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
