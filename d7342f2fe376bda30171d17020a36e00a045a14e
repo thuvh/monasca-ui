@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "df87a7cf_e6d17359",
+        "filename": "monitoring/config/local_settings.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2017-12-04T09:31:09Z",
+      "side": 1,
+      "message": "I think you\u0027ve forgotten to move that part. You write about \u0027both formats\u0027 but it\u0027s not clear at this point, what formats you\u0027re referring to. This comment fits better around line 96.",
+      "parentUuid": "ff82abbf_a9083ed9",
+      "range": {
+        "startLine": 74,
+        "startChar": 0,
+        "endLine": 78,
+        "endChar": 39
+      },
+      "revId": "d7342f2fe376bda30171d17020a36e00a045a14e",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ff82abbf_510cbe3a",
         "filename": "monitoring/overview/templates/overview/index.html",
         "patchSetId": 5
@@ -78,6 +102,24 @@
       "side": 1,
       "message": "Hmm. I\u0027d rather not do that since that would break the promise of the \u0027raw\u0027 attribute by adding things to the raw URL again even though the documentation claims that does not happen (and I think documenting another exception to what is already a fairly complex rule in the documentation does not exactly help matters either).",
       "parentUuid": "ff82abbf_510cbe3a",
+      "revId": "d7342f2fe376bda30171d17020a36e00a045a14e",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df87a7cf_e6a093a8",
+        "filename": "monitoring/overview/templates/overview/index.html",
+        "patchSetId": 5
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2017-12-04T09:31:09Z",
+      "side": 1,
+      "message": "Yes, you\u0027re right. That\u0027s better approach.",
+      "parentUuid": "ff82abbf_c96b4283",
       "revId": "d7342f2fe376bda30171d17020a36e00a045a14e",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
