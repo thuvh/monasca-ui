@@ -22,7 +22,7 @@ from openstack_dashboard.test import helpers
 from monitoring.test.test_data import utils as test_data_utils
 
 
-# Makes output of failing mox tests much easier to read.
+# Makes output of failing mock tests much easier to read.
 wsgi.WSGIRequest.__repr__ = lambda self: "<class 'django.http.HttpRequest'>"
 
 # Silences the warning about with statements.
