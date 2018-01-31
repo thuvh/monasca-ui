@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f93b717_8990384c",
+        "filename": "monitoring/alarmdefs/templates/alarmdefs/_edit.html",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 17981
+      },
+      "writtenOn": "2018-01-31T11:22:23Z",
+      "side": 1,
+      "message": "Add the indent intentionally to use same translation resource in here (https://github.com/openstack/monasca-ui/blob/master/monitoring/locale/ja/LC_MESSAGES/django.po#L64)",
+      "revId": "0373c984d2bd660447edbf52ee84e3f76a4c7244",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
