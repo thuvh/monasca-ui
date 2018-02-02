@@ -12,7 +12,12 @@
   {% include "horizon/common/_page_header.html" with title=_("All Alarms") %}
   {% endif %}
 {% endblock page_header %}
-
+{% block breadcrumb_nav %}
+  <ol class="breadcrumb">
+    <li>{% trans "Monitoring" %}</li>
+    <li>{% trans "Alarms" %}</li>
+  </ol>
+{% endblock %}
 {% block main %}
     {{ table.render }}
 <div class="pagination">
