@@ -1,0 +1,8 @@
+Code-Review+2: Amir Mofakhar <amofakhar@op5.com>
+Workflow+1: Amir Mofakhar <amofakhar@op5.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Fri, 02 Feb 2018 08:00:02 +0000
+Reviewed-on: https://review.openstack.org/540268
+Project: openstack/monasca-ui
+Branch: refs/heads/master
