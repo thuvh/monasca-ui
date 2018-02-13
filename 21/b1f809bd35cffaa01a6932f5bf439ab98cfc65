@@ -1,0 +1,9 @@
+Code-Review+1: Adrian Czarnecki <adrian.czarnecki@ts.fujitsu.com>
+Code-Review+2: Amir Mofakhar <amofakhar@op5.com>
+Workflow+1: Amir Mofakhar <amofakhar@op5.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Tue, 13 Feb 2018 07:51:23 +0000
+Reviewed-on: https://review.openstack.org/542868
+Project: openstack/monasca-ui
+Branch: refs/heads/stable/queens
