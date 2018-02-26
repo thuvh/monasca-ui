@@ -125,3 +125,4 @@ NOSE_ARGS = ['--nocapture',
              '--cover-inclusive',
              '--with-xunit',
              '--all-modules']
+
