@@ -93,7 +93,7 @@ def monascaclient(request_auth_params, version=None):
                           user_domain_id=user_domain_id,
                           project_domain_id=project_domain_id,
                           insecure=INSECURE,
-                          cert=CACERT,
+                          verify=CACERT,
                           auth_url=auth_url,
                           endpoint=monasca_url)
     return c
