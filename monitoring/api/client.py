@@ -67,6 +67,14 @@ def _get_auth_params_from_request(request):
     )
 
 
+def _get_to_verify():
+    to_verify = CACERT
+    if INSECURE:
+        to_verify = False
+
+    return to_verify
+
+
 @memoized.memoized_with_request(_get_auth_params_from_request)
 def monascaclient(request_auth_params, version=None):
 
@@ -87,13 +95,15 @@ def monascaclient(request_auth_params, version=None):
     LOG.debug('Monasca::Client <Url: %s> <Version: %s>'
               % (monasca_url, version))
 
+    to_verify = _get_to_verify()
+
     c = mon_client.Client(api_version=version,
                           token=token_id,
                           project_id=project_id,
                           user_domain_id=user_domain_id,
                           project_domain_id=project_domain_id,
                           insecure=INSECURE,
-                          cert=CACERT,
+                          verify=to_verify,
                           auth_url=auth_url,
                           endpoint=monasca_url)
     return c
