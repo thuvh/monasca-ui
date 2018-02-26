@@ -87,13 +87,17 @@ def monascaclient(request_auth_params, version=None):
     LOG.debug('Monasca::Client <Url: %s> <Version: %s>'
               % (monasca_url, version))
 
+    to_verify = CACERT
+    if INSECURE:
+        to_verify = False
+
     c = mon_client.Client(api_version=version,
                           token=token_id,
                           project_id=project_id,
                           user_domain_id=user_domain_id,
                           project_domain_id=project_domain_id,
                           insecure=INSECURE,
-                          cert=CACERT,
+                          verify=to_verify,
                           auth_url=auth_url,
                           endpoint=monasca_url)
     return c
