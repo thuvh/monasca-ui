@@ -44,7 +44,7 @@ cp openstack_dashboard/local/local_settings.py.example openstack_dashboard/local
 ```
 
 Pro Tip: Make sure you have horizon running correctly before proceeding.
-For more details go to http://docs.openstack.org/developer/horizon/quickstart.html#setup
+For more details go to https://docs.openstack.org/horizon/latest/#setup
 
 ##Set up Monasca-UI
 
