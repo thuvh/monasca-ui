@@ -1,0 +1,8 @@
+Code-Review+2: Amir Mofakhar <amofakhar@op5.com>
+Workflow+1: Amir Mofakhar <amofakhar@op5.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Tue, 13 Mar 2018 16:07:30 +0000
+Reviewed-on: https://review.openstack.org/550724
+Project: openstack/monasca-ui
+Branch: refs/heads/stable/queens
