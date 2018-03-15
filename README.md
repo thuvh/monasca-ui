@@ -80,6 +80,28 @@ ln -sfF $(pwd)/../monasca-ui/monitoring $(pwd)/monitoring
 ##Removing notification panel
 If you want to disable the notification panel copy over _70_remove_monasca_notification_panel to the openstack_dashboard/enabled directory
 
+## Style checks
+
+To check if the code follows python coding style, run the following command from
+the root directory of this project:
+
+    $ tox -e pep8
+
+## Coverage checks
+
+To measure the code coverage, run the following command from the root
+directory of this project:
+
+    $ tox -e cover
+
+## Unit tests
+
+To run all the unit test cases, run the following command from the root
+directory of this project:
+
+    $ tox -e py27
+
+
 #License
 
 Copyright (c) 2014 Hewlett-Packard Development Company, L.P.
