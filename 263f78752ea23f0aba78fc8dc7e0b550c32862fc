@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "df7087c5_9fb04ddf",
+        "filename": "monitoring/api/tests.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 26733
+      },
+      "writtenOn": "2018-03-15T10:04:27Z",
+      "side": 1,
+      "message": "I think it makes more sense to have some tests for client.monascaclient method instead. They will also cover the _get_to_verify method.",
+      "revId": "263f78752ea23f0aba78fc8dc7e0b550c32862fc",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
