@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "df7087c5_35b49ef1",
+        "filename": "monitoring/api/tests.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2018-03-16T13:12:40Z",
+      "side": 1,
+      "message": "I think we should move these tests to monitoring.test package. The tests.py modules in `overview`, `alarms`, `alarmdefs`, and `notifications` are meant for individual panels and follow the general schema for Horizon plugins. `api` package does not represent any panel.",
+      "revId": "263f78752ea23f0aba78fc8dc7e0b550c32862fc",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "df7087c5_9fb04ddf",
         "filename": "monitoring/api/tests.py",
         "patchSetId": 11
