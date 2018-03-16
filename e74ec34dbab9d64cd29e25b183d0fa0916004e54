@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "df7087c5_b0d8bc1d",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 17669
+      },
+      "writtenOn": "2018-03-16T13:48:50Z",
+      "side": 1,
+      "message": "Could we also add coverage check?\n\n  $ tox -e cover\n\nhttps://github.com/openstack/monasca-ui/blob/master/tox.ini#L36",
+      "revId": "e74ec34dbab9d64cd29e25b183d0fa0916004e54",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
