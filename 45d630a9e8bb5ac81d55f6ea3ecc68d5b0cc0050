@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "df7087c5_94b459f4",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 14123
+      },
+      "writtenOn": "2018-03-19T19:08:53Z",
+      "side": 1,
+      "message": "Please reformat to 80 columns width.",
+      "revId": "45d630a9e8bb5ac81d55f6ea3ecc68d5b0cc0050",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df7087c5_b4ae3d96",
+        "filename": "README.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 14123
+      },
+      "writtenOn": "2018-03-19T19:08:53Z",
+      "side": 1,
+      "message": "Should we add how to install and highlight the need to install hacking?",
+      "revId": "45d630a9e8bb5ac81d55f6ea3ecc68d5b0cc0050",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
