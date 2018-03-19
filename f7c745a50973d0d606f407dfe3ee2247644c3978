@@ -42,6 +42,30 @@
     },
     {
       "key": {
+        "uuid": "df7087c5_a4129908",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 26733
+      },
+      "writtenOn": "2018-03-19T10:49:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "df7087c5_c661d513",
+      "range": {
+        "startLine": 86,
+        "startChar": 0,
+        "endLine": 86,
+        "endChar": 1
+      },
+      "revId": "f7c745a50973d0d606f407dfe3ee2247644c3978",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "df7087c5_a63e21d8",
         "filename": "README.md",
         "patchSetId": 5
@@ -89,6 +113,30 @@
     },
     {
       "key": {
+        "uuid": "df7087c5_a42b792e",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 26733
+      },
+      "writtenOn": "2018-03-19T10:49:05Z",
+      "side": 1,
+      "message": "yes, flake8 config is used by pep8.",
+      "parentUuid": "df7087c5_a9127208",
+      "range": {
+        "startLine": 88,
+        "startChar": 13,
+        "endLine": 88,
+        "endChar": 17
+      },
+      "revId": "f7c745a50973d0d606f407dfe3ee2247644c3978",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "df7087c5_267c51b4",
         "filename": "README.md",
         "patchSetId": 5
@@ -100,6 +148,30 @@
       "writtenOn": "2018-03-19T09:59:03Z",
       "side": 1,
       "message": "Remove trailing spaces (maybe we need linter for this in CI ;) ).",
+      "range": {
+        "startLine": 89,
+        "startChar": 0,
+        "endLine": 89,
+        "endChar": 4
+      },
+      "revId": "f7c745a50973d0d606f407dfe3ee2247644c3978",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df7087c5_44f7fdd5",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 26733
+      },
+      "writtenOn": "2018-03-19T10:49:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "df7087c5_267c51b4",
       "range": {
         "startLine": 89,
         "startChar": 0,
