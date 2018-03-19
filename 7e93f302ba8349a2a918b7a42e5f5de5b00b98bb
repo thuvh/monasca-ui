@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "df7087c5_3e2d31a8",
+        "filename": "monitoring/test/client_tests.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 26733
+      },
+      "writtenOn": "2018-03-19T15:39:03Z",
+      "side": 1,
+      "message": "1. This test does not make sense because if monascaclient returns anything it will be passed and also if it returns a client object with incorrect properties it will pass again.\n\n2. There is no need to mock _get_auth_params_from_request. if you don\u0027t do that , this method will be tested automatically and no need for test_no_ssl_verify and test_ssl_verify_with_cert. both of them should be covered in test_client.",
+      "revId": "7e93f302ba8349a2a918b7a42e5f5de5b00b98bb",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
