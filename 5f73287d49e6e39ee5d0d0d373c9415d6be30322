@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "df7087c5_9d4a07aa",
+        "filename": "monitoring/test/client_tests.py",
+        "patchSetId": 16
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 26733
+      },
+      "writtenOn": "2018-03-21T13:46:27Z",
+      "side": 1,
+      "message": "good tests below ones but unfortunately they are not testing monasca-ui.monitoring.api.client.monclient !\n\nthese two tests are testing monascaclient (python-monascaclient) which is a seperate library and there is no need to test it here in monasca-ui.\n(look at your patches)\n\nyou can see it just by changing line #106 in api.client.py to : verify\u003d\u0027HELLO\u0027 and see that all tests are passed yet! which should not be!",
+      "revId": "5f73287d49e6e39ee5d0d0d373c9415d6be30322",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
