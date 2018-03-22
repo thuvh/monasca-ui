@@ -26,6 +26,9 @@ INDEX_URL = urlresolvers.reverse(
 
 
 class OverviewTest(helpers.TestCase):
+
+    use_mox = False
+
     def test_index_get(self):
         res = self.client.get(INDEX_URL)
         self.assertTemplateUsed(
@@ -34,6 +37,8 @@ class OverviewTest(helpers.TestCase):
 
 
 class KibanaProxyViewTest(helpers.TestCase):
+
+    use_mox = False
 
     def setUp(self):
         super(KibanaProxyViewTest, self).setUp()
@@ -48,7 +53,7 @@ class KibanaProxyViewTest(helpers.TestCase):
             '/', data={'a': 1, 'b': 2}
         )
         expected_path = ('/elasticsearch/.kibana/search'
-                    '/New-Saved-Search%E3%81%82')
+                         '/New-Saved-Search%E3%81%82')
         expected_qs = {'a': ['1'], 'b': ['2']}
 
         url = self.view.get_relative_url(
