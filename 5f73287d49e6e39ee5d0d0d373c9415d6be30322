@@ -16,6 +16,24 @@
       "revId": "5f73287d49e6e39ee5d0d0d373c9415d6be30322",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df7087c5_f1d31ed4",
+        "filename": "monitoring/test/client_tests.py",
+        "patchSetId": 16
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 11880
+      },
+      "writtenOn": "2018-03-22T00:41:32Z",
+      "side": 1,
+      "message": "I will add one api.client.monascaclient test.\nI will keep the following tests...since the actual call into _session of keystone is what we really care. I just want to make sure the variations of the verify will reflect in the params passed into _session.",
+      "parentUuid": "df7087c5_9d4a07aa",
+      "revId": "5f73287d49e6e39ee5d0d0d373c9415d6be30322",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
