@@ -26,6 +26,9 @@ INDEX_URL = urlresolvers.reverse(
 
 
 class OverviewTest(helpers.TestCase):
+    
+    use_mox = False
+    
     def test_index_get(self):
         res = self.client.get(INDEX_URL)
         self.assertTemplateUsed(
@@ -34,6 +37,8 @@ class OverviewTest(helpers.TestCase):
 
 
 class KibanaProxyViewTest(helpers.TestCase):
+
+    use_mox = False
 
     def setUp(self):
         super(KibanaProxyViewTest, self).setUp()

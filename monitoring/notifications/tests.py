@@ -26,6 +26,9 @@ EDIT_URL = urlresolvers.reverse(
 
 
 class AlarmsTest(helpers.TestCase):
+    
+    use_mox = False
+
     def test_index(self):
         with patch('monitoring.api.monitor', **{
             'spec_set': ['notification_list'],
