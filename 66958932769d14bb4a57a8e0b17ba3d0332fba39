@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "df7087c5_19cd6784",
+        "filename": "monitoring/alarmdefs/tests.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2018-03-23T13:39:38Z",
+      "side": 1,
+      "message": "All test classes inherit from monitoring.test.helpers.TestCase. Please set `use_mox` attribute there.",
+      "revId": "66958932769d14bb4a57a8e0b17ba3d0332fba39",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
