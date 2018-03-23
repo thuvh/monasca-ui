@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "df7087c5_74ffca00",
+        "filename": "monitoring/alarms/tests.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2018-03-23T13:57:28Z",
+      "side": 1,
+      "message": "As we set `use_mox` in monitoring.test.helpers.TestCase, we don\u0027t need it here again.",
+      "revId": "900d947af647f241e597bdf9027744a4693f2cd0",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df7087c5_540ac61f",
+        "filename": "monitoring/notifications/tests.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2018-03-23T13:57:28Z",
+      "side": 1,
+      "message": "see above",
+      "revId": "900d947af647f241e597bdf9027744a4693f2cd0",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df7087c5_b4180276",
+        "filename": "monitoring/overview/tests.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2018-03-23T13:57:28Z",
+      "side": 1,
+      "message": "see above",
+      "revId": "900d947af647f241e597bdf9027744a4693f2cd0",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df7087c5_74282a85",
+        "filename": "monitoring/overview/tests.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2018-03-23T13:57:28Z",
+      "side": 1,
+      "message": "see above",
+      "revId": "900d947af647f241e597bdf9027744a4693f2cd0",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df7087c5_942dbe96",
+        "filename": "monitoring/test/client_tests.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2018-03-23T13:57:28Z",
+      "side": 1,
+      "message": "see above",
+      "revId": "900d947af647f241e597bdf9027744a4693f2cd0",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
