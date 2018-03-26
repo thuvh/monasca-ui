@@ -1,0 +1,9 @@
+Code-Review+1: Lukasz Zajaczkowski <lukasz.zajaczkowski@ts.fujitsu.com>
+Code-Review+2: Dobroslaw Zybort <dobroslaw.zybort@ts.fujitsu.com>
+Workflow+1: Dobroslaw Zybort <dobroslaw.zybort@ts.fujitsu.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Mon, 26 Mar 2018 09:37:26 +0000
+Reviewed-on: https://review.openstack.org/555786
+Project: openstack/monasca-ui
+Branch: refs/heads/stable/pike
