@@ -20,6 +20,7 @@ from django.core.urlresolvers import reverse_lazy
 from django import template
 from django.utils.translation import ugettext_lazy as _  # noqa
 from django.utils.translation import ungettext_lazy
+import six
 
 from horizon import tables
 
@@ -166,7 +167,7 @@ class GraphMetric(tables.LinkAction):
             metric = datum['metrics'][0]['name']
             dimensions = datum['metrics'][0].get('dimensions', {})
             query = "?metric=%s" % metric
-            for key, value in dimensions.iteritems():
+            for key, value in six.iteritems(dimensions):
                 query += "&dim_%s=%s" % (key, value)
         except AttributeError:
             # Catches case where Grafana 2 is not enabled.
