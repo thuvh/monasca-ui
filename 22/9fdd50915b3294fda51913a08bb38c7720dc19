@@ -1,0 +1,10 @@
+Code-Review+1: Jeremy Moffitt <jeremy.moffitt@suse.com>
+Code-Review+2: Witold Bedyk <witold.bedyk@est.fujitsu.com>
+Code-Review+2: Amir Mofakhar <amofakhar@op5.com>
+Workflow+1: Amir Mofakhar <amofakhar@op5.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Tue, 27 Mar 2018 22:16:45 +0000
+Reviewed-on: https://review.openstack.org/556601
+Project: openstack/monasca-ui
+Branch: refs/heads/stable/queens
