@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bf659307_e20cac3c",
+        "filename": "monitoring/test/client_tests.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2018-03-28T11:43:29Z",
+      "side": 1,
+      "message": "Why not\n\n  from keystoneauth1.identity.generic import token",
+      "revId": "2b1619c39e45249bc7ad5055a5cb59b5ffade8ab",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
