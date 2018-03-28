@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bf659307_43647ae4",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2018-03-28T16:21:47Z",
+      "side": 1,
+      "message": "Can be removed. See below.",
+      "revId": "268eb199a724f9df52d4b3a421f0a7606b268799",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bf659307_8341323c",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2018-03-28T16:21:47Z",
+      "side": 1,
+      "message": "Better just use:\n\n  dimensions.items()",
+      "range": {
+        "startLine": 170,
+        "startChar": 30,
+        "endLine": 170,
+        "endChar": 55
+      },
+      "revId": "268eb199a724f9df52d4b3a421f0a7606b268799",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bf659307_f576a1a4",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2018-03-28T16:21:47Z",
+      "side": 1,
+      "message": "nit:\n  list(project_link)[0]",
+      "range": {
+        "startLine": 82,
+        "startChar": 18,
+        "endLine": 82,
+        "endChar": 43
+      },
+      "revId": "268eb199a724f9df52d4b3a421f0a7606b268799",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bf659307_d5d4bdbf",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2018-03-28T16:21:47Z",
+      "side": 1,
+      "message": "list(group)[0]",
+      "range": {
+        "startLine": 132,
+        "startChar": 18,
+        "endLine": 132,
+        "endChar": 39
+      },
+      "revId": "268eb199a724f9df52d4b3a421f0a7606b268799",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
