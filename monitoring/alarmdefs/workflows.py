@@ -100,11 +100,12 @@ class SetAlarmDefinitionAction(workflows.Action):
     def clean(self):
         cleaned_data = super(SetAlarmDefinitionAction, self).clean()
 
-        alarm_def_name = cleaned_data.get('name', '')
-        is_name_valid = self._is_alarm_def_name_unique_validator(
-            alarm_def_name)
-        if not is_name_valid:
-            self.add_error('name',
+        alarm_def_name = cleaned_data.get('name', '').strip()
+        if alarm_def_name:
+            is_name_valid = self._is_alarm_def_name_unique_validator(
+                 alarm_def_name)
+            if not is_name_valid:
+                 self.add_error('name',
                            _('Alarm definition with %s name already exists')
                              % alarm_def_name)
 
