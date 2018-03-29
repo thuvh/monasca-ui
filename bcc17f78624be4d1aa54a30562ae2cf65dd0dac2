@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bf659307_01589bf7",
+        "filename": "monitoring/alarmdefs/workflows.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 26639
+      },
+      "writtenOn": "2018-03-29T15:00:18Z",
+      "side": 1,
+      "message": "instead return early: \"if not alarm_def_name then return\"",
+      "range": {
+        "startLine": 104,
+        "startChar": 11,
+        "endLine": 104,
+        "endChar": 25
+      },
+      "revId": "bcc17f78624be4d1aa54a30562ae2cf65dd0dac2",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
