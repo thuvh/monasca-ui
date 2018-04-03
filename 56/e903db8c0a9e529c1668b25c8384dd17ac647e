@@ -1,0 +1,9 @@
+Code-Review+2: Amir Mofakhar <amofakhar@op5.com>
+Code-Review+1: Adrian Czarnecki <adrian.czarnecki@ts.fujitsu.com>
+Workflow+1: Dobroslaw Zybort <dobroslaw.zybort@ts.fujitsu.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Tue, 03 Apr 2018 11:53:10 +0000
+Reviewed-on: https://review.openstack.org/557601
+Project: openstack/monasca-ui
+Branch: refs/heads/master
