@@ -1,0 +1,10 @@
+Code-Review+1: Adrian Czarnecki <adrian.czarnecki@ts.fujitsu.com>
+Code-Review+1: Lukasz Zajaczkowski <lukasz.zajaczkowski@ts.fujitsu.com>
+Code-Review+2: Dobroslaw Zybort <dobroslaw.zybort@ts.fujitsu.com>
+Workflow+1: Dobroslaw Zybort <dobroslaw.zybort@ts.fujitsu.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Mon, 09 Apr 2018 08:44:53 +0000
+Reviewed-on: https://review.openstack.org/559289
+Project: openstack/monasca-ui
+Branch: refs/heads/stable/ocata
