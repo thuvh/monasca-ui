@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bf659307_1d45ac43",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 21922
+      },
+      "writtenOn": "2018-04-09T07:56:55Z",
+      "side": 1,
+      "message": "Use single quotes.",
+      "range": {
+        "startLine": 74,
+        "startChar": 26,
+        "endLine": 74,
+        "endChar": 30
+      },
+      "revId": "d62d6c8c00e538820a887354cf234bcb63fcfdca",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
