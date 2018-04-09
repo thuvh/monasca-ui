@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bf659307_5b6c8c35",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2018-04-09T08:54:41Z",
+      "side": 1,
+      "message": "Empty line after the first line missing.",
+      "revId": "8661fbc0ceb24d09380535f443c5269fa6316c65",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
