@@ -71,26 +71,21 @@ class BaseNotificationMethodForm(forms.SelfHandlingForm):
 
     def clean_period(self):
         '''Check to make sure period is zero unless type is WEBHOOK.
+        For WEBHOOK period must be set to 0 or 60.
         '''
         data = self.cleaned_data
         if data['type'] != constants.NotificationType.WEBHOOK and data['period'] != 0:
-            raise forms.ValidationError(_("Period must be zero except for type webhook."))
+            raise forms.ValidationError(
+                _('Period must be zero except for type webhook.'))
+        elif (data['type'] == constants.NotificationType.WEBHOOK and
+              (data['period'] > 0 and data['period'] < 60)):
+            raise forms.ValidationError(_('Period must be 0 or 60.'))
 
         return data['period']
 
-    @cached_property
-    def notification_types(self):
-        return api.monitor.notification_type_list(self.request)
-
-
-class CreateMethodForm(BaseNotificationMethodForm):
-    def __init__(self, request, *args, **kwargs):
-        super(CreateMethodForm, self).__init__(request, *args, **kwargs)
-        super(CreateMethodForm, self)._init_fields(readOnly=False)
-
     def clean_address(self):
         '''Check to make sure address is the correct format depending on the
-        type of notification
+        type of notification.
         '''
         data = self.cleaned_data
         if data['type'] == constants.NotificationType.EMAIL:
@@ -101,6 +96,16 @@ class CreateMethodForm(BaseNotificationMethodForm):
             pass
 
         return data['address']
+
+    @cached_property
+    def notification_types(self):
+        return api.monitor.notification_type_list(self.request)
+
+
+class CreateMethodForm(BaseNotificationMethodForm):
+    def __init__(self, request, *args, **kwargs):
+        super(CreateMethodForm, self).__init__(request, *args, **kwargs)
+        super(CreateMethodForm, self)._init_fields(readOnly=False)
 
     def handle(self, request, data):
         try:
