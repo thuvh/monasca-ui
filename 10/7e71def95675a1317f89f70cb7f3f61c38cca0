@@ -1,0 +1,9 @@
+Code-Review+2: Dobroslaw Zybort <dobroslaw.zybort@ts.fujitsu.com>
+Code-Review+1: Tobias Johansson <tjohansson@op5.com>
+Workflow+1: Dobroslaw Zybort <dobroslaw.zybort@ts.fujitsu.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Thu, 12 Apr 2018 06:47:45 +0000
+Reviewed-on: https://review.openstack.org/559939
+Project: openstack/monasca-ui
+Branch: refs/heads/stable/ocata
