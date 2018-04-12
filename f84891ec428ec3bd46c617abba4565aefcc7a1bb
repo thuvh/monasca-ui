@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bf659307_3a15b249",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2018-04-12T07:54:26Z",
+      "side": 1,
+      "message": "You don\u0027t really need this conditional.",
+      "range": {
+        "startLine": 70,
+        "startChar": 4,
+        "endLine": 70,
+        "endChar": 32
+      },
+      "revId": "f84891ec428ec3bd46c617abba4565aefcc7a1bb",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bf659307_da24b6c8",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2018-04-12T07:54:26Z",
+      "side": 1,
+      "message": "nicer:\n\n  names \u003d set(metric[\u0027name\u0027] for metric in data[\u0027metrics\u0027])",
+      "range": {
+        "startLine": 71,
+        "startChar": 8,
+        "endLine": 73,
+        "endChar": 38
+      },
+      "revId": "f84891ec428ec3bd46c617abba4565aefcc7a1bb",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bf659307_75049b15",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2018-04-12T07:54:26Z",
+      "side": 1,
+      "message": "Could be replaced with:\n\n  \u0027, \u0027.join(names)",
+      "range": {
+        "startLine": 74,
+        "startChar": 15,
+        "endLine": 74,
+        "endChar": 53
+      },
+      "revId": "f84891ec428ec3bd46c617abba4565aefcc7a1bb",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
