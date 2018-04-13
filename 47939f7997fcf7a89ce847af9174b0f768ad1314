@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bf659307_080ba58d",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2018-04-13T09:47:15Z",
+      "side": 1,
+      "message": "nit: we should rename this to plural and update the column name as well.",
+      "range": {
+        "startLine": 69,
+        "startChar": 4,
+        "endLine": 69,
+        "endChar": 20
+      },
+      "revId": "47939f7997fcf7a89ce847af9174b0f768ad1314",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bf659307_e8b991cb",
+        "filename": "test-requirements.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2018-04-13T09:47:15Z",
+      "side": 1,
+      "message": "Please don\u0027t add dependency on mox. We want to get rid of it in OpenStack and we actually don\u0027t need it here. I know tox fails locally complaining about missing mox, but that\u0027s because older Horizon version gets installed. Zuul installs Horizon from current master and it should just pass fine in OpenStack CI without mox.",
+      "revId": "47939f7997fcf7a89ce847af9174b0f768ad1314",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
