@@ -1,0 +1,9 @@
+Code-Review+2: Witold Bedyk <witold.bedyk@est.fujitsu.com>
+Code-Review+1: James Gu <jgu@suse.com>
+Workflow+1: Witold Bedyk <witold.bedyk@est.fujitsu.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Tue, 17 Apr 2018 12:03:59 +0000
+Reviewed-on: https://review.openstack.org/561540
+Project: openstack/monasca-ui
+Branch: refs/heads/stable/queens
