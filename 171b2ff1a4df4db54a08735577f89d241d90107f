@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "9f6a8fd7_a10c9d3b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 21922
+      },
+      "writtenOn": "2018-04-18T09:21:55Z",
+      "side": 1,
+      "message": "Add empty line and dot at end.",
+      "revId": "171b2ff1a4df4db54a08735577f89d241d90107f",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f6a8fd7_21464d51",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -30,6 +47,29 @@
       "writtenOn": "2018-04-18T09:11:17Z",
       "side": 1,
       "message": "You need a new task in the same story.",
+      "revId": "171b2ff1a4df4db54a08735577f89d241d90107f",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f6a8fd7_c1a191ab",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 21922
+      },
+      "writtenOn": "2018-04-18T09:21:55Z",
+      "side": 1,
+      "message": "Remove one space.",
+      "range": {
+        "startLine": 12,
+        "startChar": 6,
+        "endLine": 12,
+        "endChar": 7
+      },
       "revId": "171b2ff1a4df4db54a08735577f89d241d90107f",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
