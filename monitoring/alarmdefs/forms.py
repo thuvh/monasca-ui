@@ -222,6 +222,13 @@ class EditAlarmForm(forms.SelfHandlingForm):
             label=_("Undetermined Actions"),
             widget=forms.MultipleHiddenInput())
 
+    def clean_name(self):
+        data = self.cleaned_data
+        name = data['name'].strip()
+        if not name:
+                raise forms.ValidationError(_('Name can not be empty'))
+        return name
+
     def set_notification_choices(self, request):
         try:
             notifications = api.monitor.notification_list(request)
