@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9f6a8fd7_41410139",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2018-04-18T09:11:17Z",
+      "side": 1,
+      "message": "Empty line missing",
+      "revId": "171b2ff1a4df4db54a08735577f89d241d90107f",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f6a8fd7_21464d51",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2018-04-18T09:11:17Z",
+      "side": 1,
+      "message": "You need a new task in the same story.",
+      "revId": "171b2ff1a4df4db54a08735577f89d241d90107f",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
