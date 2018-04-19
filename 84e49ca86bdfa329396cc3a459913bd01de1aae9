@@ -22,6 +22,30 @@
       "revId": "84e49ca86bdfa329396cc3a459913bd01de1aae9",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f6a8fd7_840390b8",
+        "filename": "monitoring/alarmdefs/workflows.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 16171
+      },
+      "writtenOn": "2018-04-19T04:43:48Z",
+      "side": 1,
+      "message": "Yes, good point. It will be more readable to reverse conditions:\n\n        if alarm_def_name:\n            is_name_valid \u003d self._is_alarm_def_name_unique_validator(alarm_def_name)\n            if not is_name_valid:\n                self.add_error(\u0027name\u0027,\n                               _(\u0027Alarm definition with %s name already exists\u0027)\n                                  % alarm_def_name)\n        else\n             self.add_error(\u0027name\u0027,\n                           _(\u0027Alarm name can not be empty\u0027))\n        return alarm_def_name",
+      "parentUuid": "9f6a8fd7_2423a907",
+      "range": {
+        "startLine": 113,
+        "startChar": 0,
+        "endLine": 113,
+        "endChar": 8
+      },
+      "revId": "84e49ca86bdfa329396cc3a459913bd01de1aae9",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
