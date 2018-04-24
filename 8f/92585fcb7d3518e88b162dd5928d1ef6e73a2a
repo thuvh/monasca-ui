@@ -1,0 +1,10 @@
+Code-Review+1: Amir Mofakhar <amofakhar@op5.com>
+Code-Review+2: Stefano Canepa (sc) <sc@linux.it>
+Code-Review+2: Witold Bedyk <witold.bedyk@est.fujitsu.com>
+Workflow+1: Witold Bedyk <witold.bedyk@est.fujitsu.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Tue, 24 Apr 2018 09:07:50 +0000
+Reviewed-on: https://review.openstack.org/557899
+Project: openstack/monasca-ui
+Branch: refs/heads/master
