@@ -1,0 +1,8 @@
+Code-Review+2: Witold Bedyk <witold.bedyk@est.fujitsu.com>
+Workflow+1: Witold Bedyk <witold.bedyk@est.fujitsu.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Wed, 09 May 2018 08:12:59 +0000
+Reviewed-on: https://review.openstack.org/564388
+Project: openstack/monasca-ui
+Branch: refs/heads/stable/pike
