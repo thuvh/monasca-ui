@@ -1,9 +1,206 @@
 CHANGES
 =======
 
+* Imported Translations from Zanata
+* Fix Alarm status Panel on Overview page
+* Imported Translations from Zanata
+* Imported Translations from Zanata
+* Modify policy configuration file
+* Trivial: Update pypi url to new url
+
+1.13.0
+------
+
+* Update pep8 checks
+* Imported Translations from Zanata
+* Change IntegerField to ChoiceField for notification period
+* Imported Translations from Zanata
+* Display unique metric names for alarm
+* Imported Translations from Zanata
+* Run lower-constraints job with Python 3
+* Fix Alarm Details section in Alarm History view
+* add lower-constraints job
+* Fix validators for creating and editing notifications
+* Center the text for the button Deterministic
+* Fix missing metric names for Alarm
+* Adding title to Filter Alarms pop-up
+* Fix misleading validation error
+* Update links in README
+* Make monasca-ui python3 compatible
+* Update unit test for testing monitoring.api.client
+* Updated from global requirements
+* Drop mox3 from test-requirements.txt
+* Fixed the problem for SSL certificate access failure
+* Imported Translations from Zanata
+* Update README file to add description about running tests
+* Move coverage reports to \`cover\` directory
+* Updated from global requirements
+* Updated from global requirements
+* Avoid tox-install.sh
+* Updated from global requirements
+* Updated from global requirements
+* Imported Translations from Zanata
+* Imported Translations from Zanata
+
+1.12.0
+------
+
+* Fix Breadcrumbs
+* Fix installing horizon dependency
+* Imported Translations from Zanata
+* Fix description for name field
+* Fix nit found in monasca-ui
+* Fixing 'Create Alarm Definition' for IE11
+* Imported Translations from Zanata
+* Updated from global requirements
+* Remove heat\_data from unit tests
+
+1.11.0
+------
+
+* Allow raw Grafana links
+
+1.10.0
+------
+
+* Updated from global requirements
+* Imported Translations from Zanata
+* Make tox working for zuulv3
+
+1.9.0
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+* Extended grafana dashboard to display dimensions
+* Updated from global requirements
+
+1.8.0
+-----
+
+* Imported Translations from Zanata
+* Updated from global requirements
+* Remove undeterministic test
+* Fix tags order in test
+* Fix monasca-ui forms
+* Integrate with newer client
+* Updated from global requirements
+* Fix incorrect django.conf.url patterns import
+* Updated from global requirements
+
+1.7.1
+-----
+
+* Add monitoring\_policy.json
+* Remove 'load url from future'
+
+1.7.0
+-----
+
+* Updated from global requirements
+* Imported Translations from Zanata
+* Updated from global requirements
+* Remove deprecated attributes and add alternative methods
+* Updated from global requirements
+
+1.6.0
+-----
+
+* Optimize the link address
+* Fix tox\_install branch name
+* Sync tools/tox\_install.sh
+* Fixed the Problem with add alarm expresion of Alarm Definition
+* Updated from global requirements
+* Updated from global requirements
+* [Fix gate]Update test requirement
+* Updated from global requirements
+
+1.5.0
+-----
+
+* Changes for CI improvement and generate nosetests.xml
+* Fix pagination of notifications
+* Updated from global requirements
+* Add support for notification plugin
+* Add proxy configuration for tox.ini file
+* Add Apache 2.0 license to source file
+* Enable Log Management via specific policy
+* H305 and H307 hacking have been deprecated
+* Updated from global requirements
+* Add Constraints support
+* H803 hacking have been deprecated
+
+1.4.0
+-----
+
+* Fix local variable is assigned to but never used
+* Remove imported but unused modules
+* Enable pep8 checks on monasca-ui
+* Adjust tests for python-monascaclient >= 1.3.0
+* Remove excessive print
+* Sync from global-requirements
+* Proxy cookies from and to Kibana
+* Show team and repo badges on README
+* Don't include openstack/common in flake8 exclude list
+* Remove vim header
+* Allow removing single subexpression
+
+1.3.0
+-----
+
+* Changed author and author-email
+* Imported Translations from Zanata
+* Add support for 'last' function
+* Imported Translations from Zanata
+* Replace LOG.warn with LOG.warning
+* Translate two exception messages
+* Translate Create Alarm Definition workflow pop-up
+* TrivialFix: Remove logging import unused
+* Fix alarm list if dimensions contain spaces
+
+1.2.0
+-----
+
+* Fix creation alarmdef fails when threshold equals 0
+* Remove expression validation from UI
+* Fix severity key error
+* Some refactoring broke the alarm history link -- fix it
+* Alarm page count does not work
+* Allow filter alarms with query including '/'
+* Compound alarm expression
+* Check user permissions when serving pages
+* Imported Translations from Zanata
+* Update notification create/modify form to include period
+* Improve overview buttons
+* Multi-step alarm definition form
+
+1.1.0
+-----
+
+* Support for (non)deterministic alarms
+* Enhance match\_by item field
+* Fix XSS in dashboard kibana elasticsearch proxy
+* Imported Translations from Zanata
+* Change cancel link to button
+* Translate Create Alarm Definition pop-up properly
+* Restrict access to Kibana for admin
+* Do not filter with empty alarm id
+* Add support of alarm actions of notification
+* FIX the translation for overview page
+* Missing Grafana buttons
+* Imported Translations from Zanata
+* Fix grafana2 link of alarms
+* FIX the grafana link from alarm table
+* Fix compiling messages for i18n
 * Updates for grafana 2
+
+1.0.31
+------
+
+* Remove non license text from license header
 * Dump thresholds as JSON, not python repr()
-* Fix pagination of alarm_definitions and alarms
+* Support dimensions that multibyte characters are contained
+* Fix pagination of alarm\_definitions and alarms
 
 1.0.30
 ------
@@ -46,7 +243,7 @@ CHANGES
 * Delete python bytecode before every test run
 * Change link from stackforge to openstack
 * Make alarm groups configurable on overview page
-* Make match_by item configurable in create alarm definition dialog
+* Make match\_by item configurable in create alarm definition dialog
 * UTC/Browser time as timestamp display format
 * Make notification more readable - leftover
 * Notification more readable in create alarm dialog
@@ -54,7 +251,7 @@ CHANGES
 * Update .gitreview for new namespace
 * Allow to specify different static url in js
 * Scope requests to horizon scoped region
-* Read STATIC_URL from Horizon settings
+* Read STATIC\_URL from Horizon settings
 * UTC/Browser time as timestamp display format
 * Fix sorting timestamp column in alarm history table
 * The "Create Alarm Definition" dialog is closed unintentionally
@@ -70,7 +267,7 @@ CHANGES
 * fixed overview service/hostname bug
 * Added alarm definition pagination and notification
 * Add the ability to disable the notification panel
-* Provide default limit and offset for alarm_list
+* Provide default limit and offset for alarm\_list
 * Wrapped the table cells to maintain alignment
 
 1.0.26
@@ -93,7 +290,7 @@ CHANGES
 1.0.25
 ------
 
-* Grabbing the list_measurements when getting metrics_list
+* Grabbing the list\_measurements when getting metrics\_list
 * alarams graph link broken
 * Allow dynamic dashboard links
 
@@ -123,7 +320,7 @@ CHANGES
 * Clear leftover text when focus moves from dimension chooser
 * Add general alarm information to top of alarm history
 * Adding common alarm metrics dimensions to state change history
-* Since API does not support actions_enabled on create, don't show in form
+* Since API does not support actions\_enabled on create, don't show in form
 * Change layout of alarmdef detail to match the latest horizon CSS
 * Show dashboard buttons on the same line
 
@@ -136,7 +333,7 @@ CHANGES
 * Outputting common dimensions for multiple metrics
 * Added a button for the Monasca Health dashboard https://blueprints.launchpad.net/monasca/+spec/monitoring-of-monitoring
 * Fix filter action logic to allow server side filtering in future
-* Fixed a dead link in the documentation to alarm expressions. Changed it to the github repo docs
+* Fixed a dead link in the documentation to alarm expressions.  Changed it to the github repo docs
 * Remove some old unused code
 
 1.0.19
@@ -236,22 +433,22 @@ CHANGES
 1.0.6
 -----
 
-* Use data_files to install data files
+* Use data\_files to install data files
 * Update buttons to bootstrap3, add icons, add filter
-* Move local_settings to config
+* Move local\_settings to config
 
 1.0.5
 -----
 
 * Fill in expression fields when there is a form redraw
 * fix max size of autocomplete parameter
-* Add local_settings.py to setup.cfg so it gets installed
+* Add local\_settings.py to setup.cfg so it gets installed
 
 1.0.4
 -----
 
 * Change styles to match new version of bootstrap in horizon
-* Move service health configuration to local_settings
+* Move service health configuration to local\_settings
 * Quit calling ajax when there is an error
 * Add unit tests
 
@@ -301,7 +498,7 @@ CHANGES
 * Modified ChangeLog
 * Forgot to checkin tables.py for notifications
 * New version to changelog
-* ChangeLog new version info, alarm history removed reason_data for now
+* ChangeLog new version info, alarm history removed reason\_data for now
 * Notification list, Notification delete, and Notification create action and button
 * Alarms History added
 * Fix notification create
@@ -321,7 +518,7 @@ CHANGES
 * pypi packaging files
 * Make delete alarm last action in menu. Remove demo data
 * Tweak layout of chicklets
-* Make project_id configurable in settings
+* Make project\_id configurable in settings
 * Redesign chicklets based on UX feedback
 * Pick up new icons from Piet in UX
 * Allow editing of alarm expressions. Remap severity
@@ -340,7 +537,7 @@ CHANGES
 * Add alarm edit
 * Migrate API to new signtures. Add Alarm delete
 * Add button to list all alarms
-* Set DEFAULT_PANEL to monitoring panel
+* Set DEFAULT\_PANEL to monitoring panel
 * Add in Cosmos dashboard
 * Add cosmos dashboard
 * Add Create Notification button to table
