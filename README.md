@@ -13,13 +13,13 @@ installed into devstack by monasca-vagrant.
 
 #Deployment Set Up
 
-* git clone https://git.openstack.org/openstack/horizon.git  # clone horizon
+* Clone horizon: `git clone https://git.openstack.org/openstack/horizon.git`
 
-* cd horizon
-* Add git+https://git.openstack.org/openstack/monasca-ui.git to requirements.txt
-* Edit openstack_dashboard/settings.py to include the following two lines:
-* import monitoring.enabled
-* monitoring.enabled, #Add to the settings.update_dashboards list
+* `cd horizon`
+* Add `git+https://git.openstack.org/openstack/monasca-ui.git` to `requirements.txt`.
+* Edit `openstack_dashboard/settings.py` to include the following two lines:
+    * `import monitoring.enabled`
+    * `monitoring.enabled,` (Add this line to the `settings.update_dashboards` list.)
 
 
 #Development Environment Set Up
@@ -45,13 +45,14 @@ cp openstack_dashboard/local/local_settings.py.example openstack_dashboard/local
 ```
 
 Pro Tip: Make sure you have horizon running correctly before proceeding.
-For more details go to https://docs.openstack.org/horizon/latest/#setup
+For more details visit:
+https://docs.openstack.org/horizon/latest/#setup
 
 ##Set up Monasca-UI
 
-* Edit openstack_dashboard/local/local_settings.py to modify the OPENSTACK_HOST
+* Edit `openstack_dashboard/local/local_settings.py` to modify the `OPENSTACK_HOST`
 IP address to point to devstack.
-* Add monasca-client to requirements.txt. Get the latest version from
+* Add `monasca-client` to `requirements.txt`. Get the latest version from:
 https://pypi.org/project/python-monascaclient
 * Link monasca into Horizon:
 
@@ -67,15 +68,15 @@ ln -sfF $(pwd)/../monasca-ui/monitoring $(pwd)/monitoring
 ##Set up Grafana 2.6
 
 * The v2.6.0-keystone branch of grafana is stable, as is v2.6.0 in
-grafana-plugins
-* Copy grafana-plugins/datasources/monasca into the
-grafana/public/app/plugins/datasource/
-* Use the grafana docs to build and deploy grafana
-* http://docs.grafana.org/project/building_from_source/
-* http://docs.grafana.org/installation/configuration/
-* Copy monasca-ui/grafana-dashboards/* to /public/dashboards/
+grafana-plugins.
+* Copy `grafana-plugins/datasources/monasca` into
+`grafana/public/app/plugins/datasource/`.
+* Use the grafana docs to build and deploy grafana:
+    * http://docs.grafana.org/project/building_from_source/
+    * http://docs.grafana.org/installation/configuration/
+* Copy `monasca-ui/grafana-dashboards/*` to `/public/dashboards/`
 in your grafana deployment.
-* Set GRAFANA_URL in the horizon settings
+* Set `GRAFANA_URL` in the horizon settings.
 
 ##Start Server
 
@@ -85,8 +86,8 @@ in your grafana deployment.
 
 ##Removing notification panel
 If you want to disable the notification panel copy over
-_70_remove_monasca_notification_panel to the
-openstack_dashboard/enabled directory
+`_70_remove_monasca_notification_panel` to the
+`openstack_dashboard/enabled` directory.
 
 ## Style checks
 
@@ -107,23 +108,4 @@ directory of this project:
 To run all the unit test cases, run the following command from the root
 directory of this project:
 
-    $ tox -e py27
-
-
-#License
-
-Copyright (c) 2014 Hewlett-Packard Development Company, L.P.
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
-implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
+    $ tox -e py27,py35
