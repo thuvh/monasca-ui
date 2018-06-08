@@ -12,7 +12,7 @@
 #  License for the specific language governing permissions and limitations
 #  under the License.
 
-from django.core import urlresolvers
+from django.urls import reverse
 from django.test import RequestFactory
 
 from monitoring.overview import constants
@@ -20,7 +20,7 @@ from monitoring.overview import views
 from monitoring.test import helpers
 
 
-INDEX_URL = urlresolvers.reverse(
+INDEX_URL = reverse(
     constants.URL_PREFIX + 'index')
 
 
