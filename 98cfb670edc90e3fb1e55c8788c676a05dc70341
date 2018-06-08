@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f7c97a3_e7d10f31",
+        "filename": "monitoring/alarmdefs/tables.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2018-06-08T11:04:48Z",
+      "side": 1,
+      "message": "You can put this in single line. No need to wrap.",
+      "range": {
+        "startLine": 34,
+        "startChar": 8,
+        "endLine": 35,
+        "endChar": 44
+      },
+      "revId": "98cfb670edc90e3fb1e55c8788c676a05dc70341",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f7c97a3_276ce79a",
+        "filename": "monitoring/alarmdefs/tables.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2018-06-08T11:04:48Z",
+      "side": 1,
+      "message": "same here",
+      "revId": "98cfb670edc90e3fb1e55c8788c676a05dc70341",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f7c97a3_07d52b1b",
+        "filename": "monitoring/alarmdefs/tests.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2018-06-08T11:04:48Z",
+      "side": 1,
+      "message": "No need to wrap anymore.",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 57
+      },
+      "revId": "98cfb670edc90e3fb1e55c8788c676a05dc70341",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f7c97a3_e79fcf62",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2018-06-08T11:04:48Z",
+      "side": 1,
+      "message": "pep8: continuation line over-indented for visual indent",
+      "revId": "98cfb670edc90e3fb1e55c8788c676a05dc70341",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
