@@ -18,7 +18,7 @@ import json
 import logging
 
 from django.contrib import messages
-from django.core.urlresolvers import reverse_lazy
+from django.urls import reverse_lazy
 from django import http
 from django.http import HttpResponse
 from django.utils.translation import ugettext_lazy as _  # noqa
