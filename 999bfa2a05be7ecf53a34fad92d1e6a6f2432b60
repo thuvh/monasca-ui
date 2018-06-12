@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f7c97a3_f4e89fdf",
+        "filename": "monitoring/alarmdefs/forms.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 28062
+      },
+      "writtenOn": "2018-06-12T13:03:43Z",
+      "side": 1,
+      "message": "The argument \u0027fields\u0027 was made required in Django 2.x. Please check [1].\n[1] https://github.com/django/django/commit/8e752d84378c7169ef73a483ffffcba55a08c867",
+      "range": {
+        "startLine": 94,
+        "startChar": 48,
+        "endLine": 94,
+        "endChar": 57
+      },
+      "revId": "999bfa2a05be7ecf53a34fad92d1e6a6f2432b60",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
