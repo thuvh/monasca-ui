@@ -4,8 +4,10 @@
         - openstack-tox-lower-constraints:
             required-projects:
               - openstack/horizon
+        - openstack-tox-py36
     gate:
       jobs:
         - openstack-tox-lower-constraints:
             required-projects:
               - openstack/horizon
+        - openstack-tox-py36
