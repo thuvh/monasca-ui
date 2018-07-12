@@ -4,6 +4,8 @@
         - openstack-tox-lower-constraints:
             required-projects:
               - openstack/horizon
+        - openstack-tox-py36:
+            voting: false
     gate:
       jobs:
         - openstack-tox-lower-constraints:
