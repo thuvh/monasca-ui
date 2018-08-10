@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3f79a3b5_1fbfa4b0",
+        "filename": "README.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 10311
+      },
+      "writtenOn": "2018-08-10T14:43:16Z",
+      "side": 1,
+      "message": "This might read easier with a blank line after the \u003d\u003d\u003d line.\nAre there any pre-conditions here?  I recall you were working on a deployment that already had a running DevStack, so you might mention that here.  The instructions seem to assume horizon was deployed as part of the DevStack run.",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 26
+      },
+      "revId": "dfbdd81ebcdcb815ef651f9344942b4859c5090a",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3f79a3b5_3fc3803a",
+        "filename": "README.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 10311
+      },
+      "writtenOn": "2018-08-10T14:43:16Z",
+      "side": 1,
+      "message": "You can remove the two spaces here to eliminate the red box in the gerrit review.",
+      "revId": "dfbdd81ebcdcb815ef651f9344942b4859c5090a",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
