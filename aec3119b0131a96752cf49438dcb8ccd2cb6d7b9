@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3f79a3b5_6f0b5f7c",
+        "filename": "README.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 10311
+      },
+      "writtenOn": "2018-08-13T17:57:36Z",
+      "side": 1,
+      "message": "pep8 wants a blank line after the block and before the \"- Collect\"",
+      "range": {
+        "startLine": 39,
+        "startChar": 60,
+        "endLine": 40,
+        "endChar": 1
+      },
+      "revId": "aec3119b0131a96752cf49438dcb8ccd2cb6d7b9",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3f79a3b5_2f57a75a",
+        "filename": "README.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 10311
+      },
+      "writtenOn": "2018-08-13T17:57:36Z",
+      "side": 1,
+      "message": "seems to want a blank line after \"::\" also.",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 2
+      },
+      "revId": "aec3119b0131a96752cf49438dcb8ccd2cb6d7b9",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3f79a3b5_2f6ec72e",
+        "filename": "README.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 10311
+      },
+      "writtenOn": "2018-08-13T17:57:36Z",
+      "side": 1,
+      "message": "pep8 wants a blank line here too.",
+      "range": {
+        "startLine": 45,
+        "startChar": 17,
+        "endLine": 46,
+        "endChar": 1
+      },
+      "revId": "aec3119b0131a96752cf49438dcb8ccd2cb6d7b9",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3f79a3b5_cff63364",
+        "filename": "README.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 10311
+      },
+      "writtenOn": "2018-08-13T17:57:36Z",
+      "side": 1,
+      "message": "Looks like you can drop these two lines, as pep8 recognizes it as an implicit link anyway.",
+      "range": {
+        "startLine": 146,
+        "startChar": 0,
+        "endLine": 147,
+        "endChar": 91
+      },
+      "revId": "aec3119b0131a96752cf49438dcb8ccd2cb6d7b9",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
