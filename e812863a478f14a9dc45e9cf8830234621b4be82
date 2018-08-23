@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3f79a3b5_c28621ba",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 21922
+      },
+      "writtenOn": "2018-08-23T09:42:50Z",
+      "side": 1,
+      "message": "Add comment why all this encode/decode are needed here.",
+      "revId": "e812863a478f14a9dc45e9cf8830234621b4be82",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
