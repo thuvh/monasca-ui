@@ -256,7 +256,8 @@ class IndexView(TemplateView):
             ((getattr(settings, 'KIBANA_POLICY_SCOPE'), getattr(settings, 'KIBANA_POLICY_RULE')), ),
             self.request
         )
-        context['enable_kibana_button'] = settings.ENABLE_KIBANA_BUTTON
+        context['enable_log_management_button'] = settings.ENABLE_LOG_MANAGEMENT_BUTTON
+        context['enable_event_management_button'] = settings.ENABLE_EVENT_MANAGEMENT_BUTTON
         context['show_grafana_home'] = settings.SHOW_GRAFANA_HOME
         return context
 
