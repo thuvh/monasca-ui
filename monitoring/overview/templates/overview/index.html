@@ -43,10 +43,18 @@
       </a>
       {% endfor %}
       {% endif %}
-      {% if can_access_logs and enable_kibana_button %}
+      {% if enable_log_management_button or enable_event_management_button and can_access_kibana  %}
       <a target="dashboard" href="{% url 'horizon:monitoring:overview:kibana_proxy' url='/' %}" class="btn btn-default">
-              <span class="fa fa-bar-chart"></span>
-              Log Management
+          <span class="fa fa-bar-chart"></span>
+                {% if enable_log_management_button %}
+                    {% if enable_event_management_button %}
+                        Log and Event Management
+                    {% else %}
+                        Log Management
+                    {% endif %}
+                {% elif enable_event_management_button %}
+                    Event Management
+                {% endif %}
       </a>
       {% endif %}
     </div>
