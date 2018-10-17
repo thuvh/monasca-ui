@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3f79a3b5_cf4d7e3d",
+        "filename": "monitoring/overview/templates/overview/index.html",
+        "patchSetId": 4
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 28062
+      },
+      "writtenOn": "2018-10-17T14:41:59Z",
+      "side": 1,
+      "message": "The Logical operator \u0027and\u0027 has higher precedence than \u0027or\u0027.\n\nThis sentence leads into a bug when the log_management_button is enable but user doesn\u0027t has permission to access Kibana.\n\nThis issue can not be solved by adding parenthesis, because it is a Django template [1]\n\nAlthough is possible to fix it in one logical sentence:\n\n(a or b) and c\nnot ( not ((a or b) and c) )\nnot ( not (a or b) or not c )\nnot ( not a and not b or not c )\n\nIn this case:\n\n{% if not enable_log_management_button and not enable_event_management_button or not can_access_kibana %}\n{% else %}\n\u003cPrint the button\u003e\n{% endif %}\n\n... or just use nested ifs.\n\n[1] https://docs.djangoproject.com/en/dev/ref/templates/builtins/?from\u003dolddocs#complex-expressions",
+      "range": {
+        "startLine": 46,
+        "startChar": 6,
+        "endLine": 46,
+        "endChar": 100
+      },
+      "revId": "b44f766f8d718bdab78a9668d66b9d25436b720a",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
