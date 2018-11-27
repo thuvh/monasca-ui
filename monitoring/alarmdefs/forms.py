@@ -27,9 +27,22 @@ from monitoring import api
 from monitoring.alarmdefs import constants
 
 
+def _get_metrics_call(request, offset):
+    return api.monitor.metrics_list(request, offset=offset)
+
+
 def _get_metrics(request):
-    metrics = api.monitor.metrics_list(request)
-    return json.dumps(metrics)
+    metrics_aggregation = []
+    offset = -1
+    while True:
+        metrics_batch = _get_metrics_call(request, offset)
+        if not metrics_batch:
+            break
+        metrics_aggregation += metrics_batch
+        # next offset defined as the id of last metric.
+        offset = metrics_batch[-1]['id']
+
+    return json.dumps(metrics_aggregation)
 
 
 def _get_notifications(request):
