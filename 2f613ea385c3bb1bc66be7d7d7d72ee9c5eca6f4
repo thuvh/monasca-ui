@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3f79a3b5_e065b9e5",
+        "filename": "setup.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 25553
+      },
+      "writtenOn": "2018-12-14T01:32:14Z",
+      "side": 1,
+      "message": "We can remove this?",
+      "range": {
+        "startLine": 18,
+        "startChar": 4,
+        "endLine": 18,
+        "endChar": 41
+      },
+      "revId": "2f613ea385c3bb1bc66be7d7d7d72ee9c5eca6f4",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
