@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5fc1f717_057f6bab",
+        "filename": ".zuul.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 22348
+      },
+      "writtenOn": "2019-04-05T13:38:29Z",
+      "side": 1,
+      "message": "The project template \"openstack-python36-jobs-horizonn\" was not found.",
+      "range": {
+        "startLine": 1,
+        "startChar": 2,
+        "endLine": 8,
+        "endChar": 0
+      },
+      "revId": "b5ac82806322a792adaa27e1e50bf974d49343e2",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
