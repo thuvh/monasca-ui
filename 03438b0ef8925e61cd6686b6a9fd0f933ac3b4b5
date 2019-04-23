@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ffb9cba7_a1dca946",
+        "filename": "README.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 26141
+      },
+      "writtenOn": "2019-04-23T11:11:53Z",
+      "side": 1,
+      "message": "https://opendev.org/openstack/requirements/raw/branch/master/upper-constraints.txt",
+      "range": {
+        "startLine": 18,
+        "startChar": 20,
+        "endLine": 18,
+        "endChar": 91
+      },
+      "revId": "03438b0ef8925e61cd6686b6a9fd0f933ac3b4b5",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ffb9cba7_e1d2a134",
+        "filename": "tox.ini",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 26141
+      },
+      "writtenOn": "2019-04-23T11:11:53Z",
+      "side": 1,
+      "message": "Correct link: https://opendev.org/openstack/requirements/raw/branch/master/upper-constraints.txt",
+      "range": {
+        "startLine": 14,
+        "startChar": 8,
+        "endLine": 14,
+        "endChar": 108
+      },
+      "revId": "03438b0ef8925e61cd6686b6a9fd0f933ac3b4b5",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
