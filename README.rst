@@ -15,7 +15,7 @@ Devstack Deployment Set Up
 
 -  ``cd /opt/stack/horizon``
 -  Install Openstack upper-constraints requirements
-   ``pip install -c https://git.openstack.org/cgit/openstack/requirements/plain/upper-constraints.txt -r requirements.txt``
+   ``pip install -c https://opendev.org/openstack/requirements/plain/upper-constraints.txt -r requirements.txt``
 -  Clone monasca-ui:
    ``git clone https://git.openstack.org/openstack/monasca-ui.git``
 -  Add ``git+https://git.openstack.org/openstack/monasca-ui.git`` to
