@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dfbec78f_a7dacb74",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2019-05-16T13:31:29Z",
+      "side": 1,
+      "message": "`Fix failing unit tests` would be better.",
+      "revId": "c4b87ffa71a0a5a763dfa17c684ba8bfa8f50341",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
