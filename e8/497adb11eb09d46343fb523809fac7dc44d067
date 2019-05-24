@@ -1,0 +1,11 @@
+Code-Review+2: Witold Bedyk <witold.bedyk@suse.com>
+Code-Review+1: Ivan Kolodyazhny <e0ne@e0ne.info>
+Code-Review+1: Sean McGinnis <sean.mcginnis@gmail.com>
+Code-Review+1: Jean-Pierre REN <renzp@awcloud.com>
+Workflow+1: Stefano Canepa (sc) <sc@linux.it>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Fri, 24 May 2019 13:36:58 +0000
+Reviewed-on: https://review.opendev.org/660128
+Project: openstack/monasca-ui
+Branch: refs/heads/stable/stein
