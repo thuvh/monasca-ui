@@ -1,0 +1,9 @@
+Code-Review+1: Akhil jain <akhil.jain@india.nec.com>
+Code-Review+2: Witold Bedyk <witold.bedyk@suse.com>
+Workflow+1: Witold Bedyk <witold.bedyk@suse.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Tue, 28 May 2019 11:57:17 +0000
+Reviewed-on: https://review.opendev.org/628477
+Project: openstack/monasca-ui
+Branch: refs/heads/master
