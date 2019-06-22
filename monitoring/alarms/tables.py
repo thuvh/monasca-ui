@@ -15,6 +15,7 @@
 
 import json
 
+from django.conf import settings
 from django import template
 from django.urls import reverse
 from django.urls import reverse_lazy
@@ -179,7 +180,9 @@ class GraphMetric(tables.LinkAction):
         return url + query
 
     def allowed(self, request, datum=None):
-        return datum['metrics']
+        return (getattr(settings, 'GRAFANA_URL', None) or
+                getattr(local_settings, 'GRAFANA_URL', None)) is not None \
+            and datum['metrics']
 
 
 class ShowAlarmDefinition(tables.LinkAction):
