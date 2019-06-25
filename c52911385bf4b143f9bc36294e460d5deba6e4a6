@@ -22,6 +22,30 @@
       "revId": "c52911385bf4b143f9bc36294e460d5deba6e4a6",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9fb8cfa7_cb6dce32",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 11880
+      },
+      "writtenOn": "2019-06-25T23:40:00Z",
+      "side": 1,
+      "message": "Can you advice what is a reliable way to detect Grafana integration. We have a couple of customer cases where user complains the link goes nowhere when Grafana integration is not available.",
+      "parentUuid": "9fb8cfa7_accc3d6a",
+      "range": {
+        "startLine": 183,
+        "startChar": 34,
+        "endLine": 183,
+        "endChar": 47
+      },
+      "revId": "c52911385bf4b143f9bc36294e460d5deba6e4a6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
