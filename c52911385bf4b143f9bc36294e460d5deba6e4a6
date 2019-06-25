@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9fb8cfa7_accc3d6a",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2019-06-25T14:05:07Z",
+      "side": 1,
+      "message": "`GRAFANA_LINKS` is not strictly required, so checking it is not sufficient. For example, in DevStack deployment we set [1]:\n\n  GRAFANA_URL \u003d {\u0027RegionOne\u0027: \"http://${SERVICE_HOST}:3000\", }\n  GRAFANA_LINKS \u003d []\n\nIn this setup your change disables the button although Grafana is deployed and usable.\n\n[1] https://opendev.org/openstack/monasca-api/src/branch/master/devstack/lib/ui.sh#L37",
+      "range": {
+        "startLine": 183,
+        "startChar": 34,
+        "endLine": 183,
+        "endChar": 47
+      },
+      "revId": "c52911385bf4b143f9bc36294e460d5deba6e4a6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
