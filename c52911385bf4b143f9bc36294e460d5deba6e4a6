@@ -46,6 +46,30 @@
       "revId": "c52911385bf4b143f9bc36294e460d5deba6e4a6",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9fb8cfa7_39e39bda",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2019-06-26T09:37:02Z",
+      "side": 1,
+      "message": "Checking `GRAFANA_URL` should work. It\u0027s also used earlier in this class. If unset, Grafana integration won\u0027t work.",
+      "parentUuid": "9fb8cfa7_cb6dce32",
+      "range": {
+        "startLine": 183,
+        "startChar": 34,
+        "endLine": 183,
+        "endChar": 47
+      },
+      "revId": "c52911385bf4b143f9bc36294e460d5deba6e4a6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
