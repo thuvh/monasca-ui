@@ -39,7 +39,6 @@ from monitoring.overview import constants
 
 LOG = logging.getLogger(__name__)
 
-
 STATUS_FA_ICON_MAP = {'btn-success': "fa-check",
                       'btn-danger': "fa-exclamation-triangle",
                       'btn-warning': "fa-exclamation",
@@ -237,7 +236,7 @@ class IndexView(TemplateView):
     template_name = constants.TEMPLATE_PREFIX + 'index.html'
 
     def get_context_data(self, **kwargs):
-        if not policy.check((('monitoring', 'monitoring:monitoring'), ), self.request):
+        if not policy.check((('monitoring', 'monitoring:monitoring'),), self.request):
             raise exceptions.NotAuthorized()
         context = super(IndexView, self).get_context_data(**kwargs)
         try:
@@ -253,7 +252,7 @@ class IndexView(TemplateView):
         for link in context["dashboards"]:
             link['raw'] = link.get('raw', False)
         context['can_access_kibana'] = policy.check(
-            ((getattr(settings, 'KIBANA_POLICY_SCOPE'), getattr(settings, 'KIBANA_POLICY_RULE')), ),
+            ((getattr(settings, 'KIBANA_POLICY_SCOPE'), getattr(settings, 'KIBANA_POLICY_RULE')),),
             self.request
         )
         context['enable_log_management_button'] = settings.ENABLE_LOG_MANAGEMENT_BUTTON
@@ -311,20 +310,20 @@ class MonascaProxyView(TemplateView):
             self._convert_dimensions(req_kwargs)
             if len(parts) == 1:
                 results = {'elements': api.monitor.
-                           metrics_list(request,
-                                        **req_kwargs)}
+                    metrics_list(request,
+                                 **req_kwargs)}
             elif "statistics" == parts[1]:
                 results = {'elements': api.monitor.
-                           metrics_stat_list(request,
-                                             **req_kwargs)}
+                    metrics_stat_list(request,
+                                      **req_kwargs)}
             elif "measurements" == parts[1]:
                 results = {'elements': api.monitor.
-                           metrics_measurement_list(request,
-                                                    **req_kwargs)}
+                    metrics_measurement_list(request,
+                                             **req_kwargs)}
             elif "dimensions" == parts[1]:
                 results = {'elements': api.monitor.
-                           metrics_dimension_value_list(request,
-                                                        **req_kwargs)}
+                    metrics_dimension_value_list(request,
+                                                 **req_kwargs)}
         if not results:
             LOG.warning("There was a request made for the path %s that"
                         " is not supported." % restpath)
@@ -365,38 +364,43 @@ def proxy_stream_generator(response):
 
 
 class KibanaProxyView(generic.View):
-
     base_url = None
     http_method_names = ['GET', 'POST', 'PUT', 'DELETE', 'HEAD']
 
     def read(self, method, url, data, headers):
-
-        proxy_request_url = self.get_absolute_url(url)
-        proxy_request = _HttpMethodRequest(
-            method, proxy_request_url, data=data, headers=headers
-        )
-        try:
-            response = urllib.request.urlopen(proxy_request)
-
-        except urllib.error.HTTPError as e:
-            return http.HttpResponse(
-                e.read(),
-                status=e.code,
-                content_type=e.hdrs['content-type']
+        with open('/vagrant_home/files/upgrade/ui-debug.txt', 'a') as file:
+            proxy_request_url = self.get_absolute_url(url)
+            proxy_request = _HttpMethodRequest(
+                method, proxy_request_url, data=data, headers=headers
             )
-        except urllib.error.URLError as e:
-            return http.HttpResponse(e.reason, 404)
+            try:
+                response = urllib.request.urlopen(proxy_request)
 
-        else:
-            status = response.getcode()
-            proxy_response = http.StreamingHttpResponse(
-                proxy_stream_generator(response),
-                status=status,
-                content_type=response.headers['content-type']
-            )
-            if 'set-cookie' in response.headers:
-                proxy_response['set-cookie'] = response.headers['set-cookie']
-            return proxy_response
+            except urllib.error.HTTPError as e:
+                if 'bundle' in proxy_request.get_full_url():
+                    file.write("data:\n{0}\n".format(data))
+                    file.write("headers:\n{0}\n".format(headers))
+                    file.write("method: {0}\n".format(method))
+                    file.write("proxy_request: {0}\n".format(proxy_request.get_full_url()))
+                    file.write("error: {0}\n\n".format(e.read()))
+                return http.HttpResponse(
+                    e.read(),
+                    status=e.code,
+                    content_type=e.hdrs['content-type']
+                )
+            except urllib.error.URLError as e:
+                return http.HttpResponse(e.reason, 404)
+
+            else:
+                status = response.getcode()
+                proxy_response = http.StreamingHttpResponse(
+                    proxy_stream_generator(response),
+                    status=status,
+                    content_type=response.headers['content-type']
+                )
+                if 'set-cookie' in response.headers:
+                    proxy_response['set-cookie'] = response.headers['set-cookie']
+                return proxy_response
 
     @csrf_exempt
     def dispatch(self, request, url):
@@ -415,9 +419,11 @@ class KibanaProxyView(generic.View):
 
         # passing kbn version explicitly for kibana >= 4.3.x
         headers = {
-            'X-Auth-Token': request.user.token.id,
-            'kbn-version': request.META.get('HTTP_KBN_VERSION', ''),
-            'Cookie': request.META.get('HTTP_COOKIE', '')
+            "X-Auth-Token": request.user.token.id,
+            "kbn-version": request.META.get("HTTP_KBN_VERSION", ""),
+            "Cookie": request.META.get("HTTP_COOKIE", ""),
+            "Content-Type": "application/json",
+            "kbn-xsrf": "reporting"
         }
 
         return self.read(request.method, url, request.body, headers)
@@ -431,10 +437,11 @@ class KibanaProxyView(generic.View):
         return url
 
     def get_absolute_url(self, url):
+
         return self.base_url + self.get_relative_url(url).lstrip('/')
 
     def _can_access_kibana(self):
         return policy.check(
-            ((getattr(settings, 'KIBANA_POLICY_SCOPE'), getattr(settings, 'KIBANA_POLICY_RULE')), ),
+            ((getattr(settings, 'KIBANA_POLICY_SCOPE'), getattr(settings, 'KIBANA_POLICY_RULE')),),
             self.request
         )
