@@ -365,12 +365,10 @@ def proxy_stream_generator(response):
 
 
 class KibanaProxyView(generic.View):
-
     base_url = None
     http_method_names = ['GET', 'POST', 'PUT', 'DELETE', 'HEAD']
 
     def read(self, method, url, data, headers):
-
         proxy_request_url = self.get_absolute_url(url)
         proxy_request = _HttpMethodRequest(
             method, proxy_request_url, data=data, headers=headers
@@ -415,9 +413,10 @@ class KibanaProxyView(generic.View):
 
         # passing kbn version explicitly for kibana >= 4.3.x
         headers = {
-            'X-Auth-Token': request.user.token.id,
-            'kbn-version': request.META.get('HTTP_KBN_VERSION', ''),
-            'Cookie': request.META.get('HTTP_COOKIE', '')
+            "X-Auth-Token": request.user.token.id,
+            "kbn-version": request.META.get("HTTP_KBN_VERSION", ""),
+            "Cookie": request.META.get("HTTP_COOKIE", ""),
+            "Content-Type": "application/json",
         }
 
         return self.read(request.method, url, request.body, headers)
