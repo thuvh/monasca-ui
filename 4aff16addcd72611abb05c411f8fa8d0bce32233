@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7faddb67_f3dde940",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 16222
+      },
+      "writtenOn": "2019-08-05T10:44:13Z",
+      "side": 1,
+      "message": "What is the difference between `django.conf.settings` and `monitoring.config.local_settings` imported in line 29?\n\nWhen testing in DevStack I noticed the button being disabled even when the GRAFANA_URL was set. Please note that in DevStack we update the `local_settings` module to set the GRAFANA_URL [1]. Is it the recommended way? Should we change that?\n\n[1] https://opendev.org/openstack/monasca-api/src/branch/master/devstack/lib/ui.sh#L37",
+      "revId": "4aff16addcd72611abb05c411f8fa8d0bce32233",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
