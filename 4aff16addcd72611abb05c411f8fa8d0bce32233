@@ -16,6 +16,24 @@
       "revId": "4aff16addcd72611abb05c411f8fa8d0bce32233",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7faddb67_bf7692d7",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 11880
+      },
+      "writtenOn": "2019-08-15T23:20:53Z",
+      "side": 1,
+      "message": "@Witold, I remember using local_settings didn\u0027t work when I test it in our cloud, using django.conf, it used to work. It has been a while, today I tried it with local_settings and settings...both of them don\u0027t seem to work anymore. It doesn\u0027t make sense...need to dig.",
+      "parentUuid": "7faddb67_f3dde940",
+      "revId": "4aff16addcd72611abb05c411f8fa8d0bce32233",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
