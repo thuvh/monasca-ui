@@ -34,6 +34,24 @@
       "revId": "4aff16addcd72611abb05c411f8fa8d0bce32233",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7faddb67_fa797881",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 11880
+      },
+      "writtenOn": "2019-08-16T00:16:04Z",
+      "side": 1,
+      "message": "@Witold, Sorry I was a little bit confused earlier. I did a couple of more testing again, now it works the way it is supposed to be.  I added GRAFANA_URL in local/local_settings.py or local/local_settings.d/_111_test.py in the real cloud environment. Both worked fine, the Graph Metric button shows when it is set and doesn\u0027t show when it is NOT set. \nIn alarms/tables.py, local_settings is from monitoring.config where it will get the GRAFANA_URL from django.conf. If I use the local_settings instead of django.conf , the problem is in the unit test, the test will fail, because I am using django.test.utils import override_settings to overwrite settings to force condition. Do you have any suggestions? Thanks.",
+      "parentUuid": "7faddb67_bf7692d7",
+      "revId": "4aff16addcd72611abb05c411f8fa8d0bce32233",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
