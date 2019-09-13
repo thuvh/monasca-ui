@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_5632e760",
+        "filename": "monitoring/alarms/tables.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 1736
+      },
+      "writtenOn": "2019-09-13T12:23:34Z",
+      "side": 1,
+      "message": "We don\u0027t need to check for local_settings. \u0027getattr(settings, \u0027GRAFANA_URL\u0027, None)\u0027 is enough",
+      "range": {
+        "startLine": 184,
+        "startChar": 24,
+        "endLine": 184,
+        "endChar": 38
+      },
+      "revId": "347b394f32b5d9fbb9213e058ea78e47a7f58e40",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
