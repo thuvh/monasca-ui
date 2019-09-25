@@ -1,0 +1,8 @@
+Code-Review+2: Adrian Czarnecki <adrian.czarnecki@ts.fujitsu.com>
+Workflow+1: Stefano Canepa (sc) <sc@linux.it>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Wed, 25 Sep 2019 14:58:52 +0000
+Reviewed-on: https://review.opendev.org/674601
+Project: openstack/monasca-ui
+Branch: refs/heads/master
