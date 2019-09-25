@@ -1,0 +1,10 @@
+Code-Review+1: Jeremy Moffitt <jeremy.moffitt@suse.com>
+Code-Review+1: Gary W. Smith <gary.smith@suse.com>
+Code-Review+2: Witold Bedyk <witold.bedyk@suse.com>
+Workflow+1: Stefano Canepa (sc) <sc@linux.it>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Wed, 25 Sep 2019 14:58:47 +0000
+Reviewed-on: https://review.opendev.org/684026
+Project: openstack/monasca-ui
+Branch: refs/heads/stable/rocky
