@@ -1,0 +1,8 @@
+Code-Review+2: Witold Bedyk <witold.bedyk@suse.com>
+Workflow+1: Witold Bedyk <witold.bedyk@suse.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Tue, 01 Oct 2019 12:24:32 +0000
+Reviewed-on: https://review.opendev.org/685945
+Project: openstack/monasca-ui
+Branch: refs/heads/stable/train
