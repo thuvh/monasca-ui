@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3fa7e38b_c4f79359",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 841
+      },
+      "writtenOn": "2019-10-18T01:05:59Z",
+      "side": 1,
+      "message": "The source code change and its background need to be mentioned here.",
+      "revId": "a86efc5bda617e5a77e393f9dd3bfaf99eb3ecb5",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
