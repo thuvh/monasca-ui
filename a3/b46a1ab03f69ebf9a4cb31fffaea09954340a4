@@ -1,0 +1,10 @@
+Code-Review+1: pengyuesheng <pengyuesheng@gohighsec.com>
+Code-Review+1: Akihiro Motoki <amotoki@gmail.com>
+Code-Review+2: Witold Bedyk <witold.bedyk@suse.com>
+Workflow+1: Witold Bedyk <witold.bedyk@suse.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Tue, 22 Oct 2019 09:43:43 +0000
+Reviewed-on: https://review.opendev.org/687621
+Project: openstack/monasca-ui
+Branch: refs/heads/master
