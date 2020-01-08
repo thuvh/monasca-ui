@@ -1,0 +1,9 @@
+Code-Review+2: Vishal Manchanda <manchandavishal143@gmail.com>
+Code-Review+2: Akihiro Motoki <amotoki@gmail.com>
+Workflow+1: Akihiro Motoki <amotoki@gmail.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Wed, 08 Jan 2020 08:39:33 +0000
+Reviewed-on: https://review.opendev.org/700637
+Project: openstack/monasca-ui
+Branch: refs/heads/master
