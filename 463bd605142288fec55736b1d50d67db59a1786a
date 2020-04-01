@@ -22,6 +22,30 @@
       "revId": "463bd605142288fec55736b1d50d67db59a1786a",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df33271e_520d3d8e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 6547
+      },
+      "writtenOn": "2020-04-01T12:22:29Z",
+      "side": 1,
+      "message": "I mean friends. That is pep8, flake8, pyflakes.",
+      "parentUuid": "df33271e_32023970",
+      "range": {
+        "startLine": 14,
+        "startChar": 19,
+        "endLine": 14,
+        "endChar": 26
+      },
+      "revId": "463bd605142288fec55736b1d50d67db59a1786a",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
