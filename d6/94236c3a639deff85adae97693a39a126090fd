@@ -1,0 +1,9 @@
+Code-Review+2: Vishal Manchanda <manchandavishal143@gmail.com>
+Code-Review+1: Joseph Davis <joseph.davis@suse.com>
+Workflow+1: Joseph Davis <joseph.davis@suse.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Wed, 15 Apr 2020 18:06:27 +0000
+Reviewed-on: https://review.opendev.org/717560
+Project: openstack/monasca-ui
+Branch: refs/heads/master
