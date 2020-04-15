@@ -1,0 +1,9 @@
+Code-Review+2: Witold Bedyk <witold.bedyk@suse.com>
+Code-Review+2: Vishal Manchanda <manchandavishal143@gmail.com>
+Workflow+1: Vishal Manchanda <manchandavishal143@gmail.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Wed, 15 Apr 2020 16:59:18 +0000
+Reviewed-on: https://review.opendev.org/720200
+Project: openstack/monasca-ui
+Branch: refs/heads/master
