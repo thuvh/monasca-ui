@@ -1,0 +1,8 @@
+Code-Review+2: Doug Szumski <doug@stackhpc.com>
+Workflow+1: Doug Szumski <doug@stackhpc.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Tue, 19 May 2020 20:11:44 +0000
+Reviewed-on: https://review.opendev.org/729286
+Project: openstack/monasca-ui
+Branch: refs/heads/master
