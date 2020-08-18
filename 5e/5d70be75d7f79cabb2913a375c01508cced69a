@@ -1,0 +1,8 @@
+Code-Review+2: Martin Chacon Piza <MartinDavid.ChaconPiza1@est.fujitsu.com>
+Workflow+1: Martin Chacon Piza <MartinDavid.ChaconPiza1@est.fujitsu.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Tue, 18 Aug 2020 10:33:57 +0000
+Reviewed-on: https://review.opendev.org/746674
+Project: openstack/monasca-ui
+Branch: refs/heads/stable/ussuri
