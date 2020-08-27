@@ -93,7 +93,7 @@ def get_status(alarms):
 def generate_status(request):
     try:
         alarms = api.monitor.alarm_list(request)
-    except Exception as e:
+    except Exception:
         messages.error(request,
                        _('Unable to list alarms: %s') % str(e))
         alarms = []
