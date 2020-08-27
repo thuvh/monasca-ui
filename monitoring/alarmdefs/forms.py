@@ -240,10 +240,10 @@ class EditAlarmForm(forms.SelfHandlingForm):
     def set_notification_choices(self, request):
         try:
             notifications = api.monitor.notification_list(request)
-        except Exception as e:
+        except Exception:
             notifications = []
             exceptions.handle(request,
-                              _('Unable to retrieve notifications: %s') % e)
+                              _('Unable to retrieve notifications.'))
         notification_choices = [
             (notification['id'], notification) for notification in notifications]
 
@@ -267,7 +267,7 @@ class EditAlarmForm(forms.SelfHandlingForm):
             )
             messages.success(request,
                              _('Alarm definition has been updated.'))
-        except Exception as e:
-            exceptions.handle(request, _('%s') % e)
+        except Exception:
+            exceptions.handle(request)
             return False
         return True
