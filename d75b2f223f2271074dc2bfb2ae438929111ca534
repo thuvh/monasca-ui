@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9f560f44_97ef8e1b",
+        "filename": "monitoring/alarmdefs/forms.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 271,
+      "author": {
+        "id": 841
+      },
+      "writtenOn": "2020-09-12T01:33:15Z",
+      "side": 1,
+      "message": "It would be nice to have a proper message.",
+      "revId": "d75b2f223f2271074dc2bfb2ae438929111ca534",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f560f44_d7dc6675",
+        "filename": "monitoring/alarmdefs/workflows.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 841
+      },
+      "writtenOn": "2020-09-12T01:33:15Z",
+      "side": 1,
+      "message": "It is better to provide a proper message.",
+      "revId": "d75b2f223f2271074dc2bfb2ae438929111ca534",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f560f44_b7d7324f",
+        "filename": "monitoring/notifications/forms.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 841
+      },
+      "writtenOn": "2020-09-12T01:33:15Z",
+      "side": 1,
+      "message": "It can be a single line.",
+      "range": {
+        "startLine": 123,
+        "startChar": 30,
+        "endLine": 124,
+        "endChar": 43
+      },
+      "revId": "d75b2f223f2271074dc2bfb2ae438929111ca534",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f560f44_97c82ea8",
+        "filename": "monitoring/overview/views.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 841
+      },
+      "writtenOn": "2020-09-12T01:33:15Z",
+      "side": 1,
+      "message": "Remove it.",
+      "range": {
+        "startLine": 193,
+        "startChar": 47,
+        "endLine": 193,
+        "endChar": 51
+      },
+      "revId": "d75b2f223f2271074dc2bfb2ae438929111ca534",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
