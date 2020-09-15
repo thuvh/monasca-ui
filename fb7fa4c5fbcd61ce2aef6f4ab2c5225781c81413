@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9f560f44_684598b4",
+        "filename": "monitoring/alarmdefs/forms.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 272,
+      "author": {
+        "id": 841
+      },
+      "writtenOn": "2020-09-15T09:34:56Z",
+      "side": 1,
+      "message": "retrieve? update? This is part of EditAlarmForm.",
+      "range": {
+        "startLine": 272,
+        "startChar": 43,
+        "endLine": 272,
+        "endChar": 51
+      },
+      "revId": "fb7fa4c5fbcd61ce2aef6f4ab2c5225781c81413",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f560f44_484254ad",
+        "filename": "monitoring/alarmdefs/workflows.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 841
+      },
+      "writtenOn": "2020-09-15T09:34:56Z",
+      "side": 1,
+      "message": "retrieve? not \"create\"?",
+      "range": {
+        "startLine": 226,
+        "startChar": 43,
+        "endLine": 226,
+        "endChar": 51
+      },
+      "revId": "fb7fa4c5fbcd61ce2aef6f4ab2c5225781c81413",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f560f44_c884a4d6",
+        "filename": "monitoring/alarms/views.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 841
+      },
+      "writtenOn": "2020-09-15T09:34:56Z",
+      "side": 1,
+      "message": "Why not exceptions.handle() without redirect?",
+      "revId": "fb7fa4c5fbcd61ce2aef6f4ab2c5225781c81413",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
+    }
+  ]
+}
