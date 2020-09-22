@@ -128,6 +128,24 @@
       "revId": "fb7fa4c5fbcd61ce2aef6f4ab2c5225781c81413",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f560f44_bfec9229",
+        "filename": "monitoring/alarms/views.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 841
+      },
+      "writtenOn": "2020-09-22T05:02:36Z",
+      "side": 1,
+      "message": "The goal of the blueprint is not to improve exceptions.handle only. The goal is to provide error details to user in a smarter and unified way.\n\nThis messages.error() concatenates an exception message directly. This is what you improved in exceptions.handle() https://review.opendev.org/#/c/708069/.\n\nWhile I believe this is a part of the blueprint goal, but I am okay if you just cover exceptions.handle().",
+      "parentUuid": "9f560f44_81a9d57d",
+      "revId": "fb7fa4c5fbcd61ce2aef6f4ab2c5225781c81413",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543",
+      "unresolved": false
     }
   ]
 }
