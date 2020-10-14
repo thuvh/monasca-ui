@@ -1,0 +1,8 @@
+Code-Review+2: Ivan Kolodyazhny <e0ne@e0ne.info>
+Workflow+1: Martin Chacon Piza <martin@chaconpiza.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Wed, 14 Oct 2020 13:16:22 +0000
+Reviewed-on: https://review.opendev.org/748489
+Project: openstack/monasca-ui
+Branch: refs/heads/master
