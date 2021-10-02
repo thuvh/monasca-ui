@@ -279,8 +279,15 @@ class MonascaProxyView(TemplateView):
                 # the `url` dimension of the service_status check.
                 dimension_name_value = dimension.split(':', 1)
                 if len(dimension_name_value) == 2:
+<<<<<<< HEAD   (b48d81 Update TOX_CONSTRAINTS_FILE for stable/wallaby)
                     name = dimension_name_value[0].encode('utf8')
                     value = dimension_name_value[1].encode('utf8')
+=======
+                    name = dimension_name_value[0]
+                    value = dimension_name_value[1]
+                    if isinstance(value, bytes):
+                        value = value.decode("utf-8")
+>>>>>>> CHANGE (995915 Convert dimension value type from byte to str in MonascaProx)
                     dim_dict[name] = urllib.parse.unquote(value)
                 else:
                     raise Exception('Dimensions are malformed')
