@@ -36,9 +36,13 @@ function expressionBuilder() {
                 expr.fun && '(',
                 expr.metric ? expr.metric.name : '', renderDimensions(expr),
                 (expr.deterministic ? ',deterministic': ''),
+                expr.time && ',',
+                expr.time || '',
                 expr.fun && ')',
                 expr.cmp || '',
-                expr.threshold === 0 ? 0 : expr.threshold || ''
+                expr.threshold === 0 ? 0 : expr.threshold || '',
+                expr.times && ' times ',
+                expr.times || '',
             ].join('');
             tmp.push(exprAsStr);
         });
