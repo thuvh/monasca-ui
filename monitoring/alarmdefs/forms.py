@@ -79,18 +79,6 @@ class ExpressionWidget(forms.Widget):
         local_attrs.update(final_attrs)
         return t.render(local_attrs)
 
-
-class ExpressionField(forms.CharField):
-
-    def _get_metrics(self):
-        return self._metrics
-
-    def _set_metrics(self, value):
-        self._metrics = self.widget.metrics = value
-
-    metrics = property(_get_metrics, _set_metrics)
-
-
 class MatchByWidget(forms.Widget):
     def __init__(self, initial, attrs=None):
         super(MatchByWidget, self).__init__(attrs)
@@ -178,11 +166,9 @@ class EditAlarmForm(forms.SelfHandlingForm):
         textWidget = None
         choiceWidget = forms.Select
         if create:
-            expressionWidget = ExpressionWidget(initial)
             matchByWidget = MatchByWidget(initial)
             notificationWidget = NotificationCreateWidget()
         else:
-            expressionWidget = textWidget
             matchByWidget = forms.TextInput(attrs={'readonly': 'readonly'})
             notificationWidget = NotificationCreateWidget()
 
@@ -191,10 +177,6 @@ class EditAlarmForm(forms.SelfHandlingForm):
                                               max_length=250,
                                               widget=textWidget,
                                               help_text=_("An unique name of the alarm."))
-        self.fields['expression'] = forms.CharField(label=_("Expression"),
-                                                    required=required,
-                                                    widget=expressionWidget,
-                                                    help_text=_("An alarm expression."))
         self.fields['match_by'] = forms.CharField(label=_("Match by"),
                                                   required=False,
                                                   widget=matchByWidget,
