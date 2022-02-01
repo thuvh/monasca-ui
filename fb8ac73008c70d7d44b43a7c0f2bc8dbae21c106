@@ -24,6 +24,30 @@
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "7c018056_63393f75",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 26141
+      },
+      "writtenOn": "2022-02-01T13:57:43Z",
+      "side": 1,
+      "message": "I think this correct link: \nhttps://governance.openstack.org/tc/goals/completed/wallaby/migrate-policy-format-from-json-to-yaml.html",
+      "parentUuid": "f0891267_ec17d689",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 103
+      },
+      "revId": "fb8ac73008c70d7d44b43a7c0f2bc8dbae21c106",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "c6be5de7_a4e3f632",
