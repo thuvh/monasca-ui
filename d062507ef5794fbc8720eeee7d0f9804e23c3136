@@ -16,6 +16,23 @@
       "message": "Thanks for Update, LGTM now.",
       "revId": "d062507ef5794fbc8720eeee7d0f9804e23c3136",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91e3156c_0054641f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 29313
+      },
+      "writtenOn": "2022-02-03T09:29:50Z",
+      "side": 1,
+      "message": "Forgot to mention earlier, but it would be nice if you add some release notes\nabout this change.",
+      "revId": "d062507ef5794fbc8720eeee7d0f9804e23c3136",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
     }
   ]
 }
