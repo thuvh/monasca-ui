@@ -1,0 +1,9 @@
+Code-Review+1: Elod Illes <elod.illes@est.tech>
+Code-Review+2: Martin Chacon Piza <martin@chaconpiza.com>
+Workflow+1: Martin Chacon Piza <martin@chaconpiza.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Fri, 11 Mar 2022 11:19:24 +0000
+Reviewed-on: https://review.opendev.org/c/openstack/monasca-ui/+/833133
+Project: openstack/monasca-ui
+Branch: refs/heads/stable/yoga
