@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9bec5b7f_197459f0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 17685
+      },
+      "writtenOn": "2022-09-16T18:19:00Z",
+      "side": 1,
+      "message": "Generated patch + looks OK, please merge it as soon as possible.",
+      "revId": "de0b2d6f13c03b04bca84b4bc3fb115222231596",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    }
+  ]
+}
