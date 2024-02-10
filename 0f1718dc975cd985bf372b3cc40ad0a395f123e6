@@ -16,6 +16,23 @@
       "message": "recheck - unmaintained/requirements branch is created, gate should be in a better shape",
       "revId": "0f1718dc975cd985bf372b3cc40ad0a395f123e6",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "05b6f26f_491ea4b5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 17685
+      },
+      "writtenOn": "2024-02-10T08:32:37Z",
+      "side": 1,
+      "message": "Trivial, generated patch. LGTM. Let\u0027s merge this ASAP.",
+      "revId": "0f1718dc975cd985bf372b3cc40ad0a395f123e6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
     }
   ]
 }
